@@ -3,6 +3,7 @@
 
 import csv
 import os
+from dotenv import load_dotenv
 import mysql.connector
 
 FIDE_CSV_DIR = "fide_historical_ratings_formatted"
@@ -11,6 +12,7 @@ FIDE_CSV_DIR_2 = "fide_historical_ratings_reformatted"
 
 
 def initiate_conn():
+    load_dotenv()
     host = os.environ.get("MYSQL_HOST")
     user = os.environ.get("MYSQL_USER")
     password = os.environ.get("MYSQL_PASSWORD")
