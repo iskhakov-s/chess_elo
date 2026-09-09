@@ -185,16 +185,17 @@ def output_heads():
 
 def delete_null_rows(month_names: list[dict[str, str]]):
     conn = initiate_conn()
-    with conn.cursor() as cursor:
-        for month_data in month_names:
-            cursor.execute(f"SELECT * FROM {month_data['table_name']} WHERE id=0;")
+    for month_data in month_names:
+        with conn.cursor() as cursor:
+            cursor.execute(f"DELETE FROM {month_data['table_name']} WHERE id=0;")
             conn.commit()
-            head = cursor.fetchall()
-            if head:
-                print(month_data['table_name'])
-                print(head.fetchall())
+            # cursor.execute(f"SELECT * FROM {month_data['table_name']} WHERE id=0;")
+            # head = cursor.fetchall()
+            # if head:
+            #     print(month_data['table_name'])
+            #     print(head)
     conn.close()
 
 # mpiexec -n 8 python -u validate.py
 if __name__ == "__main__":
-    output_heads()
+    delete_null_rows(get_table_data())
