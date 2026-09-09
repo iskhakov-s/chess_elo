@@ -1,0 +1,95 @@
+Root: Completed reading SQL/CSV names.
+218
+Process 0: 01-APR: CSV 37625 , SQL 1     , Diff 37624
+Process 0: 02-APR: CSV 41408 , SQL 1     , Diff 41407
+Process 0: 03-APR: CSV 45663 , SQL 45632 , Diff 31
+Process 0: 04-APR: CSV 51907 , SQL 51886 , Diff 21
+Process 0: 05-APR: CSV 60795 , SQL 60755 , Diff 40
+Process 0: 06-APR: CSV 69281 , SQL 69238 , Diff 43
+Process 0: 07-APR: CSV 79362 , SQL 79288 , Diff 74
+Process 0: 08-APR: CSV 89430 , SQL 89400 , Diff 30
+Process 0: 12-AUG: CSV 149715, SQL 149713, Diff 2
+Process 2: 01-JAN: CSV 36978 , SQL 36967 , Diff 11
+Process 2: 02-JAN: CSV 29283 , SQL 1     , Diff 29282
+Process 2: 03-JAN: CSV 45016 , SQL 44983 , Diff 33
+Process 2: 04-JAN: CSV 50458 , SQL 50437 , Diff 21
+Process 2: 05-JAN: CSV 58649 , SQL 58623 , Diff 26
+Process 2: 06-JAN: CSV 67436 , SQL 67395 , Diff 41
+Process 2: 07-JAN: CSV 77056 , SQL 76984 , Diff 72
+Process 2: 08-JAN: CSV 87075 , SQL 87023 , Diff 52
+Process 2: 12-JAN: CSV 139007, SQL 139005, Diff 2
+Process 6: 11-NOV: CSV 137694, SQL 137693, Diff 1
+Process 6: 01-OCT: CSV 39741 , SQL 1     , Diff 39740
+Process 6: 02-OCT: CSV 42619 , SQL 42604 , Diff 15
+Process 6: 03-OCT: CSV 49264 , SQL 49242 , Diff 22
+Process 6: 04-OCT: CSV 56930 , SQL 56906 , Diff 24
+Process 6: 05-OCT: CSV 65797 , SQL 65762 , Diff 35
+Process 6: 06-OCT: CSV 75096 , SQL 75025 , Diff 71
+Process 6: 07-OCT: CSV 85350 , SQL 85286 , Diff 64
+Process 6: 08-OCT: CSV 97177 , SQL 97148 , Diff 29
+Process 3: 01-JUL: CSV 38622 , SQL 1     , Diff 38621
+Process 3: 02-JUL: CSV 40958 , SQL 1     , Diff 40957
+Process 3: 03-JUL: CSV 47006 , SQL 46982 , Diff 24
+Process 3: 04-JUL: CSV 53764 , SQL 53743 , Diff 21
+Process 3: 05-JUL: CSV 63262 , SQL 63228 , Diff 34
+Process 3: 06-JUL: CSV 72005 , SQL 71951 , Diff 54
+Process 3: 07-JUL: CSV 82661 , SQL 82595 , Diff 66
+Process 3: 08-JUL: CSV 92971 , SQL 92943 , Diff 28
+Process 3: 12-JUL: CSV 148194, SQL 148192, Diff 2
+Process 4: 12-MAR: CSV 141286, SQL 141284, Diff 2
+Process 4: 13-MAR: CSV 156259, SQL 156248, Diff 11
+Process 5: 12-MAY: CSV 145073, SQL 145071, Diff 2
+
+
+
+Process 0: 01-APR: CSV  37625, SQL      1, Diff 37624, Blank 12
+Process 0: 02-APR: CSV  41408, SQL      1, Diff 41407, Blank 12
+Process 0: 03-APR: CSV  45663, SQL  45632, Diff    31, Blank 19
+Process 0: 04-APR: CSV  51907, SQL  51886, Diff    21, Blank 22
+Process 0: 05-APR: CSV  60795, SQL  60755, Diff    40, Blank 29
+Process 0: 06-APR: CSV  69281, SQL  69238, Diff    43, Blank 42
+Process 0: 07-APR: CSV  79362, SQL  79288, Diff    74, Blank 59
+Process 0: 08-APR: CSV  89430, SQL  89400, Diff    30, Blank 31
+Process 0: 09-APR: CSV  99997, SQL  99997, Diff     0, Blank  1
+Process 0: 12-AUG: CSV 149715, SQL 149713, Diff     2, Blank  0
+Process 1: 01-JAN: CSV  36978, SQL  36967, Diff    11, Blank 12
+Process 1: 02-JAN: CSV  29283, SQL      1, Diff 29282, Blank 10
+Process 1: 03-JAN: CSV  45016, SQL  44983, Diff    33, Blank 16
+Process 1: 04-JAN: CSV  50458, SQL  50437, Diff    21, Blank 22
+Process 1: 05-JAN: CSV  58649, SQL  58623, Diff    26, Blank 26
+Process 1: 06-JAN: CSV  67436, SQL  67395, Diff    41, Blank 36
+Process 1: 07-JAN: CSV  77056, SQL  76984, Diff    72, Blank 60
+Process 1: 08-JAN: CSV  87075, SQL  87023, Diff    52, Blank 44
+Process 1: 09-JAN: CSV  99232, SQL  99232, Diff     0, Blank  1
+Process 1: 10-JAN: CSV 109556, SQL 109556, Diff     0, Blank  1
+Process 1: 11-JAN: CSV 122615, SQL 122615, Diff     0, Blank  1
+Process 1: 12-JAN: CSV 139007, SQL 139005, Diff     2, Blank  0
+Process 3: 01-JUL: CSV  38622, SQL      1, Diff 38621, Blank 12
+Process 3: 02-JUL: CSV  40958, SQL      1, Diff 40957, Blank 13
+Process 3: 03-JUL: CSV  47006, SQL  46982, Diff    24, Blank 18
+Process 3: 04-JUL: CSV  53764, SQL  53743, Diff    21, Blank 21
+Process 3: 05-JUL: CSV  63262, SQL  63228, Diff    34, Blank 32
+Process 3: 06-JUL: CSV  72005, SQL  71951, Diff    54, Blank 51
+Process 3: 07-JUL: CSV  82661, SQL  82595, Diff    66, Blank 47
+Process 3: 08-JUL: CSV  92971, SQL  92943, Diff    28, Blank 29
+Process 3: 09-JUL: CSV 105242, SQL 105242, Diff     0, Blank  1
+Process 3: 10-JUL: CSV 119042, SQL 119042, Diff     0, Blank  1
+Process 3: 12-JUL: CSV 148194, SQL 148192, Diff     2, Blank  0
+Process 4: 10-MAR: CSV 113629, SQL 113629, Diff     0, Blank  1
+Process 4: 12-MAR: CSV 141286, SQL 141284, Diff     2, Blank  0
+Process 4: 13-MAR: CSV 156259, SQL 156248, Diff    11, Blank  0
+Process 5: 10-MAY: CSV 116524, SQL 116524, Diff     0, Blank  1
+Process 5: 12-MAY: CSV 145073, SQL 145071, Diff     2, Blank  0
+Process 5: 09-NOV: CSV  99522, SQL  99522, Diff     0, Blank  1
+Process 6: 01-OCT: CSV  39741, SQL      1, Diff 39740, Blank 15
+Process 6: 02-OCT: CSV  42619, SQL  42604, Diff    15, Blank 15
+Process 6: 03-OCT: CSV  49264, SQL  49242, Diff    22, Blank 19
+Process 6: 04-OCT: CSV  56930, SQL  56906, Diff    24, Blank 24
+Process 6: 05-OCT: CSV  65797, SQL  65762, Diff    35, Blank 34
+Process 6: 06-OCT: CSV  75096, SQL  75025, Diff    71, Blank 64
+Process 6: 07-OCT: CSV  85350, SQL  85286, Diff    64, Blank 48
+Process 6: 08-OCT: CSV  97177, SQL  97148, Diff    29, Blank 30
+Process 6: 10-NOV: CSV 123519, SQL 123519, Diff     0, Blank  1
+Process 6: 11-NOV: CSV 137694, SQL 137693, Diff     1, Blank  0
+Process 7: 09-SEP: CSV 107392, SQL 107392, Diff     0, Blank  1
+Process 7: 10-SEP: CSV 121878, SQL 121878, Diff     0, Blank  1

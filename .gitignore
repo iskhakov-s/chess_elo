@@ -1,0 +1,10 @@
+__pycache__/
+.Rproj.user/
+.vscode/
+fide_historical_ratings/
+fide_historical_ratings_formatted/
+fide_historical_ratings_reformatted/
+fide_historical_ratings_zip/
+olimpbase_records/
+.Rhistory
+chess_elo.Rproj

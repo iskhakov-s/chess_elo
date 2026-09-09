@@ -1,0 +1,219 @@
+Log generated on 2026-08-29 15:38:02.842970
+INFO - 01-01: CSV IDs: 36966 , SQL IDs: 36967 , Overlap: 36966 , Only CSV: 0     , Only SQL: 1     , Total Diff: 1     ; Rank 5 - 2026-08-29 15:38:02
+INFO - 01-04: CSV IDs: 37613 , SQL IDs: 37614 , Overlap: 37613 , Only CSV: 0     , Only SQL: 1     , Total Diff: 1     ; Rank 3 - 2026-08-29 15:38:01
+INFO - 01-07: CSV IDs: 38610 , SQL IDs: 38611 , Overlap: 38610 , Only CSV: 0     , Only SQL: 1     , Total Diff: 1     ; Rank 1 - 2026-08-29 15:38:02
+INFO - 01-10: CSV IDs: 39726 , SQL IDs: 39727 , Overlap: 39726 , Only CSV: 0     , Only SQL: 1     , Total Diff: 1     ; Rank 2 - 2026-08-29 15:38:02
+INFO - 02-01: CSV IDs: 29272 , SQL IDs: 29273 , Overlap: 29272 , Only CSV: 0     , Only SQL: 1     , Total Diff: 1     ; Rank 6 - 2026-08-29 15:38:02
+INFO - 02-04: CSV IDs: 41395 , SQL IDs: 41396 , Overlap: 41395 , Only CSV: 0     , Only SQL: 1     , Total Diff: 1     ; Rank 5 - 2026-08-29 15:38:02
+INFO - 02-07: CSV IDs: 40944 , SQL IDs: 40945 , Overlap: 40944 , Only CSV: 0     , Only SQL: 1     , Total Diff: 1     ; Rank 4 - 2026-08-29 15:38:02
+INFO - 02-10: CSV IDs: 42603 , SQL IDs: 42604 , Overlap: 42603 , Only CSV: 0     , Only SQL: 1     , Total Diff: 1     ; Rank 6 - 2026-08-29 15:38:02
+INFO - 03-01: CSV IDs: 44982 , SQL IDs: 44983 , Overlap: 44982 , Only CSV: 0     , Only SQL: 1     , Total Diff: 1     ; Rank 7 - 2026-08-29 15:37:59
+INFO - 03-04: CSV IDs: 45631 , SQL IDs: 45632 , Overlap: 45631 , Only CSV: 0     , Only SQL: 1     , Total Diff: 1     ; Rank 0 - 2026-08-29 15:37:59
+INFO - 03-07: CSV IDs: 46981 , SQL IDs: 46982 , Overlap: 46981 , Only CSV: 0     , Only SQL: 1     , Total Diff: 1     ; Rank 0 - 2026-08-29 15:37:59
+INFO - 03-10: CSV IDs: 49241 , SQL IDs: 49242 , Overlap: 49241 , Only CSV: 0     , Only SQL: 1     , Total Diff: 1     ; Rank 7 - 2026-08-29 15:37:59
+INFO - 04-01: CSV IDs: 50436 , SQL IDs: 50437 , Overlap: 50436 , Only CSV: 0     , Only SQL: 1     , Total Diff: 1     ; Rank 6 - 2026-08-29 15:38:02
+INFO - 04-04: CSV IDs: 51885 , SQL IDs: 51886 , Overlap: 51885 , Only CSV: 0     , Only SQL: 1     , Total Diff: 1     ; Rank 5 - 2026-08-29 15:38:01
+INFO - 04-07: CSV IDs: 53742 , SQL IDs: 53743 , Overlap: 53742 , Only CSV: 0     , Only SQL: 1     , Total Diff: 1     ; Rank 4 - 2026-08-29 15:38:02
+INFO - 04-10: CSV IDs: 56905 , SQL IDs: 56906 , Overlap: 56905 , Only CSV: 0     , Only SQL: 1     , Total Diff: 1     ; Rank 2 - 2026-08-29 15:38:02
+INFO - 05-01: CSV IDs: 58622 , SQL IDs: 58623 , Overlap: 58622 , Only CSV: 0     , Only SQL: 1     , Total Diff: 1     ; Rank 1 - 2026-08-29 15:38:01
+INFO - 05-04: CSV IDs: 60754 , SQL IDs: 60755 , Overlap: 60754 , Only CSV: 0     , Only SQL: 1     , Total Diff: 1     ; Rank 3 - 2026-08-29 15:38:00
+INFO - 05-07: CSV IDs: 63227 , SQL IDs: 63228 , Overlap: 63227 , Only CSV: 0     , Only SQL: 1     , Total Diff: 1     ; Rank 3 - 2026-08-29 15:38:00
+INFO - 05-10: CSV IDs: 65761 , SQL IDs: 65762 , Overlap: 65761 , Only CSV: 0     , Only SQL: 1     , Total Diff: 1     ; Rank 4 - 2026-08-29 15:38:02
+INFO - 06-01: CSV IDs: 67394 , SQL IDs: 67395 , Overlap: 67394 , Only CSV: 0     , Only SQL: 1     , Total Diff: 1     ; Rank 1 - 2026-08-29 15:38:01
+INFO - 06-04: CSV IDs: 69237 , SQL IDs: 69238 , Overlap: 69237 , Only CSV: 0     , Only SQL: 1     , Total Diff: 1     ; Rank 5 - 2026-08-29 15:38:01
+INFO - 06-07: CSV IDs: 71950 , SQL IDs: 71951 , Overlap: 71950 , Only CSV: 0     , Only SQL: 1     , Total Diff: 1     ; Rank 2 - 2026-08-29 15:38:02
+INFO - 06-10: CSV IDs: 75024 , SQL IDs: 75025 , Overlap: 75024 , Only CSV: 0     , Only SQL: 1     , Total Diff: 1     ; Rank 6 - 2026-08-29 15:38:02
+INFO - 07-01: CSV IDs: 76983 , SQL IDs: 76984 , Overlap: 76983 , Only CSV: 0     , Only SQL: 1     , Total Diff: 1     ; Rank 7 - 2026-08-29 15:37:59
+INFO - 07-04: CSV IDs: 79287 , SQL IDs: 79288 , Overlap: 79287 , Only CSV: 0     , Only SQL: 1     , Total Diff: 1     ; Rank 0 - 2026-08-29 15:37:59
+INFO - 07-07: CSV IDs: 82594 , SQL IDs: 82595 , Overlap: 82594 , Only CSV: 0     , Only SQL: 1     , Total Diff: 1     ; Rank 0 - 2026-08-29 15:37:58
+INFO - 07-10: CSV IDs: 85285 , SQL IDs: 85286 , Overlap: 85285 , Only CSV: 0     , Only SQL: 1     , Total Diff: 1     ; Rank 7 - 2026-08-29 15:37:58
+INFO - 08-01: CSV IDs: 87022 , SQL IDs: 87023 , Overlap: 87022 , Only CSV: 0     , Only SQL: 1     , Total Diff: 1     ; Rank 6 - 2026-08-29 15:38:01
+INFO - 08-04: CSV IDs: 89399 , SQL IDs: 89400 , Overlap: 89399 , Only CSV: 0     , Only SQL: 1     , Total Diff: 1     ; Rank 2 - 2026-08-29 15:38:01
+INFO - 08-07: CSV IDs: 92942 , SQL IDs: 92943 , Overlap: 92942 , Only CSV: 0     , Only SQL: 1     , Total Diff: 1     ; Rank 5 - 2026-08-29 15:38:01
+INFO - 08-10: CSV IDs: 97147 , SQL IDs: 97148 , Overlap: 97147 , Only CSV: 0     , Only SQL: 1     , Total Diff: 1     ; Rank 4 - 2026-08-29 15:38:01
+INFO - 09-01: CSV IDs: 99231 , SQL IDs: 99232 , Overlap: 99231 , Only CSV: 0     , Only SQL: 1     , Total Diff: 1     ; Rank 3 - 2026-08-29 15:38:00
+INFO - 09-04: CSV IDs: 99996 , SQL IDs: 99997 , Overlap: 99996 , Only CSV: 0     , Only SQL: 1     , Total Diff: 1     ; Rank 1 - 2026-08-29 15:38:00
+INFO - 09-07: CSV IDs: 105241, SQL IDs: 105242, Overlap: 105241, Only CSV: 0     , Only SQL: 1     , Total Diff: 1     ; Rank 3 - 2026-08-29 15:37:59
+INFO - 09-09: CSV IDs: 107391, SQL IDs: 107392, Overlap: 107391, Only CSV: 0     , Only SQL: 1     , Total Diff: 1     ; Rank 5 - 2026-08-29 15:38:00
+INFO - 09-11: CSV IDs: 99521 , SQL IDs: 99522 , Overlap: 99521 , Only CSV: 0     , Only SQL: 1     , Total Diff: 1     ; Rank 1 - 2026-08-29 15:38:01
+INFO - 10-01: CSV IDs: 109555, SQL IDs: 109556, Overlap: 109555, Only CSV: 0     , Only SQL: 1     , Total Diff: 1     ; Rank 4 - 2026-08-29 15:38:01
+INFO - 10-03: CSV IDs: 113628, SQL IDs: 113629, Overlap: 113628, Only CSV: 0     , Only SQL: 1     , Total Diff: 1     ; Rank 7 - 2026-08-29 15:37:57
+INFO - 10-05: CSV IDs: 116523, SQL IDs: 116524, Overlap: 116523, Only CSV: 0     , Only SQL: 1     , Total Diff: 1     ; Rank 6 - 2026-08-29 15:38:01
+INFO - 10-07: CSV IDs: 119041, SQL IDs: 119042, Overlap: 119041, Only CSV: 0     , Only SQL: 1     , Total Diff: 1     ; Rank 2 - 2026-08-29 15:38:01
+INFO - 10-09: CSV IDs: 121877, SQL IDs: 121878, Overlap: 121877, Only CSV: 0     , Only SQL: 1     , Total Diff: 1     ; Rank 0 - 2026-08-29 15:37:57
+INFO - 10-11: CSV IDs: 123518, SQL IDs: 123519, Overlap: 123518, Only CSV: 0     , Only SQL: 1     , Total Diff: 1     ; Rank 2 - 2026-08-29 15:38:00
+INFO - 11-01: CSV IDs: 122614, SQL IDs: 122615, Overlap: 122614, Only CSV: 0     , Only SQL: 1     , Total Diff: 1     ; Rank 0 - 2026-08-29 15:37:57
+INFO - 11-03: CSV IDs: 126695, SQL IDs: 126695, Overlap: 126695, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 6 - 2026-08-29 15:38:00
+INFO - 11-05: CSV IDs: 129843, SQL IDs: 129843, Overlap: 129843, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 7 - 2026-08-29 15:37:57
+INFO - 11-07: CSV IDs: 132263, SQL IDs: 132263, Overlap: 132263, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 4 - 2026-08-29 15:38:00
+INFO - 11-09: CSV IDs: 135353, SQL IDs: 135353, Overlap: 135353, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 3 - 2026-08-29 15:37:58
+INFO - 11-11: CSV IDs: 137693, SQL IDs: 137693, Overlap: 137693, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 1 - 2026-08-29 15:38:00
+INFO - 12-01: CSV IDs: 139005, SQL IDs: 139005, Overlap: 139005, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 5 - 2026-08-29 15:38:00
+INFO - 12-03: CSV IDs: 141284, SQL IDs: 141284, Overlap: 141284, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 5 - 2026-08-29 15:37:59
+INFO - 12-05: CSV IDs: 145071, SQL IDs: 145071, Overlap: 145071, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 1 - 2026-08-29 15:37:59
+INFO - 12-07: CSV IDs: 148192, SQL IDs: 148192, Overlap: 148192, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 0 - 2026-08-29 15:37:56
+INFO - 12-08: CSV IDs: 149713, SQL IDs: 149713, Overlap: 149713, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 7 - 2026-08-29 15:37:56
+INFO - 12-09: CSV IDs: 151251, SQL IDs: 151251, Overlap: 151251, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 6 - 2026-08-29 15:37:59
+INFO - 12-10: CSV IDs: 152330, SQL IDs: 152330, Overlap: 152330, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 3 - 2026-08-29 15:37:57
+INFO - 12-11: CSV IDs: 153298, SQL IDs: 153298, Overlap: 153298, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 2 - 2026-08-29 15:37:59
+INFO - 12-12: CSV IDs: 154687, SQL IDs: 154687, Overlap: 154687, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 4 - 2026-08-29 15:37:58
+INFO - 13-01: CSV IDs: 151297, SQL IDs: 151297, Overlap: 151297, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 4 - 2026-08-29 15:37:59
+INFO - 13-02: CSV IDs: 155098, SQL IDs: 155098, Overlap: 155098, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 2 - 2026-08-29 15:37:58
+INFO - 13-03: CSV IDs: 156248, SQL IDs: 156248, Overlap: 156248, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 3 - 2026-08-29 15:37:56
+INFO - 13-04: CSV IDs: 158025, SQL IDs: 158025, Overlap: 158025, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 6 - 2026-08-29 15:37:58
+INFO - 13-05: CSV IDs: 159663, SQL IDs: 159663, Overlap: 159663, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 7 - 2026-08-29 15:37:55
+INFO - 13-06: CSV IDs: 161718, SQL IDs: 161718, Overlap: 161718, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 0 - 2026-08-29 15:37:55
+INFO - 13-07: CSV IDs: 163306, SQL IDs: 163306, Overlap: 163306, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 1 - 2026-08-29 15:37:58
+INFO - 13-08: CSV IDs: 164866, SQL IDs: 164866, Overlap: 164866, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 5 - 2026-08-29 15:37:58
+INFO - 13-09: CSV IDs: 166298, SQL IDs: 166298, Overlap: 166298, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 3 - 2026-08-29 15:37:55
+INFO - 13-10: CSV IDs: 167685, SQL IDs: 167685, Overlap: 167685, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 1 - 2026-08-29 15:37:56
+INFO - 13-11: CSV IDs: 169059, SQL IDs: 169059, Overlap: 169059, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 7 - 2026-08-29 15:37:54
+INFO - 13-12: CSV IDs: 170237, SQL IDs: 170237, Overlap: 170237, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 0 - 2026-08-29 15:37:54
+INFO - 14-01: CSV IDs: 171842, SQL IDs: 171842, Overlap: 171842, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 5 - 2026-08-29 15:37:56
+INFO - 14-02: CSV IDs: 173598, SQL IDs: 173598, Overlap: 173598, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 6 - 2026-08-29 15:37:57
+INFO - 14-03: CSV IDs: 174789, SQL IDs: 174789, Overlap: 174789, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 2 - 2026-08-29 15:37:57
+INFO - 14-04: CSV IDs: 176968, SQL IDs: 176968, Overlap: 176968, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 4 - 2026-08-29 15:37:57
+INFO - 14-05: CSV IDs: 179164, SQL IDs: 179164, Overlap: 179164, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 6 - 2026-08-29 15:37:55
+INFO - 14-06: CSV IDs: 180792, SQL IDs: 180792, Overlap: 180792, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 4 - 2026-08-29 15:37:55
+INFO - 14-07: CSV IDs: 182405, SQL IDs: 182405, Overlap: 182405, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 2 - 2026-08-29 15:37:55
+INFO - 14-08: CSV IDs: 184730, SQL IDs: 184730, Overlap: 184730, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 5 - 2026-08-29 15:37:55
+INFO - 14-09: CSV IDs: 187498, SQL IDs: 187498, Overlap: 187498, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 0 - 2026-08-29 15:37:52
+INFO - 14-10: CSV IDs: 189835, SQL IDs: 189835, Overlap: 189835, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 7 - 2026-08-29 15:37:53
+INFO - 14-11: CSV IDs: 192459, SQL IDs: 192459, Overlap: 192459, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 1 - 2026-08-29 15:37:55
+INFO - 14-12: CSV IDs: 194790, SQL IDs: 194790, Overlap: 194790, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 3 - 2026-08-29 15:37:53
+INFO - 15-01: CSV IDs: 197568, SQL IDs: 197568, Overlap: 197568, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 1 - 2026-08-29 15:37:53
+INFO - 15-02: CSV IDs: 200033, SQL IDs: 200033, Overlap: 200033, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 3 - 2026-08-29 15:37:52
+INFO - 15-03: CSV IDs: 202398, SQL IDs: 202398, Overlap: 202398, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 7 - 2026-08-29 15:37:51
+INFO - 15-04: CSV IDs: 204902, SQL IDs: 204902, Overlap: 204902, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 0 - 2026-08-29 15:37:51
+INFO - 15-05: CSV IDs: 208663, SQL IDs: 208663, Overlap: 208663, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 5 - 2026-08-29 15:37:53
+INFO - 15-06: CSV IDs: 212075, SQL IDs: 212075, Overlap: 212075, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 2 - 2026-08-29 15:37:54
+INFO - 15-07: CSV IDs: 214727, SQL IDs: 214727, Overlap: 214727, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 4 - 2026-08-29 15:37:54
+INFO - 15-08: CSV IDs: 217661, SQL IDs: 217661, Overlap: 217661, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 6 - 2026-08-29 15:37:54
+INFO - 15-09: CSV IDs: 220658, SQL IDs: 220658, Overlap: 220658, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 6 - 2026-08-29 15:37:52
+INFO - 15-10: CSV IDs: 222933, SQL IDs: 222933, Overlap: 222933, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 4 - 2026-08-29 15:37:52
+INFO - 15-11: CSV IDs: 225354, SQL IDs: 225354, Overlap: 225354, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 2 - 2026-08-29 15:37:52
+INFO - 15-12: CSV IDs: 227960, SQL IDs: 227960, Overlap: 227960, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 5 - 2026-08-29 15:37:52
+INFO - 16-01: CSV IDs: 231178, SQL IDs: 231178, Overlap: 231178, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 0 - 2026-08-29 15:37:50
+INFO - 16-02: CSV IDs: 234247, SQL IDs: 234247, Overlap: 234247, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 7 - 2026-08-29 15:37:50
+INFO - 16-03: CSV IDs: 236970, SQL IDs: 236970, Overlap: 236970, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 3 - 2026-08-29 15:37:50
+INFO - 16-04: CSV IDs: 240437, SQL IDs: 240437, Overlap: 240437, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 1 - 2026-08-29 15:37:52
+INFO - 16-05: CSV IDs: 243220, SQL IDs: 243220, Overlap: 243220, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 1 - 2026-08-29 15:37:50
+INFO - 16-06: CSV IDs: 246494, SQL IDs: 246494, Overlap: 246494, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 3 - 2026-08-29 15:37:49
+INFO - 16-07: CSV IDs: 248856, SQL IDs: 248856, Overlap: 248856, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 7 - 2026-08-29 15:37:48
+INFO - 16-08: CSV IDs: 251954, SQL IDs: 251954, Overlap: 251954, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 5 - 2026-08-29 15:37:50
+INFO - 16-09: CSV IDs: 254785, SQL IDs: 254785, Overlap: 254785, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 2 - 2026-08-29 15:37:50
+INFO - 16-10: CSV IDs: 256868, SQL IDs: 256868, Overlap: 256868, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 0 - 2026-08-29 15:37:48
+INFO - 16-11: CSV IDs: 259224, SQL IDs: 259224, Overlap: 259224, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 4 - 2026-08-29 15:37:50
+INFO - 16-12: CSV IDs: 261796, SQL IDs: 261796, Overlap: 261796, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 6 - 2026-08-29 15:37:50
+INFO - 17-01: CSV IDs: 265108, SQL IDs: 265108, Overlap: 265108, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 6 - 2026-08-29 15:37:48
+INFO - 17-02: CSV IDs: 268001, SQL IDs: 268001, Overlap: 268001, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 4 - 2026-08-29 15:37:48
+INFO - 17-03: CSV IDs: 270268, SQL IDs: 270268, Overlap: 270268, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 0 - 2026-08-29 15:37:45
+INFO - 17-04: CSV IDs: 273146, SQL IDs: 273146, Overlap: 273146, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 2 - 2026-08-29 15:37:48
+INFO - 17-05: CSV IDs: 276209, SQL IDs: 276209, Overlap: 276209, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 5 - 2026-08-29 15:37:48
+INFO - 17-06: CSV IDs: 278808, SQL IDs: 278808, Overlap: 278808, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 7 - 2026-08-29 15:37:46
+INFO - 17-07: CSV IDs: 281183, SQL IDs: 281183, Overlap: 281183, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 3 - 2026-08-29 15:37:47
+INFO - 17-08: CSV IDs: 284261, SQL IDs: 284261, Overlap: 284261, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 1 - 2026-08-29 15:37:48
+INFO - 17-09: CSV IDs: 287002, SQL IDs: 287002, Overlap: 287002, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 3 - 2026-08-29 15:37:45
+INFO - 17-10: CSV IDs: 285314, SQL IDs: 285314, Overlap: 285314, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 1 - 2026-08-29 15:37:45
+INFO - 17-11: CSV IDs: 290913, SQL IDs: 290913, Overlap: 290913, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 7 - 2026-08-29 15:37:44
+INFO - 17-12: CSV IDs: 293258, SQL IDs: 293258, Overlap: 293258, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 5 - 2026-08-29 15:37:45
+INFO - 18-01: CSV IDs: 296050, SQL IDs: 296050, Overlap: 296050, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 0 - 2026-08-29 15:37:43
+INFO - 18-02: CSV IDs: 298690, SQL IDs: 298690, Overlap: 298690, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 2 - 2026-08-29 15:37:45
+INFO - 18-03: CSV IDs: 301073, SQL IDs: 301073, Overlap: 301073, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 4 - 2026-08-29 15:37:45
+INFO - 18-04: CSV IDs: 303506, SQL IDs: 303506, Overlap: 303506, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 6 - 2026-08-29 15:37:45
+INFO - 18-05: CSV IDs: 306576, SQL IDs: 306576, Overlap: 306576, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 6 - 2026-08-29 15:37:42
+INFO - 18-06: CSV IDs: 309323, SQL IDs: 309323, Overlap: 309323, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 4 - 2026-08-29 15:37:43
+INFO - 18-07: CSV IDs: 311576, SQL IDs: 311576, Overlap: 311576, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 2 - 2026-08-29 15:37:43
+INFO - 18-08: CSV IDs: 314351, SQL IDs: 314351, Overlap: 314351, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 0 - 2026-08-29 15:37:41
+INFO - 18-09: CSV IDs: 316934, SQL IDs: 316934, Overlap: 316934, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 5 - 2026-08-29 15:37:43
+INFO - 18-10: CSV IDs: 318268, SQL IDs: 318268, Overlap: 318268, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 7 - 2026-08-29 15:37:42
+INFO - 18-11: CSV IDs: 320222, SQL IDs: 320222, Overlap: 320222, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 3 - 2026-08-29 15:37:42
+INFO - 18-12: CSV IDs: 322710, SQL IDs: 322710, Overlap: 322710, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 1 - 2026-08-29 15:37:43
+INFO - 19-01: CSV IDs: 325190, SQL IDs: 325190, Overlap: 325190, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 1 - 2026-08-29 15:37:40
+INFO - 19-02: CSV IDs: 327897, SQL IDs: 327897, Overlap: 327897, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 3 - 2026-08-29 15:37:40
+INFO - 19-03: CSV IDs: 329950, SQL IDs: 329950, Overlap: 329950, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 7 - 2026-08-29 15:37:39
+INFO - 19-04: CSV IDs: 332568, SQL IDs: 332568, Overlap: 332568, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 5 - 2026-08-29 15:37:40
+INFO - 19-05: CSV IDs: 335694, SQL IDs: 335694, Overlap: 335694, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 2 - 2026-08-29 15:37:40
+INFO - 19-06: CSV IDs: 337851, SQL IDs: 337851, Overlap: 337851, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 0 - 2026-08-29 15:37:38
+INFO - 19-07: CSV IDs: 340519, SQL IDs: 340519, Overlap: 340519, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 4 - 2026-08-29 15:37:40
+INFO - 19-08: CSV IDs: 343437, SQL IDs: 343437, Overlap: 343437, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 6 - 2026-08-29 15:37:40
+INFO - 19-09: CSV IDs: 346035, SQL IDs: 346035, Overlap: 346035, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 6 - 2026-08-29 15:37:37
+INFO - 19-10: CSV IDs: 347656, SQL IDs: 347656, Overlap: 347656, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 4 - 2026-08-29 15:37:37
+INFO - 19-11: CSV IDs: 349781, SQL IDs: 349781, Overlap: 349781, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 0 - 2026-08-29 15:37:36
+INFO - 19-12: CSV IDs: 352229, SQL IDs: 352229, Overlap: 352229, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 2 - 2026-08-29 15:37:37
+INFO - 20-01: CSV IDs: 354588, SQL IDs: 354588, Overlap: 354588, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 5 - 2026-08-29 15:37:37
+INFO - 20-02: CSV IDs: 357264, SQL IDs: 357264, Overlap: 357264, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 7 - 2026-08-29 15:37:36
+INFO - 20-03: CSV IDs: 359390, SQL IDs: 359390, Overlap: 359390, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 3 - 2026-08-29 15:37:37
+INFO - 20-04: CSV IDs: 360778, SQL IDs: 360778, Overlap: 360778, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 1 - 2026-08-29 15:37:37
+INFO - 20-05: CSV IDs: 360890, SQL IDs: 360890, Overlap: 360890, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 6 - 2026-08-29 15:37:33
+INFO - 20-06: CSV IDs: 360904, SQL IDs: 360904, Overlap: 360904, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 4 - 2026-08-29 15:37:33
+INFO - 20-07: CSV IDs: 360962, SQL IDs: 360962, Overlap: 360962, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 2 - 2026-08-29 15:37:33
+INFO - 20-08: CSV IDs: 361188, SQL IDs: 361188, Overlap: 361188, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 5 - 2026-08-29 15:37:33
+INFO - 20-09: CSV IDs: 361543, SQL IDs: 361543, Overlap: 361543, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 0 - 2026-08-29 15:37:33
+INFO - 20-10: CSV IDs: 361760, SQL IDs: 361760, Overlap: 361760, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 7 - 2026-08-29 15:37:33
+INFO - 20-11: CSV IDs: 362097, SQL IDs: 362097, Overlap: 362097, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 1 - 2026-08-29 15:37:33
+INFO - 20-12: CSV IDs: 362493, SQL IDs: 362493, Overlap: 362493, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 3 - 2026-08-29 15:37:33
+INFO - 21-01: CSV IDs: 362902, SQL IDs: 362902, Overlap: 362902, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 5 - 2026-08-29 15:37:30
+INFO - 21-02: CSV IDs: 363272, SQL IDs: 363272, Overlap: 363272, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 3 - 2026-08-29 15:37:30
+INFO - 21-03: CSV IDs: 363589, SQL IDs: 363589, Overlap: 363589, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 1 - 2026-08-29 15:37:30
+INFO - 21-04: CSV IDs: 364520, SQL IDs: 364520, Overlap: 364520, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 7 - 2026-08-29 15:37:30
+INFO - 21-05: CSV IDs: 365417, SQL IDs: 365417, Overlap: 365417, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 0 - 2026-08-29 15:37:30
+INFO - 21-06: CSV IDs: 365948, SQL IDs: 365948, Overlap: 365948, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 2 - 2026-08-29 15:37:30
+INFO - 21-07: CSV IDs: 367374, SQL IDs: 367374, Overlap: 367374, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 4 - 2026-08-29 15:37:30
+INFO - 21-08: CSV IDs: 368757, SQL IDs: 368757, Overlap: 368757, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 6 - 2026-08-29 15:37:30
+INFO - 21-09: CSV IDs: 370660, SQL IDs: 370660, Overlap: 370660, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 0 - 2026-08-29 15:37:26
+INFO - 21-10: CSV IDs: 371946, SQL IDs: 371946, Overlap: 371946, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 6 - 2026-08-29 15:37:26
+INFO - 21-11: CSV IDs: 373331, SQL IDs: 373331, Overlap: 373331, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 7 - 2026-08-29 15:37:26
+INFO - 21-12: CSV IDs: 375275, SQL IDs: 375275, Overlap: 375275, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 1 - 2026-08-29 15:37:26
+INFO - 22-01: CSV IDs: 377518, SQL IDs: 377518, Overlap: 377518, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 2 - 2026-08-29 15:37:26
+INFO - 22-02: CSV IDs: 379289, SQL IDs: 379289, Overlap: 379289, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 4 - 2026-08-29 15:37:26
+INFO - 22-03: CSV IDs: 380786, SQL IDs: 380786, Overlap: 380786, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 3 - 2026-08-29 15:37:26
+INFO - 22-04: CSV IDs: 383008, SQL IDs: 383008, Overlap: 383008, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 5 - 2026-08-29 15:37:26
+INFO - 22-05: CSV IDs: 385907, SQL IDs: 385907, Overlap: 385907, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 4 - 2026-08-29 15:37:23
+INFO - 22-06: CSV IDs: 388129, SQL IDs: 388129, Overlap: 388129, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 3 - 2026-08-29 15:37:23
+INFO - 22-07: CSV IDs: 390597, SQL IDs: 390597, Overlap: 390597, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 5 - 2026-08-29 15:37:23
+INFO - 22-08: CSV IDs: 393377, SQL IDs: 393377, Overlap: 393377, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 2 - 2026-08-29 15:37:23
+INFO - 22-09: CSV IDs: 396310, SQL IDs: 396310, Overlap: 396310, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 1 - 2026-08-29 15:37:23
+INFO - 22-10: CSV IDs: 398342, SQL IDs: 398342, Overlap: 398342, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 7 - 2026-08-29 15:37:23
+INFO - 22-11: CSV IDs: 400523, SQL IDs: 400523, Overlap: 400523, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 6 - 2026-08-29 15:37:23
+INFO - 22-12: CSV IDs: 403371, SQL IDs: 403371, Overlap: 403371, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 0 - 2026-08-29 15:37:23
+INFO - 23-01: CSV IDs: 405510, SQL IDs: 405510, Overlap: 405510, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 7 - 2026-08-29 15:37:19
+INFO - 23-02: CSV IDs: 408559, SQL IDs: 408559, Overlap: 408559, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 2 - 2026-08-29 15:37:19
+INFO - 23-03: CSV IDs: 411323, SQL IDs: 411323, Overlap: 411323, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 1 - 2026-08-29 15:37:19
+INFO - 23-04: CSV IDs: 413945, SQL IDs: 413945, Overlap: 413945, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 0 - 2026-08-29 15:37:19
+INFO - 23-05: CSV IDs: 417311, SQL IDs: 417311, Overlap: 417311, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 6 - 2026-08-29 15:37:19
+INFO - 23-06: CSV IDs: 420430, SQL IDs: 420430, Overlap: 420430, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 5 - 2026-08-29 15:37:19
+INFO - 23-07: CSV IDs: 423357, SQL IDs: 423357, Overlap: 423357, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 3 - 2026-08-29 15:37:19
+INFO - 23-08: CSV IDs: 426608, SQL IDs: 426608, Overlap: 426608, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 4 - 2026-08-29 15:37:19
+INFO - 23-09: CSV IDs: 430068, SQL IDs: 430068, Overlap: 430068, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 3 - 2026-08-29 15:37:15
+INFO - 23-10: CSV IDs: 431974, SQL IDs: 431974, Overlap: 431974, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 4 - 2026-08-29 15:37:15
+INFO - 23-11: CSV IDs: 434824, SQL IDs: 434824, Overlap: 434824, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 5 - 2026-08-29 15:37:15
+INFO - 23-12: CSV IDs: 437527, SQL IDs: 437527, Overlap: 437527, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 6 - 2026-08-29 15:37:15
+INFO - 24-01: CSV IDs: 440385, SQL IDs: 440385, Overlap: 440385, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 0 - 2026-08-29 15:37:15
+INFO - 24-02: CSV IDs: 447385, SQL IDs: 447385, Overlap: 447385, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 1 - 2026-08-29 15:37:15
+INFO - 24-03: CSV IDs: 450782, SQL IDs: 450782, Overlap: 450782, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 2 - 2026-08-29 15:37:15
+INFO - 24-04: CSV IDs: 456714, SQL IDs: 456714, Overlap: 456714, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 7 - 2026-08-29 15:37:15
+INFO - 24-05: CSV IDs: 460420, SQL IDs: 460420, Overlap: 460420, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 0 - 2026-08-29 15:37:11
+INFO - 24-06: CSV IDs: 468339, SQL IDs: 468339, Overlap: 468339, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 7 - 2026-08-29 15:37:11
+INFO - 24-07: CSV IDs: 468009, SQL IDs: 468009, Overlap: 468009, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 1 - 2026-08-29 15:37:11
+INFO - 24-08: CSV IDs: 471731, SQL IDs: 471731, Overlap: 471731, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 2 - 2026-08-29 15:37:11
+INFO - 24-09: CSV IDs: 475031, SQL IDs: 475031, Overlap: 475031, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 6 - 2026-08-29 15:37:11
+INFO - 24-10: CSV IDs: 477351, SQL IDs: 477351, Overlap: 477351, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 5 - 2026-08-29 15:37:11
+INFO - 24-11: CSV IDs: 480126, SQL IDs: 480126, Overlap: 480126, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 4 - 2026-08-29 15:37:11
+INFO - 24-12: CSV IDs: 483138, SQL IDs: 483138, Overlap: 483138, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 3 - 2026-08-29 15:37:11
+INFO - 25-01: CSV IDs: 486934, SQL IDs: 486934, Overlap: 486934, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 0 - 2026-08-29 15:37:06
+INFO - 25-02: CSV IDs: 490900, SQL IDs: 490900, Overlap: 490900, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 1 - 2026-08-29 15:37:06
+INFO - 25-03: CSV IDs: 494691, SQL IDs: 494691, Overlap: 494691, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 2 - 2026-08-29 15:37:06
+INFO - 25-04: CSV IDs: 497932, SQL IDs: 497932, Overlap: 497932, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 3 - 2026-08-29 15:37:06
+INFO - 25-05: CSV IDs: 502276, SQL IDs: 502276, Overlap: 502276, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 4 - 2026-08-29 15:37:06
+INFO - 25-06: CSV IDs: 506415, SQL IDs: 506415, Overlap: 506415, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 5 - 2026-08-29 15:37:06
+INFO - 25-07: CSV IDs: 510088, SQL IDs: 510088, Overlap: 510088, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 6 - 2026-08-29 15:37:06
+INFO - 25-08: CSV IDs: 514183, SQL IDs: 514183, Overlap: 514183, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 7 - 2026-08-29 15:37:06
+INFO - 25-09: CSV IDs: 518064, SQL IDs: 518064, Overlap: 518064, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 7 - 2026-08-29 15:37:01
+INFO - 25-10: CSV IDs: 520924, SQL IDs: 520924, Overlap: 520924, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 6 - 2026-08-29 15:37:01
+INFO - 25-11: CSV IDs: 524186, SQL IDs: 524186, Overlap: 524186, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 5 - 2026-08-29 15:37:01
+INFO - 25-12: CSV IDs: 527831, SQL IDs: 527831, Overlap: 527831, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 4 - 2026-08-29 15:37:01
+INFO - 26-01: CSV IDs: 531422, SQL IDs: 531422, Overlap: 531422, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 3 - 2026-08-29 15:37:01
+INFO - 26-02: CSV IDs: 537407, SQL IDs: 537407, Overlap: 537407, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 2 - 2026-08-29 15:37:01
+INFO - 26-03: CSV IDs: 558557, SQL IDs: 558557, Overlap: 558557, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 0 - 2026-08-29 15:37:01
+INFO - 26-04: CSV IDs: 545534, SQL IDs: 545534, Overlap: 545534, Only CSV: 0     , Only SQL: 0     , Total Diff: 0     ; Rank 1 - 2026-08-29 15:37:01
