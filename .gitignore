@@ -8,3 +8,4 @@ fide_historical_ratings_zip/
 olimpbase_records/
 .Rhistory
 chess_elo.Rproj
+.env

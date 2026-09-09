@@ -3,10 +3,28 @@
 
 import csv
 import os
+import mysql.connector
 
 FIDE_CSV_DIR = "fide_historical_ratings_formatted"
 # secondary directory used to make edits and formatting changes to the CSV files without affecting the original files in FIDE_CSV_DIR
 FIDE_CSV_DIR_2 = "fide_historical_ratings_reformatted"
+
+
+def initiate_conn():
+    host = os.environ.get("MYSQL_HOST")
+    user = os.environ.get("MYSQL_USER")
+    password = os.environ.get("MYSQL_PASSWORD")
+    database = os.environ.get("MYSQL_DATABASE")
+    
+    conn = mysql.connector.connect(
+        host=host,
+        user=user,
+        password=password,
+        database=database,
+        allow_local_infile=True
+    )
+    return conn
+
 
 def get_table_data() -> list[dict[str, str]]:
     """returns the contents of months_with_data.csv as a list of dicts, sorted by year then month (table_name, csv_name, year4, month_digits, num_rows)

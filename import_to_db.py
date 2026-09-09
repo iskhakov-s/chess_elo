@@ -2,7 +2,7 @@ import os
 import mysql.connector
 from mysql.connector.connection import MySQLConnection
 
-from helper import FIDE_CSV_DIR, FIDE_CSV_DIR_2
+from helper import FIDE_CSV_DIR, FIDE_CSV_DIR_2, initiate_conn
 
 MONTHS = {
     1: "jan",
@@ -19,21 +19,6 @@ MONTHS = {
     12: "dec"
 }
 
-# TODO: store username and password in a config file, gitignore it, and read from it instead of prompting the user for input each time
-def initiate_conn():
-    # user = input("Enter MySQL username: ")
-    # password = input("Enter MySQL password: ")
-    user = "root"
-    password = "password"
-    
-    conn = mysql.connector.connect(
-        host="localhost",
-        user=user,
-        password=password,
-        database="elo_db",
-        allow_local_infile=True
-    )
-    return conn
 
 def init_staging_fide_table_type_1(conn: MySQLConnection, month: str, year: int):
     try:

@@ -6,24 +6,8 @@ import numpy as np
 
 from mpi_logging import *
 import mpi_logging
-from helper import get_table_data, FIDE_CSV_DIR, FIDE_CSV_DIR_2, find_optimal_split
+from helper import get_table_data, FIDE_CSV_DIR, FIDE_CSV_DIR_2, find_optimal_split, initiate_conn
 
-
-# TODO: store username and password in a config file, gitignore it, and read from it instead of prompting the user for input each time
-def initiate_conn():
-    # user = input("Enter MySQL username: ")
-    # password = input("Enter MySQL password: ")
-    user = "root"
-    password = "password"
-    
-    conn = mysql.connector.connect(
-        host="localhost",
-        user=user,
-        password=password,
-        database="elo_db",
-        allow_local_infile=True
-    )
-    return conn
 
 def find_broken_rows(conn: MySQLConnection):
     with conn.cursor() as cursor:
