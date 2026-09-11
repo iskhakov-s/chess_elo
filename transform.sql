@@ -1,68 +1,105 @@
--- sep16-present
-create table staging_union (
-	id int not null,
-	year smallint not null check(year between 1800 and 2200),
-	month tinyint not null check(month between 1 and 12),
-	name varchar(255) NOT NULL,
-	fed char(3) NOT NULL,
-	sex char(1) DEFAULT NULL,
-	title varchar(7) DEFAULT NULL,
-	wtitle varchar(7) DEFAULT NULL,
-	otitle varchar(15) DEFAULT NULL,
-	foa varchar(3) DEFAULT NULL,
-	elo smallint NOT null check(elo between 0 and 5000),
-	games smallint NOT NULL,
-	k tinyint unsigned NOT NULL,
-	birthday smallint DEFAULT NULL,
-	flag varchar(2) DEFAULT NULL,
-	primary key (id, year, month)
-);
-
-insert into staging_union
-select
-    id,
-    2026 as year,
-    1 as month,
-    trim(name) as name,
-    title,
-    foa
-from staging_temp;
-
-
-
-create table periodic_metadata (
-	id int not null,
-	year smallint not null check(year between 1800 and 2200),
-	month tinyint not null check(month between 1 and 12),
-	elo smallint NOT null check(elo between 0 and 5000),
-	games smallint NOT NULL,
-	k tinyint unsigned,
-	inactive boolean not null,
-	primary key (id, year, month)
-);
-
-
-create table periodic_data (
+-- staging table to simplify the process and unify the data for import into the player/profile
+-- because each year has its own standards for some reason
+-- birthday also not needed, because only the player table needs it, not profile
+-- ignore otitles for now, they're annoying to parse and there are multiple issues with them
+`` 
+create table player_staging_union (
     id int not null,
-	year smallint not null check(year between 1800 and 2200),
-	month tinyint not null check(month between 1 and 12),
-	name varchar(255) NOT NULL,
-	fed char(3) NOT NULL,
-	sex char(1) DEFAULT NULL,
-	title varchar(7) DEFAULT NULL,
-	wtitle varchar(7) DEFAULT NULL,
-	otitle varchar(15) DEFAULT NULL,
-	foa varchar(3) DEFAULT NULL,
-	elo smallint NOT null check(elo between 0 and 5000),
-	games smallint NOT NULL,
-	k tinyint unsigned NOT NULL,
-    active boolean not null,
-	primary key (id, year, month)
+    period date not null,
+    name varchar(255) NOT NULL,
+    fed char(3) not null,
+    sex tinyint unsigned not null,
+    title tinyint unsigned not null default 0, -- 0 = none, 1 = GM, 2 = IM, 3 = FM, 4 = CM, 5 = HGM
+    wtitle tinyint unsigned not null default 0, -- 0 = none, 1 = WGM, 2 = WIM, 3 = WFM, 4 = WCM, 5 = WHGM
+    -- allow null for foa and other titles because they are not present for all time periods
+    foa tinyint unsigned, -- 0 = none, 1 = AGM, 2 = AIM, 3 = AFM, 4 = ACM, 5 = AAF 
+    -- otit_ia boolean, -- arbiter titles
+    -- otit_fa boolean,
+    -- otit_na boolean,
+    -- otit_io boolean, -- international organizer\
+    -- otit_ao boolean,
+    -- otit_di boolean, -- trainer titles
+    -- otit_ni boolean,
+    -- otit_fi boolean,
+    -- otit_ft boolean,
+    -- otit_fst boolean, 
+    -- otit_li boolean, -- licensed instructors
+    -- otit_lsi boolean,
+    -- otit_sli boolean,
+    -- stuff only stored in elo table is not needed
+    -- elo smallint NOT null check(elo between 0 and 5000),
+    -- games smallint NOT NULL,
+    -- k tinyint unsigned NOT NULL,
+    inactive boolean NOT NULL,
+    -- flag varchar(2) DEFAULT NULL, -- instead of flag, parse flag into active/inactive
+    primary key (id, period)
 );
 
+-- jan 01
+insert into player_staging_union (id, period, name, fed, sex, title, wtitle, inactive)
+select 
+    id, 
+    "2001-01-01" as period, 
+    name,
+    fed,
+    if(flag like "%w%", 1, 0) as sex,
+    case title
+        when "g" then 1
+        when "gm" then 1
+        when "m" then 2
+        when "f" then 3
+        when "c" then 4
+        when "h" then 5
+        else 0
+    end as title,
+    case title
+        when "wg" then 1
+        when "wm" then 2
+        when "wf" then 3
+        when "wc" then 4
+        when "wh" then 5
+        else 0
+    end as wtitle,
+    if(flag like "%i%", 1, 0) as inactive
+from staging_01_jan;
 
 
-
+-- type 4
+insert into player_staging_union (id, period, name, fed, sex, title, wtitle, foa, inactive)
+select 
+    id, 
+    concat(year, '-', month, '-01') as period, 
+    name,
+    fed,
+    if(sex="F", 1, 0) as sex,
+    case title
+        when "GM" then 1
+        when "IM" then 2
+        when "FM" then 3
+        when "CM" then 4
+        when "HM" then 5
+        else 0
+    end as title,
+    case wtitle
+        when "WGM" then 1
+        when "WIM" then 2
+        when "WF" then 3
+        when "WFM" then 3
+        when "WC" then 4
+        when "WCM" then 4
+        when "WH" then 5
+        else 0
+    end as wtitle,
+    case foa
+        when "AGM" then 1
+        when "AIM" then 2
+        when "AFM" then 3
+        when "ACM" then 4
+        when "AAF" then 5
+        else 0
+    end as foa,
+    if(flag like "%i%", 1, 0) as inactive
+from staging_01_jan;
 
 -- don't use DATE because some birthdays may only have year
 -- log error rows and skip instead of auto failing
@@ -77,7 +114,8 @@ create table players (
     name VARCHAR(255) NOT NULL,
     fed CHAR(3) NOT NULL,
     sex CHAR(1) DEFAULT NULL,
-    title tinyint unsigned not null, -- 0 = none, 1 = GM, 2 = IM, 3 = FM, 4 = WGM, 5 = WIM, 6 = WFM
+    title tinyint unsigned not null, -- 0 = none, 1 = GM, 2 = IM, 3 = FM, 4 = CM, 5 = HGM
+    wtitle tinyint unsigned not null, -- 0 = none, 1 = WGM, 2 = WIM, 3 = WFM, 4 = WCM, 5 = WHGM
     foa tinyint unsigned not null, -- 0 = none, 1 = AFM, 2 = AIM, 3 = ACM, 4 = AGM, 5 = AAF 
     otit_ia boolean not null,
     otit_fa boolean not null,
@@ -98,7 +136,8 @@ CREATE TABLE player_profiles (
     name VARCHAR(255) NOT NULL,
     fed CHAR(3) NOT NULL,
     sex CHAR(1) DEFAULT NULL,
-    title tinyint unsigned not null, -- 0 = none, 1 = GM, 2 = IM, 3 = FM, 4 = WGM, 5 = WIM, 6 = WFM
+    title tinyint unsigned not null, -- 0 = none, 1 = GM, 2 = IM, 3 = FM, 4 = CM, 5 = HGM
+    wtitle tinyint unsigned not null, -- 0 = none, 1 = WGM, 2 = WIM, 3 = WFM, 4 = WCM, 5 = WHGM
     foa tinyint unsigned, -- 0 = none, 1 = AFM, 2 = AIM, 3 = ACM, 4 = AGM, 5 = AAF 
     otit_ia boolean,
     otit_fa boolean,
@@ -113,11 +152,20 @@ CREATE TABLE player_profiles (
 -- 13 bytes
 create table periodic_elo (
     period_id int auto_increment primary key,
-	player_id int not null,
-	period DATE not null,
-	elo smallint NOT null check(elo between 0 and 5000),
-	games smallint NOT NULL,
-	k tinyint unsigned,
-	inactive boolean not null,
+    player_id int not null,
+    period DATE not null,
+    elo smallint NOT null check(elo between 0 and 5000),
+    games smallint NOT NULL,
+    k tinyint unsigned,
+    inactive boolean not null,
     foreign key (player_id) references players(id)
 );
+
+-- make sure to remove k when needed
+-- since player_id is a fkey, players must be loaded first
+insert into periodic_elo (player_id, period, elo, games, k, inactive)
+select id, concat(year, '-', month, '-01'), elo, games, k, inactive
+from staging_;
+
+-- load players table with jan01
+insert into players (id, name, fed, sex, title)

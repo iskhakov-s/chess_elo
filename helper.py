@@ -5,13 +5,33 @@ import csv
 import os
 from dotenv import load_dotenv
 import mysql.connector
+from mpi4py import MPI
+
+import mpi_logging
 
 FIDE_CSV_DIR = "fide_historical_ratings_formatted"
 # secondary directory used to make edits and formatting changes to the CSV files without affecting the original files in FIDE_CSV_DIR
 FIDE_CSV_DIR_2 = "fide_historical_ratings_reformatted"
 
+MONTH_INT2STR = {
+    1: "jan",
+    2: "feb",
+    3: "mar",
+    4: "apr",
+    5: "may",
+    6: "jun",
+    7: "jul",
+    8: "aug",
+    9: "sep",
+    10: "oct",
+    11: "nov",
+    12: "dec"
+}
 
-def initiate_conn():
+MONTH_STR2INT = {v: k for k, v in MONTH_INT2STR.items()}
+
+
+def initiate_conn(get_warnings=False):
     load_dotenv()
     host = os.environ.get("MYSQL_HOST")
     user = os.environ.get("MYSQL_USER")
@@ -23,7 +43,8 @@ def initiate_conn():
         user=user,
         password=password,
         database=database,
-        allow_local_infile=True
+        allow_local_infile=True,
+        get_warnings=get_warnings
     )
     return conn
 
@@ -46,10 +67,11 @@ def get_table_data() -> list[dict[str, str]]:
         reader = csv.reader(f)
         next(reader)  # skip header
         for row in reader:
-            csv_name, year, month, year4, month_digits, num_rows = row
+            csv_name, src_name, year, month, year4, month_digits, num_rows = row
             table_name = f"staging_{year}_{month.lower()}"
             output.append({"table_name": table_name, 
                            "csv_name": csv_name, 
+                           "src_name": src_name,   
                            "year": year, 
                            "month": month, 
                            "year4": year4,
@@ -58,6 +80,36 @@ def get_table_data() -> list[dict[str, str]]:
                            })
     
     output.sort(key=lambda x: (x["year4"], x["month_digits"]))
+    return output
+
+def get_single_period(year: int, month: int | str, table_data=None) -> dict[str, str]:
+    if table_data is None:
+        table_data = get_table_data()
+        
+    if isinstance(month, str):
+        month = MONTH_STR2INT[month.lower()]
+
+    for month_data in table_data:
+        if int(month_data["year4"]) == year and int(month_data["month_digits"]) == month:
+            return month_data
+
+    raise ValueError(f"No data found for year {year} and month {month}.")
+
+def get_period_range(start_year: int, start_month: int | str, end_year: int, end_month: int | str, table_data=None) -> list[dict[str, str]]:
+    if table_data is None:
+        table_data = get_table_data()
+        
+    if isinstance(start_month, str):
+        start_month = MONTH_STR2INT[start_month.lower()]
+    if isinstance(end_month, str):
+        end_month = MONTH_STR2INT[end_month.lower()]
+
+    output = []
+    for month in table_data:
+        if int(month["year4"]) > start_year or (int(month["year4"]) == start_year and int(month["month_digits"]) >= start_month):
+            if int(month["year4"]) < end_year or (int(month["year4"]) == end_year and int(month["month_digits"]) <= end_month):
+                output.append(month)
+
     return output
 
 
@@ -88,10 +140,37 @@ def find_optimal_split(month_names: list[dict[str, str]], size: int) -> tuple[in
 
     return bags, sums
 
+def mpi_main(function: callable, log_name: str, get_period_range_kwargs=None):
+    """calls a function on each csv/sql table independently and produces a sorted output log
+
+    Args:
+        function (callable): the function that the processors run on each csv/sql table. the function must take two arguments: a list of month_names and the rank of the processor. the function should log its output using mpi_log(rank, message)
+        log_name (str): the name of the log file. 
+    """    
+    comm = MPI.COMM_WORLD
+    rank = comm.rank
+    size = comm.size
+    
+    mpi_logging.mpi_log_setup(rank, log_name)
+    
+    if rank == 0:
+        month_names = get_table_data()
+        if get_period_range_kwargs is not None:
+            month_names = get_period_range(**get_period_range_kwargs, table_data=month_names)
+        bags, _ = find_optimal_split(month_names, size)
+        print(f"Root: Completed reading {len(month_names)} SQL/CSV names.")
+    else:
+        month_names = None
+        bags = None
+
+    month_names = comm.bcast(month_names, root=0)
+    bags = comm.bcast(bags, root=0)
+    
+    function([month_names[j] for j in bags[rank]], rank)
+    
+    comm.Barrier()
+    mpi_logging.mpi_combine_logs(rank, log_name)
+    
+    
 if __name__ == "__main__":
-    months = get_table_data()
-    bags, sums = find_optimal_split(months, 8)
-    # for i, (bag, total) in enumerate(zip(bags, sums)):
-    #     # names = [months[j]["csv_name"][:-4] for j in bag]
-    #     print(f"Process {i}: num_months {months[bags[i]]}, total rows {total}")
-    print([months[j] for j in bags[0]])
+    print(get_table_data()[100])

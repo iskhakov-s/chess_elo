@@ -4,6 +4,7 @@ from mysql.connector.connection import MySQLConnection
 import os
 import numpy as np
 
+import helper
 from mpi_logging import *
 import mpi_logging
 from helper import get_table_data, FIDE_CSV_DIR, FIDE_CSV_DIR_2, find_optimal_split, initiate_conn
@@ -151,6 +152,27 @@ def validate_row_counts_mpi_main():
         np.savetxt("row_counts_no_diff.csv", no_diff, delimiter=",", fmt="%d", header="year,month,csv_rows,sql_rows,diff,blank_rows", comments="")
         np.savetxt("row_counts_diff.csv", diff, delimiter=",", fmt="%d", header="year,month,csv_rows,sql_rows,diff,blank_rows", comments="")
 
+
+def get_distinct_titles_mpi(month_names: list[dict[str, str]], rank):
+    conn = initiate_conn()
+    with conn.cursor() as cursor:
+        for month_data in month_names:            
+            cursor.execute(f"SELECT distinct trim(title) FROM {month_data['table_name']};")
+            titles = sorted([row[0] for row in cursor.fetchall()])
+            mpi_log(rank, f"{month_data['year']}-{month_data['month_digits']}: {titles}")
+    conn.close()
+    
+
+def get_distinct_otitles_mpi(month_names: list[dict[str, str]], rank):
+    conn = initiate_conn()
+    with conn.cursor() as cursor:
+        for month_data in month_names:            
+            cursor.execute(f"SELECT distinct otitle FROM {month_data['table_name']};")
+            otitles = [row[0] for row in cursor.fetchall()]
+            otitles = {item.strip() for string in otitles for item in string.split(",")}
+            mpi_log(rank, f"{month_data['year']}-{month_data['month_digits']}: {otitles}")
+    conn.close()
+
 def output_heads():
     mpi_logging.log_setup("sql_staging_heads", format="%(message)s")
     
@@ -182,4 +204,4 @@ def delete_null_rows(month_names: list[dict[str, str]]):
 
 # mpiexec -n 8 python -u validate.py
 if __name__ == "__main__":
-    delete_null_rows(get_table_data())
+    helper.mpi_main(get_distinct_otitles_mpi, "distinct_otitles", get_period_range_kwargs={"start_year": 2016, "start_month": "sep", "end_year": 2026, "end_month": "jun"})

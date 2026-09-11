@@ -1,15 +1,15 @@
-from concurrent.futures import ProcessPoolExecutor
-from multiprocessing import cpu_count
+from mpi4py import MPI
 import os
 from typing import Iterable
 
+import helper
+
 SRC_DIR = "fide_historical_ratings"
-DEST_DIR = "fide_historical_ratings_formatted"
+DEST_DIR = "fide_historical_ratings_formatted_py"
 
-HEADER_COLUMNS = (
-    "ID_NUMBER NAME                            TITLE FED  RATING GM  Bday      Flag "
-)
 
+def test():
+    ...
 
 def reformat(file_csv: str, lines: list[str]) -> list[str]:
     basename = os.path.basename(file_csv)

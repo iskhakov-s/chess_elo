@@ -1,0 +1,117 @@
+Log generated on 2026-09-10 19:00:30.660453
+INFO - 16-09: {'', 'FA', 'FT', 'DI', 'NI', 'FST', 'IO', 'FI', 'IA', 'I'}; Rank 2 - 2026-09-10 19:00:30
+INFO - 16-10: {'', 'FA', 'NI', 'FT', 'FST', 'DI', 'FI', 'IO', 'IA', 'I'}; Rank 0 - 2026-09-10 19:00:30
+INFO - 16-11: {'', 'NI', 'IA', 'I', 'DI', 'IO', 'FT', 'FST', 'FI', 'FA'}; Rank 4 - 2026-09-10 19:00:30
+INFO - 16-12: {'', 'FT', 'IO', 'FST', 'FI', 'IA', 'DI', 'FA', 'I', 'NI'}; Rank 6 - 2026-09-10 19:00:30
+INFO - 17-01: {'', 'FT', 'IO', 'FST', 'FI', 'IA', 'DI', 'FA', 'I', 'NI'}; Rank 6 - 2026-09-10 19:00:29
+INFO - 17-02: {'', 'NI', 'IA', 'I', 'DI', 'IO', 'FT', 'FST', 'FI', 'FA'}; Rank 4 - 2026-09-10 19:00:29
+INFO - 17-03: {'', 'FA', 'NI', 'FT', 'FST', 'DI', 'FI', 'IO', 'IA'}; Rank 0 - 2026-09-10 19:00:29
+INFO - 17-04: {'', 'FA', 'FT', 'DI', 'NI', 'FST', 'IO', 'FI', 'IA'}; Rank 2 - 2026-09-10 19:00:29
+INFO - 17-05: {'', 'DI', 'FST', 'IA', 'FA', 'NI', 'FT', 'FI', 'IO'}; Rank 5 - 2026-09-10 19:00:29
+INFO - 17-06: {'', 'FST', 'IO', 'FI', 'IA', 'DI', 'FT', 'FA', 'NI'}; Rank 7 - 2026-09-10 19:00:29
+INFO - 17-07: {'', 'IO', 'FT', 'DI', 'FST', 'FA', 'FI', 'NI', 'IA'}; Rank 3 - 2026-09-10 19:00:29
+INFO - 17-08: {'', 'FST', 'FA', 'IA', 'DI', 'NI', 'FI', 'FT', 'IO'}; Rank 1 - 2026-09-10 19:00:29
+INFO - 17-09: {'', 'IO', 'FT', 'DI', 'FST', 'FA', 'FI', 'NI', 'IA'}; Rank 3 - 2026-09-10 19:00:28
+INFO - 17-10: {'', 'FST', 'FA', 'IA', 'DI', 'NI', 'FI', 'FT', 'IO'}; Rank 1 - 2026-09-10 19:00:28
+INFO - 17-11: {'', 'FST', 'IO', 'FI', 'IA', 'DI', 'FT', 'FA', 'NI'}; Rank 7 - 2026-09-10 19:00:28
+INFO - 17-12: {'', 'DI', 'FST', 'IA', 'FA', 'NI', 'FT', 'FI', 'IO'}; Rank 5 - 2026-09-10 19:00:28
+INFO - 18-01: {'', 'FA', 'NI', 'FT', 'FST', 'DI', 'FI', 'IO', 'IA'}; Rank 0 - 2026-09-10 19:00:28
+INFO - 18-02: {'', 'FA', 'FT', 'DI', 'NI', 'FST', 'IO', 'FI', 'IA'}; Rank 2 - 2026-09-10 19:00:28
+INFO - 18-03: {'', 'NI', 'IA', 'DI', 'IO', 'FT', 'FST', 'FI', 'FA'}; Rank 4 - 2026-09-10 19:00:28
+INFO - 18-04: {'', 'FT', 'IO', 'FST', 'FI', 'IA', 'DI', 'FA', 'SI', 'NI'}; Rank 6 - 2026-09-10 19:00:28
+INFO - 18-05: {'', 'FT', 'IO', 'FST', 'FI', 'IA', 'DI', 'FA', 'SI', 'NI'}; Rank 6 - 2026-09-10 19:00:27
+INFO - 18-06: {'', 'NI', 'IA', 'SI', 'DI', 'IO', 'FT', 'FST', 'FI', 'FA'}; Rank 4 - 2026-09-10 19:00:27
+INFO - 18-07: {'', 'FA', 'SI', 'FT', 'DI', 'NI', 'FST', 'IO', 'FI', 'IA'}; Rank 2 - 2026-09-10 19:00:27
+INFO - 18-08: {'', 'SI', 'FA', 'NI', 'FT', 'FST', 'DI', 'FI', 'IO', 'IA'}; Rank 0 - 2026-09-10 19:00:27
+INFO - 18-09: {'', 'DI', 'SI', 'FST', 'IA', 'FA', 'NI', 'FT', 'FI', 'IO'}; Rank 5 - 2026-09-10 19:00:27
+INFO - 18-10: {'', 'FST', 'IO', 'FI', 'IA', 'DI', 'SI', 'FT', 'FA', 'NI'}; Rank 7 - 2026-09-10 19:00:27
+INFO - 18-11: {'', 'SI', 'IO', 'FT', 'DI', 'FST', 'FA', 'FI', 'NI', 'IA'}; Rank 3 - 2026-09-10 19:00:27
+INFO - 18-12: {'', 'FST', 'FA', 'IA', 'DI', 'SI', 'NI', 'FI', 'FT', 'IO'}; Rank 1 - 2026-09-10 19:00:27
+INFO - 19-01: {'', 'FST', 'FA', 'IA', 'DI', 'SI', 'NI', 'FI', 'FT', 'IO'}; Rank 1 - 2026-09-10 19:00:25
+INFO - 19-02: {'', 'SI', 'IO', 'FT', 'DI', 'FST', 'FA', 'FI', 'NI', 'IA'}; Rank 3 - 2026-09-10 19:00:25
+INFO - 19-03: {'', 'FST', 'IO', 'FI', 'IA', 'DI', 'SI', 'FT', 'FA', 'NI'}; Rank 7 - 2026-09-10 19:00:25
+INFO - 19-04: {'', 'DI', 'SI', 'FST', 'IA', 'FA', 'NI', 'FT', 'FI', 'IO'}; Rank 5 - 2026-09-10 19:00:26
+INFO - 19-05: {'', 'FI', 'SI', 'FT', 'DI', 'NI', 'FST', 'IO', 'FA', 'IA'}; Rank 2 - 2026-09-10 19:00:25
+INFO - 19-06: {'', 'SI', 'FA', 'NI', 'FT', 'FST', 'DI', 'FI', 'IO', 'IA'}; Rank 0 - 2026-09-10 19:00:25
+INFO - 19-07: {'', 'NI', 'IA', 'SI', 'DI', 'IO', 'FT', 'FST', 'FI', 'FA'}; Rank 4 - 2026-09-10 19:00:25
+INFO - 19-08: {'', 'FT', 'IO', 'FST', 'FI', 'IA', 'DI', 'FA', 'SI', 'NI'}; Rank 6 - 2026-09-10 19:00:25
+INFO - 19-09: {'', 'FT', 'IO', 'FST', 'FI', 'IA', 'DI', 'FA', 'SI', 'NI'}; Rank 6 - 2026-09-10 19:00:24
+INFO - 19-10: {'', 'NI', 'IA', 'SI', 'DI', 'IO', 'FT', 'FST', 'FI', 'FA'}; Rank 4 - 2026-09-10 19:00:24
+INFO - 19-11: {'', 'SI', 'FA', 'NI', 'FT', 'FST', 'DI', 'FI', 'IO', 'IA'}; Rank 0 - 2026-09-10 19:00:24
+INFO - 19-12: {'', 'FI', 'SI', 'FT', 'DI', 'NI', 'FST', 'IO', 'FA', 'IA'}; Rank 2 - 2026-09-10 19:00:24
+INFO - 20-01: {'', 'DI', 'SI', 'FST', 'IA', 'FA', 'NI', 'FT', 'FI', 'IO'}; Rank 5 - 2026-09-10 19:00:24
+INFO - 20-02: {'', 'FST', 'IO', 'FI', 'IA', 'DI', 'SI', 'FT', 'FA', 'NI'}; Rank 7 - 2026-09-10 19:00:24
+INFO - 20-03: {'', 'SI', 'IO', 'FT', 'DI', 'FST', 'FA', 'FI', 'NI', 'IA'}; Rank 3 - 2026-09-10 19:00:24
+INFO - 20-04: {'', 'FST', 'FA', 'IA', 'DI', 'SI', 'NI', 'FI', 'FT', 'IO'}; Rank 1 - 2026-09-10 19:00:24
+INFO - 20-05: {'', 'FT', 'IO', 'FST', 'FI', 'IA', 'DI', 'FA', 'SI', 'NI'}; Rank 6 - 2026-09-10 19:00:22
+INFO - 20-06: {'', 'NI', 'IA', 'SI', 'DI', 'IO', 'FT', 'FST', 'FI', 'FA'}; Rank 4 - 2026-09-10 19:00:23
+INFO - 20-07: {'', 'FI', 'SI', 'FT', 'DI', 'NI', 'FST', 'IO', 'FA', 'IA'}; Rank 2 - 2026-09-10 19:00:22
+INFO - 20-08: {'', 'DI', 'SI', 'FST', 'IA', 'FA', 'NI', 'FT', 'FI', 'IO'}; Rank 5 - 2026-09-10 19:00:23
+INFO - 20-09: {'', 'SI', 'FA', 'NI', 'FT', 'FST', 'DI', 'FI', 'IO', 'IA'}; Rank 0 - 2026-09-10 19:00:23
+INFO - 20-10: {'', 'FST', 'IO', 'FI', 'IA', 'DI', 'SI', 'FT', 'FA', 'NI'}; Rank 7 - 2026-09-10 19:00:22
+INFO - 20-11: {'', 'FST', 'FA', 'IA', 'DI', 'SI', 'NI', 'FI', 'FT', 'IO'}; Rank 1 - 2026-09-10 19:00:23
+INFO - 20-12: {'', 'SI', 'IO', 'FT', 'DI', 'FST', 'FA', 'FI', 'NI', 'IA'}; Rank 3 - 2026-09-10 19:00:22
+INFO - 21-01: {'', 'DI', 'SI', 'FST', 'IA', 'FA', 'NI', 'FT', 'FI', 'IO'}; Rank 5 - 2026-09-10 19:00:21
+INFO - 21-02: {'', 'SI', 'IO', 'FT', 'DI', 'FST', 'FA', 'FI', 'NI', 'IA'}; Rank 3 - 2026-09-10 19:00:21
+INFO - 21-03: {'', 'FST', 'FA', 'IA', 'DI', 'SI', 'NI', 'FI', 'FT', 'IO'}; Rank 1 - 2026-09-10 19:00:21
+INFO - 21-04: {'', 'FI', '0', 'DI', 'FT', 'NI'}; Rank 7 - 2026-09-10 19:00:21
+INFO - 21-05: {'', 'NI', 'FT', 'FI', 'FST', 'DI', 'IO', '0'}; Rank 0 - 2026-09-10 19:00:21
+INFO - 21-06: {'', 'FT', 'DI', 'NI', 'FST', 'IO', 'FI', '0'}; Rank 2 - 2026-09-10 19:00:21
+INFO - 21-07: {'', 'NI', 'IO', '0', 'DI', 'FT', 'FST', 'FI'}; Rank 4 - 2026-09-10 19:00:21
+INFO - 21-08: {'', 'FT', 'IO', 'FST', 'NI', 'FI', 'DI', '0'}; Rank 6 - 2026-09-10 19:00:21
+INFO - 21-09: {'', 'SI', 'NI', 'FT', 'FST', 'FI', 'DI', 'IO', '0'}; Rank 0 - 2026-09-10 19:00:19
+INFO - 21-10: {'', 'FT', 'IO', 'FST', 'NI', 'FI', 'DI', 'SI', '0'}; Rank 6 - 2026-09-10 19:00:19
+INFO - 21-11: {'', 'FST', 'IO', 'FI', '0', 'DI', 'SI', 'FT', 'NI'}; Rank 7 - 2026-09-10 19:00:19
+INFO - 21-12: {'', 'FST', '0', 'NI', 'SI', 'DI', 'FI', 'FT', 'IO'}; Rank 1 - 2026-09-10 19:00:19
+INFO - 22-01: {'', 'SI', 'FT', 'DI', 'NI', 'FST', 'IO', 'FI', '0'}; Rank 2 - 2026-09-10 19:00:19
+INFO - 22-02: {'', 'NI', 'SI', 'DI', '0', 'IO', 'FT', 'FST', 'FI'}; Rank 4 - 2026-09-10 19:00:19
+INFO - 22-03: {'', 'SI', 'IO', 'FT', 'DI', 'FST', 'FI', 'NI', '0'}; Rank 3 - 2026-09-10 19:00:19
+INFO - 22-04: {'', 'DI', 'SI', 'FST', 'NI', '0', 'FT', 'FI', 'IO'}; Rank 5 - 2026-09-10 19:00:19
+INFO - 22-05: {'', 'NI', 'SI', 'DI', 'IO', '0', 'FT', 'FST', 'FI'}; Rank 4 - 2026-09-10 19:00:18
+INFO - 22-06: {'', 'SI', 'IO', 'FT', 'DI', 'FST', 'FI', 'NI', '0'}; Rank 3 - 2026-09-10 19:00:18
+INFO - 22-07: {'', 'DI', 'SI', 'FST', 'NI', '0', 'FT', 'FI', 'IO'}; Rank 5 - 2026-09-10 19:00:18
+INFO - 22-08: {'', 'SI', 'FT', 'DI', 'NI', 'IO', 'FST', 'FI', '0'}; Rank 2 - 2026-09-10 19:00:18
+INFO - 22-09: {'', 'FST', '0', 'NI', 'DI', 'SI', 'FI', 'FT', 'IO'}; Rank 1 - 2026-09-10 19:00:18
+INFO - 22-10: {'', 'FST', 'IO', 'FI', '0', 'DI', 'SI', 'FT', 'NI'}; Rank 7 - 2026-09-10 19:00:18
+INFO - 22-11: {'', 'FT', 'IO', 'FST', 'FI', 'DI', '0', 'SI', 'NI'}; Rank 6 - 2026-09-10 19:00:18
+INFO - 22-12: {'', 'SI', 'NI', 'FT', 'LSI', 'FI', 'DI', 'FST', 'IO', '0'}; Rank 0 - 2026-09-10 19:00:18
+INFO - 23-01: {'', 'LSI', 'FST', 'IO', 'FI', '0', 'DI', 'SI', 'FT', 'NI'}; Rank 7 - 2026-09-10 19:00:16
+INFO - 23-02: {'', 'LSI', 'SI', 'FT', 'DI', 'NI', 'IO', 'FST', 'FI', '0'}; Rank 2 - 2026-09-10 19:00:16
+INFO - 23-03: {'', 'FST', '0', 'NI', 'DI', 'SI', 'LSI', 'FI', 'FT', 'IO'}; Rank 1 - 2026-09-10 19:00:16
+INFO - 23-04: {'', 'SI', 'NI', 'FT', 'LSI', 'FI', 'DI', 'FST', 'IO', '0'}; Rank 0 - 2026-09-10 19:00:16
+INFO - 23-05: {'', 'FT', 'IO', 'FST', 'FI', 'DI', '0', 'SI', 'NI', 'LSI'}; Rank 6 - 2026-09-10 19:00:16
+INFO - 23-06: {'', 'DI', 'SI', 'FST', 'NI', '0', 'FT', 'FI', 'IO', 'LSI'}; Rank 5 - 2026-09-10 19:00:16
+INFO - 23-07: {'', 'SI', 'IO', 'FT', 'DI', 'FST', 'FI', 'NI', 'LSI', '0'}; Rank 3 - 2026-09-10 19:00:16
+INFO - 23-08: {'', 'NI', 'SI', 'DI', 'IO', '0', 'LSI', 'FT', 'FST', 'FI'}; Rank 4 - 2026-09-10 19:00:16
+INFO - 23-09: {'', 'SI', 'IO', 'FT', 'DI', 'FST', 'FI', 'NI', 'LSI', '0'}; Rank 3 - 2026-09-10 19:00:14
+INFO - 23-10: {'', 'NI', 'SI', 'DI', 'IO', '0', 'LSI', 'FT', 'FST', 'FI'}; Rank 4 - 2026-09-10 19:00:14
+INFO - 23-11: {'', 'DI', 'SI', 'FST', 'NI', '0', 'FT', 'FI', 'IO', 'LSI'}; Rank 5 - 2026-09-10 19:00:14
+INFO - 23-12: {'', 'FT', 'IO', 'FST', 'FI', 'DI', '0', 'SI', 'NI', 'LSI'}; Rank 6 - 2026-09-10 19:00:14
+INFO - 24-01: {'', 'SI', 'NI', 'FT', 'LSI', 'FI', 'DI', 'FST', 'IO', '0'}; Rank 0 - 2026-09-10 19:00:14
+INFO - 24-02: {'', 'FST', '0', 'NI', 'DI', 'SI', 'LSI', 'FI', 'FT', 'IO'}; Rank 1 - 2026-09-10 19:00:14
+INFO - 24-03: {'', 'LSI', 'SI', 'FT', 'DI', 'NI', 'FST', 'IO', 'FI', '0'}; Rank 2 - 2026-09-10 19:00:14
+INFO - 24-04: {'', 'LSI', 'FST', 'IO', 'FI', '0', 'DI', 'SI', 'FT', 'NI'}; Rank 7 - 2026-09-10 19:00:14
+INFO - 24-05: {'', 'SI', 'NA', 'FA', 'NI', 'FT', 'LSI', 'FST', 'DI', 'FI', 'IO', 'IA'}; Rank 0 - 2026-09-10 19:00:12
+INFO - 24-06: {'', 'LSI', 'FST', 'IO', 'FI', 'IA', 'AO', 'DI', 'SI', 'FT', 'NA', 'FA', 'NI'}; Rank 7 - 2026-09-10 19:00:12
+INFO - 24-07: {'', 'FST', 'FA', 'IA', 'DI', 'SI', 'NA', 'NI', 'FI', 'FT', 'LSI', 'AO', 'IO'}; Rank 1 - 2026-09-10 19:00:12
+INFO - 24-08: {'', 'FA', 'SI', 'LSI', 'FT', 'AO', 'DI', 'NI', 'NA', 'FST', 'IO', 'FI', 'IA'}; Rank 2 - 2026-09-10 19:00:12
+INFO - 24-09: {'', 'FT', 'IO', 'FST', 'AO', 'FI', 'IA', 'NA', 'DI', 'FA', 'SI', 'NI', 'LSI'}; Rank 6 - 2026-09-10 19:00:12
+INFO - 24-10: {'', 'DI', 'NA', 'AO', 'SI', 'FST', 'FA', 'IA', 'NI', 'FT', 'FI', 'IO', 'LSI'}; Rank 5 - 2026-09-10 19:00:12
+INFO - 24-11: {'', 'NI', 'IA', 'SI', 'DI', 'IO', 'LSI', 'F', 'FT', 'FST', 'AO', 'FI', 'NA', 'FA'}; Rank 4 - 2026-09-10 19:00:12
+INFO - 24-12: {'', 'SI', 'IO', 'FT', 'DI', 'FST', 'FA', 'FI', 'SLI', 'NI', 'AO', 'F', 'NA', 'IA', 'LSI'}; Rank 3 - 2026-09-10 19:00:12
+INFO - 25-01: {'', 'SI', 'IA', 'NA', 'SLI', 'NI', 'FT', 'LSI', 'FI', 'DI', 'FST', 'F', 'IO', 'FA', 'I', 'AO'}; Rank 0 - 2026-09-10 19:00:10
+INFO - 25-02: {'', 'FST', 'I', 'FA', 'IA', 'DI', 'SI', 'NA', 'NI', 'FI', 'FT', 'LSI', 'F', 'SLI', 'AO', 'IO'}; Rank 1 - 2026-09-10 19:00:10
+INFO - 25-03: {'', 'FA', 'SI', 'LSI', 'FT', 'SLI', 'AO', 'DI', 'NI', 'NA', 'FST', 'IO', 'F', 'FI', 'IA', 'I'}; Rank 2 - 2026-09-10 19:00:10
+INFO - 25-04: {'', 'SI', 'IO', 'FT', 'DI', 'N', 'FST', 'FA', 'FI', 'SLI', 'NI', 'AO', 'F', 'I', 'NA', 'IA', 'LSI'}; Rank 3 - 2026-09-10 19:00:10
+INFO - 25-05: {'', 'NI', 'IA', 'I', 'SI', 'DI', 'IO', 'LSI', 'SLI', 'FT', 'F', 'FST', 'AO', 'N', 'FI', 'NA', 'FA'}; Rank 4 - 2026-09-10 19:00:10
+INFO - 25-06: {'', 'DI', 'NA', 'AO', 'SI', 'SLI', 'F', 'FST', 'FA', 'IA', 'NI', 'I', 'FT', 'N', 'FI', 'IO', 'LSI'}; Rank 5 - 2026-09-10 19:00:10
+INFO - 25-07: {'', 'FT', 'F', 'IO', 'FST', 'AO', 'FI', 'IA', 'NA', 'N', 'DI', 'SLI', 'FA', 'I', 'SI', 'NI', 'LSI'}; Rank 6 - 2026-09-10 19:00:10
+INFO - 25-08: {'', 'LSI', 'FST', 'IO', 'FI', 'IA', 'AO', 'DI', 'I', 'N', 'SI', 'FT', 'NA', 'F', 'SLI', 'FA', 'NI'}; Rank 7 - 2026-09-10 19:00:10
+INFO - 25-09: {'', 'LSI', 'FST', 'IO', 'FI', 'IA', 'AO', 'DI', 'I', 'N', 'SI', 'FT', 'NA', 'F', 'SLI', 'FA', 'NI'}; Rank 7 - 2026-09-10 19:00:08
+INFO - 25-10: {'', 'FT', 'F', 'IO', 'FST', 'AO', 'FI', 'IA', 'NA', 'N', 'DI', 'SLI', 'FA', 'I', 'SI', 'NI', 'LSI'}; Rank 6 - 2026-09-10 19:00:08
+INFO - 25-11: {'', 'DI', 'NA', 'AO', 'SI', 'SLI', 'F', 'FST', 'FA', 'IA', 'NI', 'I', 'FT', 'N', 'FI', 'IO', 'LSI'}; Rank 5 - 2026-09-10 19:00:08
+INFO - 25-12: {'', 'NI', 'IA', 'I', 'SI', 'DI', 'IO', 'LSI', 'SLI', 'FT', 'F', 'FST', 'AO', 'N', 'FI', 'NA', 'FA'}; Rank 4 - 2026-09-10 19:00:08
+INFO - 26-01: {'', 'SI', 'IO', 'FT', 'DI', 'N', 'FST', 'FA', 'FI', 'SLI', 'NI', 'AO', 'LS', 'F', 'NA', 'I', 'IA', 'LSI'}; Rank 3 - 2026-09-10 19:00:08
+INFO - 26-02: {'', 'N', 'FA', 'SI', 'LSI', 'FT', 'SLI', 'LS', 'AO', 'DI', 'I', 'NI', 'NA', 'FST', 'IO', 'FI', 'IA', 'F'}; Rank 2 - 2026-09-10 19:00:08
+INFO - 26-03: {'', 'SI', 'IA', 'NA', 'SLI', 'NI', 'FT', 'LSI', 'FI', 'FST', 'DI', 'IO', 'N', 'FA', 'I', 'AO'}; Rank 0 - 2026-09-10 19:00:08
+INFO - 26-04: {'', 'FST', 'I', 'FA', 'IA', 'SI', 'NA', 'NI', 'LSI', 'FI', 'FT', 'DI', 'SLI', 'AO', 'N', 'IO'}; Rank 1 - 2026-09-10 19:00:08
