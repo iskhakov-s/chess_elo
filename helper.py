@@ -140,7 +140,7 @@ def find_optimal_split(month_names: list[dict[str, str]], size: int) -> tuple[in
 
     return bags, sums
 
-def mpi_main(function: callable, log_name: str, get_period_range_kwargs=None):
+def mpi_main(function: callable, log_name: str, get_period_range_kwargs=None, mpi_log_kwargs=None):
     """calls a function on each csv/sql table independently and produces a sorted output log
 
     Args:
@@ -151,14 +151,14 @@ def mpi_main(function: callable, log_name: str, get_period_range_kwargs=None):
     rank = comm.rank
     size = comm.size
     
-    mpi_logging.mpi_log_setup(rank, log_name)
+    mpi_logging.mpi_log_setup(rank, log_name, **(mpi_log_kwargs or {}))
     
     if rank == 0:
         month_names = get_table_data()
         if get_period_range_kwargs is not None:
             month_names = get_period_range(**get_period_range_kwargs, table_data=month_names)
         bags, _ = find_optimal_split(month_names, size)
-        print(f"Root: Completed reading {len(month_names)} SQL/CSV names.")
+        # print(f"Root: Completed reading {len(month_names)} SQL/CSV names.")
     else:
         month_names = None
         bags = None

@@ -108,21 +108,14 @@ from staging_01_jan;
 -- 20+257 bytes
 create table players (
     id int not null,
-    birthyear smallint check(year between 1800 and 2200),
-    birthmonth tinyint check(month between 1 and 12),
-    birthday tinyint check(day between 1 and 31),
+    birthday date,
+    is birthday_exact boolean,
     name VARCHAR(255) NOT NULL,
     fed CHAR(3) NOT NULL,
     sex CHAR(1) DEFAULT NULL,
     title tinyint unsigned not null, -- 0 = none, 1 = GM, 2 = IM, 3 = FM, 4 = CM, 5 = HGM
     wtitle tinyint unsigned not null, -- 0 = none, 1 = WGM, 2 = WIM, 3 = WFM, 4 = WCM, 5 = WHGM
-    foa tinyint unsigned not null, -- 0 = none, 1 = AFM, 2 = AIM, 3 = ACM, 4 = AGM, 5 = AAF 
-    otit_ia boolean not null,
-    otit_fa boolean not null,
-    otit_na boolean not null,
-    otit_io boolean not null,
-    otit_ft boolean not null,
-    otit_fst boolean not null
+    foa tinyint unsigned not null -- 0 = none, 1 = AFM, 2 = AIM, 3 = ACM, 4 = AGM, 5 = AAF 
     primary key id
 );
 
@@ -133,6 +126,7 @@ CREATE TABLE player_profiles (
     profile_id INT AUTO_INCREMENT PRIMARY KEY,
     player_id INT NOT NULL,
     effective_date DATE NOT NULL,
+    end_date DATE NOT NULL, -- exclusive, using sentinel date 9999-12-31 for current?
     name VARCHAR(255) NOT NULL,
     fed CHAR(3) NOT NULL,
     sex CHAR(1) DEFAULT NULL,
@@ -147,6 +141,26 @@ CREATE TABLE player_profiles (
     otit_fst boolean,
     PRIMARY KEY (profile_id),
     FOREIGN KEY (player_id) REFERENCES players(id)
+);
+
+create table other_titles (
+    player_id int not null,
+    effective_date date not null,
+    otit_ia boolean, -- arbiter titles
+    otit_fa boolean,
+    otit_na boolean,
+    otit_io boolean, -- international organizer
+    otit_ao boolean,
+    otit_di boolean, -- trainer titles
+    otit_ni boolean,
+    otit_fi boolean,
+    otit_ft boolean,
+    otit_fst boolean, 
+    otit_li boolean, -- licensed instructors
+    otit_lsi boolean,
+    otit_sli boolean,
+    primary key (player_id, effective_date),
+    foreign key (player_id) references players(id)
 );
 
 -- 13 bytes

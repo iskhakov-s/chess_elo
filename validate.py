@@ -201,7 +201,35 @@ def delete_null_rows(month_names: list[dict[str, str]]):
             #     print(month_data['table_name'])
             #     print(head)
     conn.close()
+    
+
+def validate_long_names_mpi(month_names: list[dict[str, str]], rank):
+    conn = initiate_conn()
+    with conn.cursor() as cursor:
+        for month_data in month_names:
+            cursor.execute(f"SELECT MAX(CHAR_LENGTH(name)) FROM {month_data['table_name']};")
+            max_length = cursor.fetchone()[0]
+            cursor.execute(f"""SELECT id FROM {month_data['table_name']} WHERE CHAR_LENGTH(TRIM(name)) = {max_length};""")
+            long_names = [row[0] for row in cursor.fetchall()]
+            if long_names:
+                mpi_log(rank, f"{month_data['year']}-{month_data['month_digits']}: {max_length=}")
+                mpi_log(rank, f"{month_data['year']}-{month_data['month_digits']}: {long_names}")
+    conn.close()
+    
+
+def get_titles_in_name_mpi(month_names: list[dict[str, str]], rank):
+    """Certain titles in the early years are stored in the name column, so they have to be manually extracted.
+    """    
+    conn = initiate_conn()
+    with conn.cursor() as cursor:
+        for month_data in month_names:
+            cursor.execute(f"SELECT id, name FROM {month_data['table_name']} WHERE name like '%(%)%';")
+            output = cursor.fetchall()
+            for row in output:
+                mpi_log(rank, f"{month_data['year']}-{month_data['month_digits']}: {row[0]:>6} {row[1]}")
+    conn.close()
+
 
 # mpiexec -n 8 python -u validate.py
 if __name__ == "__main__":
-    helper.mpi_main(get_distinct_otitles_mpi, "distinct_otitles", get_period_range_kwargs={"start_year": 2016, "start_month": "sep", "end_year": 2026, "end_month": "jun"})
+    helper.mpi_main(get_titles_in_name_mpi, "get_titles_in_name", mpi_log_kwargs={ "format": "%(message)s"})

@@ -10,7 +10,7 @@ def transform_type_1_2_3():
             start_month="apr",
             end_year=2012,
             end_month="aug",
-            table_data=table_data,
+            table_data=helper.get_table_data(),
         )
         cursor.execute("""
             insert into player_staging_union (id, period, name, fed, sex, title, wtitle, inactive)
@@ -37,7 +37,7 @@ def transform_type_1_2_3():
                         when "wh" then 5
                         else 0
                     end as wtitle,
-                    if(flag like "%i%", 1, 0) as inactive,
+                    if(flag like "%i%", 1, 0) as inactive
                 from staging_01_jan;
             );
         """)
@@ -78,11 +78,18 @@ def transform_type_4(month_names: list[dict[str, str]], rank):
             """)
             if cursor.warnings:
                 for warning in cursor.warnings:
-                    mpi_logging.mpi_log(rank, f"{month_data['year']}-{month_data['month_digits']}: {warning}")
-            mpi_logging.mpi_log(rank, f"{month_data['year']}-{month_data['month_digits']}: Inserted {cursor.rowcount} rows into player_staging_union")
+                    mpi_logging.mpi_log(
+                        rank,
+                        f"{month_data['year']}-{month_data['month_digits']}: {warning}",
+                    )
+            mpi_logging.mpi_log(
+                rank,
+                f"{month_data['year']}-{month_data['month_digits']}: Inserted {cursor.rowcount} rows into player_staging_union",
+            )
+    conn.commit()
     conn.close()
-    
-    
+
+
 def transform_type_5(month_names: list[dict[str, str]], rank):
     conn = helper.initiate_conn(get_warnings=True)
     with conn.cursor() as cursor:
@@ -126,8 +133,15 @@ def transform_type_5(month_names: list[dict[str, str]], rank):
             """)
             if cursor.warnings:
                 for warning in cursor.warnings:
-                    mpi_logging.mpi_log(rank, f"{month_data['year']}-{month_data['month_digits']}: {warning}")
-            mpi_logging.mpi_log(rank, f"{month_data['year']}-{month_data['month_digits']}: Inserted {cursor.rowcount} rows into player_staging_union")
+                    mpi_logging.mpi_log(
+                        rank,
+                        f"{month_data['year']}-{month_data['month_digits']}: {warning}",
+                    )
+            mpi_logging.mpi_log(
+                rank,
+                f"{month_data['year']}-{month_data['month_digits']}: Inserted {cursor.rowcount} rows into player_staging_union",
+            )
+    conn.commit()
     conn.close()
 
 

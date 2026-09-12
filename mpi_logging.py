@@ -4,14 +4,16 @@ import datetime
 from mpi4py import MPI
 
 # logging format is setup so that sorting by year/month is simple
-def mpi_log_setup(rank, filename, remove_existing=True):
+def mpi_log_setup(rank, filename, remove_existing=True, format=None):
     path = os.path.join("logs", f"rank_{rank}_{filename}.log")
     if remove_existing and os.path.exists(path):
         os.remove(path)
+    if format is None:
+        format = "%(levelname)s - %(message)s - %(asctime)s"
     logging.basicConfig(
         filename=path,
         filemode='a',  # 'a' to append, 'w' to overwrite
-        format='%(levelname)s - %(message)s - %(asctime)s',
+        format=format,
         datefmt='%Y-%m-%d %H:%M:%S',
         level=logging.INFO
     )
