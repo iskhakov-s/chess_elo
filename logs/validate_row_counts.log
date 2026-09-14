@@ -1,0 +1,55 @@
+Log generated on 2026-09-14 01:35:51.692078
+01-01: CSV rows: 36978 , SQL rows: 36966 , Diff: 12    , Blank rows: 0     ; Rank 2
+01-04: CSV rows: 37625 , SQL rows: 37613 , Diff: 12    , Blank rows: 0     ; Rank 6
+01-07: CSV rows: 38622 , SQL rows: 38610 , Diff: 12    , Blank rows: 0     ; Rank 0
+01-10: CSV rows: 39741 , SQL rows: 39726 , Diff: 15    , Blank rows: 0     ; Rank 5
+02-01: CSV rows: 29283 , SQL rows: 29272 , Diff: 11    , Blank rows: 0     ; Rank 7
+02-04: CSV rows: 41408 , SQL rows: 41395 , Diff: 13    , Blank rows: 0     ; Rank 3
+02-07: CSV rows: 40958 , SQL rows: 40944 , Diff: 14    , Blank rows: 0     ; Rank 3
+02-10: CSV rows: 42619 , SQL rows: 42603 , Diff: 16    , Blank rows: 0     ; Rank 5
+03-01: CSV rows: 45016 , SQL rows: 44982 , Diff: 34    , Blank rows: 0     ; Rank 4
+03-04: CSV rows: 45663 , SQL rows: 45631 , Diff: 32    , Blank rows: 0     ; Rank 6
+03-07: CSV rows: 47006 , SQL rows: 46981 , Diff: 25    , Blank rows: 0     ; Rank 0
+03-10: CSV rows: 49264 , SQL rows: 49241 , Diff: 23    , Blank rows: 0     ; Rank 1
+04-01: CSV rows: 50458 , SQL rows: 50436 , Diff: 22    , Blank rows: 0     ; Rank 7
+04-04: CSV rows: 51908 , SQL rows: 51885 , Diff: 23    , Blank rows: 0     ; Rank 2
+04-07: CSV rows: 53765 , SQL rows: 53742 , Diff: 23    , Blank rows: 0     ; Rank 2
+04-10: CSV rows: 56931 , SQL rows: 56905 , Diff: 26    , Blank rows: 0     ; Rank 7
+05-01: CSV rows: 58650 , SQL rows: 58622 , Diff: 28    , Blank rows: 0     ; Rank 1
+05-04: CSV rows: 60794 , SQL rows: 60754 , Diff: 40    , Blank rows: 0     ; Rank 0
+05-07: CSV rows: 63263 , SQL rows: 63227 , Diff: 36    , Blank rows: 0     ; Rank 6
+05-10: CSV rows: 65798 , SQL rows: 65761 , Diff: 37    , Blank rows: 0     ; Rank 4
+06-01: CSV rows: 67437 , SQL rows: 67384 , Diff: 53    , Blank rows: 0     ; Rank 5
+06-04: CSV rows: 69282 , SQL rows: 69237 , Diff: 45    , Blank rows: 0     ; Rank 3
+06-07: CSV rows: 72006 , SQL rows: 71950 , Diff: 56    , Blank rows: 0     ; Rank 5
+06-10: CSV rows: 75097 , SQL rows: 75024 , Diff: 73    , Blank rows: 0     ; Rank 4
+07-01: CSV rows: 77057 , SQL rows: 76983 , Diff: 74    , Blank rows: 0     ; Rank 6
+07-04: CSV rows: 79363 , SQL rows: 79287 , Diff: 76    , Blank rows: 0     ; Rank 3
+07-07: CSV rows: 82662 , SQL rows: 82594 , Diff: 68    , Blank rows: 0     ; Rank 0
+07-10: CSV rows: 85351 , SQL rows: 85285 , Diff: 66    , Blank rows: 0     ; Rank 7
+08-01: CSV rows: 87076 , SQL rows: 87022 , Diff: 54    , Blank rows: 0     ; Rank 2
+08-04: CSV rows: 89430 , SQL rows: 89399 , Diff: 31    , Blank rows: 0     ; Rank 1
+08-07: CSV rows: 92971 , SQL rows: 92942 , Diff: 29    , Blank rows: 0     ; Rank 1
+08-10: CSV rows: 97177 , SQL rows: 97147 , Diff: 30    , Blank rows: 0     ; Rank 2
+09-01: CSV rows: 99232 , SQL rows: 99231 , Diff: 1     , Blank rows: 0     ; Rank 0
+09-04: CSV rows: 99997 , SQL rows: 99996 , Diff: 1     , Blank rows: 0     ; Rank 7
+09-07: CSV rows: 105242, SQL rows: 105241, Diff: 1     , Blank rows: 0     ; Rank 6
+09-09: CSV rows: 107392, SQL rows: 107391, Diff: 1     , Blank rows: 0     ; Rank 4
+09-11: CSV rows: 99522 , SQL rows: 99521 , Diff: 1     , Blank rows: 0     ; Rank 3
+10-01: CSV rows: 109556, SQL rows: 109555, Diff: 1     , Blank rows: 0     ; Rank 5
+10-03: CSV rows: 113629, SQL rows: 113628, Diff: 1     , Blank rows: 0     ; Rank 0
+10-05: CSV rows: 116524, SQL rows: 116523, Diff: 1     , Blank rows: 0     ; Rank 1
+10-07: CSV rows: 119042, SQL rows: 119041, Diff: 1     , Blank rows: 0     ; Rank 2
+10-09: CSV rows: 121878, SQL rows: 121877, Diff: 1     , Blank rows: 0     ; Rank 3
+10-11: CSV rows: 123519, SQL rows: 123518, Diff: 1     , Blank rows: 0     ; Rank 5
+11-01: CSV rows: 122615, SQL rows: 122614, Diff: 1     , Blank rows: 0     ; Rank 4
+11-03: CSV rows: 126695, SQL rows: 126695, Diff: 0     , Blank rows: 0     ; Rank 6
+11-05: CSV rows: 129843, SQL rows: 129843, Diff: 0     , Blank rows: 0     ; Rank 7
+11-07: CSV rows: 132263, SQL rows: 132263, Diff: 0     , Blank rows: 0     ; Rank 7
+11-09: CSV rows: 135353, SQL rows: 135353, Diff: 0     , Blank rows: 0     ; Rank 6
+11-11: CSV rows: 137694, SQL rows: 137693, Diff: 1     , Blank rows: 0     ; Rank 5
+12-01: CSV rows: 139007, SQL rows: 139005, Diff: 2     , Blank rows: 0     ; Rank 4
+12-03: CSV rows: 141286, SQL rows: 141284, Diff: 2     , Blank rows: 0     ; Rank 3
+12-05: CSV rows: 145073, SQL rows: 145071, Diff: 2     , Blank rows: 0     ; Rank 2
+12-07: CSV rows: 148194, SQL rows: 148192, Diff: 2     , Blank rows: 0     ; Rank 1
+12-08: CSV rows: 149715, SQL rows: 149713, Diff: 2     , Blank rows: 0     ; Rank 0

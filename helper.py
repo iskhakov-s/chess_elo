@@ -12,6 +12,7 @@ import mpi_logging
 FIDE_CSV_DIR = "fide_historical_ratings_formatted"
 # secondary directory used to make edits and formatting changes to the CSV files without affecting the original files in FIDE_CSV_DIR
 FIDE_CSV_DIR_2 = "fide_historical_ratings_reformatted"
+SRC_DIR = "fide_historical_ratings"
 
 MONTH_INT2STR = {
     1: "jan",
@@ -56,10 +57,10 @@ def get_table_data() -> list[dict[str, str]]:
         list[dict[str, str]]: list of dictionaries, where each dictionary stores data for a month as strings:
             - "table_name": the name of the SQL table corresponding to the month
             - "csv_name": the name of the CSV file for the month
-            - "year": the year of the data
-            - "month": the month of the data
-            - "year4": the year in four-digit format
-            - "month_digits": the month in two-digit format (e.g., "01" for January)
+            - "year": year, two-digit format
+            - "month": month, three-letter format
+            - "year4": year, four-digit format
+            - "month_digits": month, two-digit format (i.e., "01" for January)
             - "num_rows": the number of rows in the CSV file for the month, excluding the header row
     """    
     output = []
@@ -111,6 +112,38 @@ def get_period_range(start_year: int, start_month: int | str, end_year: int, end
                 output.append(month)
 
     return output
+
+
+
+def get_type_dict(table_data: list[dict[str, str]]=None) -> dict[tuple[str, str], int]:
+    """Returns a mapping from the month to the table columns type. Mainly used for table import into MySQL.
+
+    Args:
+        table_data (list[dict[str, str]]): output of get_table_data(), if not provided it will be called to get the data
+
+    Returns:
+        dict[tuple[int, int], int]: a tuple of (year, month) mapped to the type of the table (1-5)
+    """
+    if table_data is None:
+        table_data = get_table_data()
+    
+    type_dict = {
+        ("2001", "jan"): 1,
+        ("2001", "apr"): 2,
+        ("2002", "jan"): 2,
+        ("2001", "jul"): 3,
+        ("2001", "oct"): 3,
+        ("2002", "apr"): 3,
+    }
+    
+    for month_data in get_period_range(2002, "jul", 2012, "aug", table_data=table_data):
+        type_dict[(month_data["year4"], month_data["month"])] = 2
+    for month_data in get_period_range(2012, "sep", 2016, "aug", table_data=table_data):
+        type_dict[(month_data["year4"], month_data["month"])] = 4
+    for month_data in get_period_range(2016, "sep", 2026, "apr", table_data=table_data):
+        type_dict[(month_data["year4"], month_data["month"])] = 5
+
+    return type_dict
 
 
 def find_optimal_split(month_names: list[dict[str, str]], size: int) -> tuple[int, int]:
@@ -166,7 +199,8 @@ def mpi_main(function: callable, log_name: str, get_period_range_kwargs=None, mp
     month_names = comm.bcast(month_names, root=0)
     bags = comm.bcast(bags, root=0)
     
-    function([month_names[j] for j in bags[rank]], rank)
+    if len(month_names) != 0:
+        function([month_names[j] for j in bags[rank]], rank)
     
     comm.Barrier()
     mpi_logging.mpi_combine_logs(rank, log_name)

@@ -40,30 +40,6 @@ def validate_ids_mpi(month_names: list[dict[str, str]], rank):
             total_diff = only_csv + only_sql
             mpi_log(rank, f"{month_data['year']}-{month_data['month_digits']}: CSV IDs: {len(csv_ids):<6}, SQL IDs: {len(sql_ids):<6}, Overlap: {overlap:<6}, Only CSV: {only_csv:<6}, Only SQL: {only_sql:<6}, Total Diff: {total_diff:<6}")
     conn.close()
-
-
-def validate_ids_main():
-    comm = MPI.COMM_WORLD
-    rank = comm.rank
-    size = comm.size
-    
-    mpi_log_setup(rank, "validate_ids")
-    
-    if rank == 0:
-        month_names = get_table_data()
-        bags, _ = find_optimal_split(month_names, size)
-        print(f"Root: Completed reading {len(month_names)} SQL/CSV names.")
-    else:
-        month_names = None
-        bags = None
-
-    month_names = comm.bcast(month_names, root=0)
-    bags = comm.bcast(bags, root=0)
-    
-    validate_ids_mpi([month_names[j] for j in bags[rank]], rank)
-    
-    comm.Barrier()
-    mpi_combine_logs(rank, "validate_ids")
     
 
 def validate_rows_mpi(month_names: list[dict[str, str]], rank):
@@ -91,12 +67,11 @@ def validate_rows_main():
     validate_rows_mpi(input, 0)
 
 # checks that the number of rows in the CSV and SQL table match
-def validate_row_counts_mpi(month_names: list[dict[str, str]]):
+def validate_row_counts_mpi(month_names: list[dict[str, str]], rank):
     conn = initiate_conn()
-    output = []
     with conn.cursor() as cursor:
         for month_data in month_names:
-            csv_path = os.path.join(FIDE_CSV_DIR, month_data["csv_name"])     
+            csv_path = os.path.join(FIDE_CSV_DIR_2, month_data["csv_name"])     
             with open(csv_path, "r") as f:
                 reader = csv.reader(f)
                 next(reader)  # skip header
@@ -111,46 +86,8 @@ def validate_row_counts_mpi(month_names: list[dict[str, str]]):
             cursor.execute(f"SELECT COUNT(*) FROM {month_data['table_name']};")
             sql_rows = cursor.fetchall()[0][0]
             diff = csv_rows - sql_rows
-            output.append((month_data["year"], month_data["month_digits"], csv_rows, sql_rows, diff, blank_rows))
+            mpi_log(rank, f"{month_data['year']}-{month_data['month_digits']}: CSV rows: {csv_rows:<6}, SQL rows: {sql_rows:<6}, Diff: {diff:<6}, Blank rows: {blank_rows:<6}")
     conn.close()
-    return np.array(output, dtype=int)
-
-def validate_row_counts_mpi_main():
-    comm = MPI.COMM_WORLD
-    rank = comm.rank
-    size = comm.size
-    
-    if rank == 0:
-        month_names = get_table_data()
-        print(f"Root: Completed reading {len(month_names)} SQL/CSV names.")
-    else:
-        month_names = None
-
-    month_names = comm.bcast(month_names, root=0)
-    
-    start_idx = rank * len(month_names) // size
-    end_idx = min((rank + 1) * len(month_names) // size, len(month_names))
-    
-    row_counts = validate_row_counts_mpi(month_names[start_idx:end_idx])
-    gathered_row_counts = comm.gather(row_counts, root=0)
-    
-    if rank == 0:
-        print("Root: Completed gathering row counts. Now sorting and outputting to CSV...")
-        # convert to numpy
-        gathered_row_counts = np.vstack(gathered_row_counts)
-        
-        # order by year, month
-        indices = np.lexsort((gathered_row_counts[:, 1], gathered_row_counts[:, 0]))
-        gathered_row_counts = gathered_row_counts[indices]
-
-        # create 2 outputs, one for rows with diffs, one for those without
-        indices = gathered_row_counts[:,4] == 0
-        no_diff = gathered_row_counts[indices]
-        diff = gathered_row_counts[~indices]
-        
-        # output to CSV
-        np.savetxt("row_counts_no_diff.csv", no_diff, delimiter=",", fmt="%d", header="year,month,csv_rows,sql_rows,diff,blank_rows", comments="")
-        np.savetxt("row_counts_diff.csv", diff, delimiter=",", fmt="%d", header="year,month,csv_rows,sql_rows,diff,blank_rows", comments="")
 
 
 def get_distinct_titles_mpi(month_names: list[dict[str, str]], rank):
@@ -232,4 +169,5 @@ def get_titles_in_name_mpi(month_names: list[dict[str, str]], rank):
 
 # mpiexec -n 8 python -u validate.py
 if __name__ == "__main__":
-    helper.mpi_main(get_titles_in_name_mpi, "get_titles_in_name", mpi_log_kwargs={ "format": "%(message)s"})
+    # helper.mpi_main(get_titles_in_name_mpi, "get_titles_in_name", mpi_log_kwargs={ "format": "%(message)s"})
+    helper.mpi_main(validate_row_counts_mpi, "validate_row_counts", mpi_log_kwargs={ "format": "%(message)s"}, get_period_range_kwargs={"start_year": 2001, "start_month": 1, "end_year": 2012, "end_month": 8})
