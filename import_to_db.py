@@ -3,6 +3,8 @@ import mysql.connector
 from mysql.connector.connection import MySQLConnection
 
 from helper import FIDE_CSV_DIR, FIDE_CSV_DIR_2, initiate_conn
+import helper
+import mpi_logging
 
 MONTHS = {
     1: "jan",
@@ -19,116 +21,77 @@ MONTHS = {
     12: "dec"
 }
 
+CREATE_TABLE_STRINGS = {
+    1: """CREATE TABLE {} (
+        id INT PRIMARY KEY,
+        name VARCHAR(255),
+        title VARCHAR(255),
+        fed CHAR(3),
+        elo INT,
+        games INT,
+        flag VARCHAR(255)
+    );""",
+    2: """CREATE TABLE {} (
+        id INT PRIMARY KEY,
+        name VARCHAR(255),
+        title VARCHAR(255),
+        fed CHAR(3),
+        elo INT,
+        games INT,
+        birthday VARCHAR(255),
+        flag VARCHAR(255)
+    );""",
+    3: """CREATE TABLE {} (
+        id INT PRIMARY KEY,
+        name VARCHAR(255),
+        title VARCHAR(255),
+        fed CHAR(3),
+        elo INT,
+        games INT,
+        birthday VARCHAR(255),
+        sex CHAR(1),
+        flag VARCHAR(255)
+    );""",
+    4: """CREATE TABLE {} (
+        id INT PRIMARY KEY,
+        name VARCHAR(255),
+        fed CHAR(3),
+        sex CHAR(1),
+        title VARCHAR(255),
+        wtitle VARCHAR(255),
+        otitle VARCHAR(255),
+        elo INT,
+        games INT,
+        k INT,
+        birthday VARCHAR(255),
+        flag VARCHAR(255)
+    );""",
+    5: """CREATE TABLE {} (
+        id INT PRIMARY KEY,
+        name VARCHAR(255),
+        fed CHAR(3),
+        sex CHAR(1),
+        title VARCHAR(255),
+        wtitle VARCHAR(255),
+        otitle VARCHAR(255),
+        foa VARCHAR(255),
+        elo INT,
+        games INT,
+        k INT,
+        birthday VARCHAR(255),
+        flag VARCHAR(255)
+    );"""
+}
 
-def init_staging_fide_table_type_1(conn: MySQLConnection, month: str, year: int):
+def init_staging_fide_table(conn: MySQLConnection, create_table_string: str, table_name: str):
     try:
         cursor = conn.cursor()
-        cursor.execute(
-            f"""CREATE TABLE staging_{year}_{month.lower()} IF NOT EXISTS (
-                    id INT PRIMARY KEY,
-                    name VARCHAR(255) NOT NULL,
-                    title VARCHAR(7),
-                    fed CHAR(3) NOT NULL,
-                    elo INT NOT NULL,
-                    games INT NOT NULL,
-                    flag VARCHAR(3)
-            );"""
-        )
+        cursor.execute(create_table_string.format(table_name))
         conn.commit()
     except mysql.connector.Error as err:
         print(f"Error creating table: {err}")
         raise
-    
-def init_staging_fide_table_type_2(conn: MySQLConnection, month: str, year: int):
-    try:
-        cursor = conn.cursor()
-        cursor.execute(
-            f"""CREATE TABLE staging_{str(year)[-2:]}_{month.lower()} (
-                id INT PRIMARY KEY,
-                name VARCHAR(255) NOT NULL,
-                title VARCHAR(7),
-                fed CHAR(3) NOT NULL,
-                elo INT NOT NULL,
-                games INT NOT NULL,
-                birthday VARCHAR(15),
-                flag VARCHAR(3)
-            );"""
-        )
-        conn.commit()
-    except mysql.connector.Error as err:
-        print(f"Error creating table: {err}")
-        raise
-    
-def init_staging_fide_table_type_3(conn: MySQLConnection, month: str, year: int):
-    try:
-        cursor = conn.cursor()
-        cursor.execute(
-            f"""CREATE TABLE staging_{str(year)[-2:]}_{month.lower()} (
-                id INT PRIMARY KEY,
-                name VARCHAR(255) NOT NULL,
-                title VARCHAR(7),
-                fed CHAR(3) NOT NULL,
-                elo INT NOT NULL,
-                games INT NOT NULL,
-                birthday VARCHAR(15),
-                sex CHAR(1),
-                flag VARCHAR(3)
-            );"""
-        )
-        conn.commit()
-    except mysql.connector.Error as err:
-        print(f"Error creating table: {err}")
-        raise
-    
-def init_staging_fide_table_type_4(conn: MySQLConnection, month: str, year: int):
-    try:
-        cursor = conn.cursor()
-        cursor.execute(
-            f"""CREATE TABLE staging_{str(year)[-2:]}_{month.lower()} (
-                id INT PRIMARY KEY,
-                name VARCHAR(255),
-                fed CHAR(3),
-                sex CHAR(1),
-                title VARCHAR(7),
-                wtitle VARCHAR(7),
-                otitle VARCHAR(15),
-                elo INT,
-                games INT,
-                k INT,
-                birthday VARCHAR(5),
-                flag VARCHAR(4)
-            );"""
-        )
-        conn.commit()
-    except mysql.connector.Error as err:
-        print(f"Error creating table: {err}")
-        raise
-    
-def init_staging_fide_table_type_5(conn: MySQLConnection, month: str, year: int):
-    try:
-        cursor = conn.cursor()
-        cursor.execute(
-            f"""CREATE TABLE staging_{str(year)[-2:]}_{month.lower()} (
-                    id INT PRIMARY KEY,
-                    name VARCHAR(255) NOT NULL,
-                    fed CHAR(3) NOT NULL,
-                    sex CHAR(1),
-                    title VARCHAR(7),
-                    wtitle VARCHAR(7),
-                    otitle VARCHAR(15),
-                    foa VARCHAR(3),
-                    elo INT NOT NULL,
-                    games INT NOT NULL,
-                    k INT NOT NULL,
-                    birthday VARCHAR(5),
-                    flag VARCHAR(3)
-            );"""
-        )
-        conn.commit()
-    except mysql.connector.Error as err:
-        print(f"Error creating table: {err}")
-        raise
-   
+
 
 def import_into_staging_fide_table(conn: MySQLConnection):
     cursor = conn.cursor()
@@ -148,8 +111,33 @@ def import_csv(conn: MySQLConnection, month:str, year:int):
     path = os.path.join(FIDE_CSV_DIR_2, filename)
     cursor.execute(f"LOAD DATA LOCAL INFILE %s INTO TABLE {table_name} FIELDS TERMINATED BY '*' IGNORE 1 ROWS;", (path,))
     conn.commit()
+    
+def import_csv_mpi(month_names: list[dict[str, str]], rank):
+    conn = initiate_conn()
+    cursor = conn.cursor()
+    
+    type_dict = helper.get_type_dict(month_names)
+    for month_data in month_names:
+        try:
+            # drop if exists
+            mpi_logging.mpi_log(rank, f"{month_data["year"]}-{month_data["month"]}: Dropping table if exists: {month_data['table_name']}")
+            cursor.execute(f"DROP TABLE IF EXISTS {month_data['table_name']};")
+            
+            # load table
+            mpi_logging.mpi_log(rank, f"{month_data["year"]}-{month_data["month"]}: Initializing staging table...")
+            create_table_string = CREATE_TABLE_STRINGS[type_dict[(month_data["year4"], month_data["month"])]]
+            init_staging_fide_table(conn, create_table_string, month_data["table_name"])
+            
+            # load from file
+            mpi_logging.mpi_log(rank, f"{month_data["year"]}-{month_data["month"]}: Importing CSV")
+            path = os.path.join(FIDE_CSV_DIR_2, month_data["csv_name"])
+            cursor.execute(f"LOAD DATA LOCAL INFILE %s INTO TABLE {month_data['table_name']} FIELDS TERMINATED BY '*' IGNORE 1 ROWS;", (path,))
+            conn.commit()
+        except Exception as e:
+            mpi_logging.mpi_log(rank, f"{month_data["year"]}-{month_data["month"]}: Error importing CSV for {month_data['month']} {month_data['year4']}: {e}")
+    conn.close()
 
-def main():
+def main_old():
     conn = initiate_conn()
     
     start_year = 2012
@@ -172,7 +160,7 @@ def main():
                     cursor.execute(f"DROP TABLE IF EXISTS staging_{str(year)[-2:]}_{month.lower()};")
                     conn.commit()
                     print("initializing...")
-                    init_staging_fide_table_type_4(conn, month, year)
+                    init_staging_fide_table(conn, create_table_string, f"staging_{str(year)[-2:]}_{month.lower()}")
                     print("importing CSV...")
                     import_csv(conn, month, year)
                 except mysql.connector.Error as err:
@@ -197,4 +185,4 @@ def temp():
     conn.close()
     
 if __name__ == "__main__":
-    main()
+    helper.mpi_main(import_csv_mpi, "import_csv_2016_2026", get_period_range_kwargs={"start_year": 2016, "start_month": 9, "end_year": 2026, "end_month": 12})

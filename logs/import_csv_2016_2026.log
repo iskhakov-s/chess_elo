@@ -1,0 +1,349 @@
+Log generated on 2026-09-14 20:27:13.736195
+INFO - 16-DEC: Dropping table if exists: staging_16_dec; Rank 0 - 2026-09-14 20:27:02
+INFO - 16-DEC: Importing CSV; Rank 0 - 2026-09-14 20:27:02
+INFO - 16-DEC: Initializing staging table...; Rank 0 - 2026-09-14 20:27:02
+INFO - 16-NOV: Dropping table if exists: staging_16_nov; Rank 1 - 2026-09-14 20:26:06
+INFO - 16-NOV: Importing CSV; Rank 1 - 2026-09-14 20:26:06
+INFO - 16-NOV: Initializing staging table...; Rank 1 - 2026-09-14 20:26:06
+INFO - 16-OCT: Dropping table if exists: staging_16_oct; Rank 1 - 2026-09-14 20:26:16
+INFO - 16-OCT: Importing CSV; Rank 1 - 2026-09-14 20:26:16
+INFO - 16-OCT: Initializing staging table...; Rank 1 - 2026-09-14 20:26:16
+INFO - 16-SEP: Dropping table if exists: staging_16_sep; Rank 0 - 2026-09-14 20:27:08
+INFO - 16-SEP: Importing CSV; Rank 0 - 2026-09-14 20:27:08
+INFO - 16-SEP: Initializing staging table...; Rank 0 - 2026-09-14 20:27:08
+INFO - 17-APR: Dropping table if exists: staging_17_apr; Rank 0 - 2026-09-14 20:26:51
+INFO - 17-APR: Importing CSV; Rank 0 - 2026-09-14 20:26:51
+INFO - 17-APR: Initializing staging table...; Rank 0 - 2026-09-14 20:26:51
+INFO - 17-AUG: Dropping table if exists: staging_17_aug; Rank 1 - 2026-09-14 20:25:07
+INFO - 17-AUG: Importing CSV; Rank 1 - 2026-09-14 20:25:09
+INFO - 17-AUG: Initializing staging table...; Rank 1 - 2026-09-14 20:25:09
+INFO - 17-DEC: Dropping table if exists: staging_17_dec; Rank 1 - 2026-09-14 20:24:34
+INFO - 17-DEC: Importing CSV; Rank 1 - 2026-09-14 20:24:35
+INFO - 17-DEC: Initializing staging table...; Rank 1 - 2026-09-14 20:24:35
+INFO - 17-FEB: Dropping table if exists: staging_17_feb; Rank 1 - 2026-09-14 20:25:51
+INFO - 17-FEB: Importing CSV; Rank 1 - 2026-09-14 20:25:52
+INFO - 17-FEB: Initializing staging table...; Rank 1 - 2026-09-14 20:25:51
+INFO - 17-JAN: Dropping table if exists: staging_17_jan; Rank 0 - 2026-09-14 20:26:56
+INFO - 17-JAN: Importing CSV; Rank 0 - 2026-09-14 20:26:56
+INFO - 17-JAN: Initializing staging table...; Rank 0 - 2026-09-14 20:26:56
+INFO - 17-JUL: Dropping table if exists: staging_17_jul; Rank 0 - 2026-09-14 20:26:37
+INFO - 17-JUL: Importing CSV; Rank 0 - 2026-09-14 20:26:37
+INFO - 17-JUL: Initializing staging table...; Rank 0 - 2026-09-14 20:26:37
+INFO - 17-JUN: Dropping table if exists: staging_17_jun; Rank 0 - 2026-09-14 20:26:45
+INFO - 17-JUN: Importing CSV; Rank 0 - 2026-09-14 20:26:45
+INFO - 17-JUN: Initializing staging table...; Rank 0 - 2026-09-14 20:26:45
+INFO - 17-MAR: Dropping table if exists: staging_17_mar; Rank 1 - 2026-09-14 20:25:36
+INFO - 17-MAR: Importing CSV; Rank 1 - 2026-09-14 20:25:38
+INFO - 17-MAR: Initializing staging table...; Rank 1 - 2026-09-14 20:25:37
+INFO - 17-MAY: Dropping table if exists: staging_17_may; Rank 1 - 2026-09-14 20:25:22
+INFO - 17-MAY: Importing CSV; Rank 1 - 2026-09-14 20:25:23
+INFO - 17-MAY: Initializing staging table...; Rank 1 - 2026-09-14 20:25:23
+INFO - 17-NOV: Dropping table if exists: staging_17_nov; Rank 0 - 2026-09-14 20:26:07
+INFO - 17-NOV: Importing CSV; Rank 0 - 2026-09-14 20:26:10
+INFO - 17-NOV: Initializing staging table...; Rank 0 - 2026-09-14 20:26:09
+INFO - 17-OCT: Dropping table if exists: staging_17_oct; Rank 1 - 2026-09-14 20:24:50
+INFO - 17-OCT: Importing CSV; Rank 1 - 2026-09-14 20:24:51
+INFO - 17-OCT: Initializing staging table...; Rank 1 - 2026-09-14 20:24:51
+INFO - 17-SEP: Dropping table if exists: staging_17_sep; Rank 0 - 2026-09-14 20:26:24
+INFO - 17-SEP: Importing CSV; Rank 0 - 2026-09-14 20:26:25
+INFO - 17-SEP: Initializing staging table...; Rank 0 - 2026-09-14 20:26:25
+INFO - 18-APR: Dropping table if exists: staging_18_apr; Rank 1 - 2026-09-14 20:23:23
+INFO - 18-APR: Importing CSV; Rank 1 - 2026-09-14 20:23:23
+INFO - 18-APR: Initializing staging table...; Rank 1 - 2026-09-14 20:23:23
+INFO - 18-AUG: Dropping table if exists: staging_18_aug; Rank 1 - 2026-09-14 20:22:09
+INFO - 18-AUG: Importing CSV; Rank 1 - 2026-09-14 20:22:12
+INFO - 18-AUG: Initializing staging table...; Rank 1 - 2026-09-14 20:22:12
+INFO - 18-DEC: Dropping table if exists: staging_18_dec; Rank 0 - 2026-09-14 20:24:29
+INFO - 18-DEC: Importing CSV; Rank 0 - 2026-09-14 20:24:29
+INFO - 18-DEC: Initializing staging table...; Rank 0 - 2026-09-14 20:24:29
+INFO - 18-FEB: Dropping table if exists: staging_18_feb; Rank 0 - 2026-09-14 20:25:48
+INFO - 18-FEB: Importing CSV; Rank 0 - 2026-09-14 20:25:51
+INFO - 18-FEB: Initializing staging table...; Rank 0 - 2026-09-14 20:25:50
+INFO - 18-JAN: Dropping table if exists: staging_18_jan; Rank 1 - 2026-09-14 20:23:46
+INFO - 18-JAN: Importing CSV; Rank 1 - 2026-09-14 20:24:01
+INFO - 18-JAN: Initializing staging table...; Rank 1 - 2026-09-14 20:23:55
+INFO - 18-JUL: Dropping table if exists: staging_18_jul; Rank 0 - 2026-09-14 20:24:54
+INFO - 18-JUL: Importing CSV; Rank 0 - 2026-09-14 20:24:56
+INFO - 18-JUL: Initializing staging table...; Rank 0 - 2026-09-14 20:24:56
+INFO - 18-JUN: Dropping table if exists: staging_18_jun; Rank 0 - 2026-09-14 20:25:17
+INFO - 18-JUN: Importing CSV; Rank 0 - 2026-09-14 20:25:18
+INFO - 18-JUN: Initializing staging table...; Rank 0 - 2026-09-14 20:25:18
+INFO - 18-MAR: Dropping table if exists: staging_18_mar; Rank 0 - 2026-09-14 20:25:31
+INFO - 18-MAR: Importing CSV; Rank 0 - 2026-09-14 20:25:32
+INFO - 18-MAR: Initializing staging table...; Rank 0 - 2026-09-14 20:25:32
+INFO - 18-MAY: Dropping table if exists: staging_18_may; Rank 1 - 2026-09-14 20:22:57
+INFO - 18-MAY: Importing CSV; Rank 1 - 2026-09-14 20:23:05
+INFO - 18-MAY: Initializing staging table...; Rank 1 - 2026-09-14 20:23:03
+INFO - 18-NOV: Dropping table if exists: staging_18_nov; Rank 1 - 2026-09-14 20:21:29
+INFO - 18-NOV: Importing CSV; Rank 1 - 2026-09-14 20:21:29
+INFO - 18-NOV: Initializing staging table...; Rank 1 - 2026-09-14 20:21:29
+INFO - 18-OCT: Dropping table if exists: staging_18_oct; Rank 1 - 2026-09-14 20:21:50
+INFO - 18-OCT: Importing CSV; Rank 1 - 2026-09-14 20:21:50
+INFO - 18-OCT: Initializing staging table...; Rank 1 - 2026-09-14 20:21:50
+INFO - 18-SEP: Dropping table if exists: staging_18_sep; Rank 0 - 2026-09-14 20:24:43
+INFO - 18-SEP: Importing CSV; Rank 0 - 2026-09-14 20:24:43
+INFO - 18-SEP: Initializing staging table...; Rank 0 - 2026-09-14 20:24:43
+INFO - 19-APR: Dropping table if exists: staging_19_apr; Rank 0 - 2026-09-14 20:23:17
+INFO - 19-APR: Importing CSV; Rank 0 - 2026-09-14 20:23:18
+INFO - 19-APR: Initializing staging table...; Rank 0 - 2026-09-14 20:23:18
+INFO - 19-AUG: Dropping table if exists: staging_19_aug; Rank 1 - 2026-09-14 20:20:16
+INFO - 19-AUG: Importing CSV; Rank 1 - 2026-09-14 20:20:16
+INFO - 19-AUG: Initializing staging table...; Rank 1 - 2026-09-14 20:20:16
+INFO - 19-DEC: Dropping table if exists: staging_19_dec; Rank 1 - 2026-09-14 20:19:35
+INFO - 19-DEC: Importing CSV; Rank 1 - 2026-09-14 20:19:35
+INFO - 19-DEC: Initializing staging table...; Rank 1 - 2026-09-14 20:19:35
+INFO - 19-FEB: Dropping table if exists: staging_19_feb; Rank 1 - 2026-09-14 20:21:12
+INFO - 19-FEB: Importing CSV; Rank 1 - 2026-09-14 20:21:13
+INFO - 19-FEB: Initializing staging table...; Rank 1 - 2026-09-14 20:21:13
+INFO - 19-JAN: Dropping table if exists: staging_19_jan; Rank 0 - 2026-09-14 20:23:33
+INFO - 19-JAN: Importing CSV; Rank 0 - 2026-09-14 20:23:35
+INFO - 19-JAN: Initializing staging table...; Rank 0 - 2026-09-14 20:23:34
+INFO - 19-JUL: Dropping table if exists: staging_19_jul; Rank 0 - 2026-09-14 20:22:06
+INFO - 19-JUL: Importing CSV; Rank 0 - 2026-09-14 20:22:06
+INFO - 19-JUL: Initializing staging table...; Rank 0 - 2026-09-14 20:22:06
+INFO - 19-JUN: Dropping table if exists: staging_19_jun; Rank 0 - 2026-09-14 20:22:29
+INFO - 19-JUN: Importing CSV; Rank 0 - 2026-09-14 20:22:30
+INFO - 19-JUN: Initializing staging table...; Rank 0 - 2026-09-14 20:22:30
+INFO - 19-MAR: Dropping table if exists: staging_19_mar; Rank 1 - 2026-09-14 20:20:59
+INFO - 19-MAR: Importing CSV; Rank 1 - 2026-09-14 20:20:59
+INFO - 19-MAR: Initializing staging table...; Rank 1 - 2026-09-14 20:20:59
+INFO - 19-MAY: Dropping table if exists: staging_19_may; Rank 1 - 2026-09-14 20:20:28
+INFO - 19-MAY: Importing CSV; Rank 1 - 2026-09-14 20:20:29
+INFO - 19-MAY: Initializing staging table...; Rank 1 - 2026-09-14 20:20:29
+INFO - 19-NOV: Dropping table if exists: staging_19_nov; Rank 0 - 2026-09-14 20:21:33
+INFO - 19-NOV: Importing CSV; Rank 0 - 2026-09-14 20:21:39
+INFO - 19-NOV: Initializing staging table...; Rank 0 - 2026-09-14 20:21:39
+INFO - 19-OCT: Dropping table if exists: staging_19_oct; Rank 0 - 2026-09-14 20:21:50
+INFO - 19-OCT: Importing CSV; Rank 0 - 2026-09-14 20:21:50
+INFO - 19-OCT: Initializing staging table...; Rank 0 - 2026-09-14 20:21:50
+INFO - 19-SEP: Dropping table if exists: staging_19_sep; Rank 1 - 2026-09-14 20:19:53
+INFO - 19-SEP: Importing CSV; Rank 1 - 2026-09-14 20:19:53
+INFO - 19-SEP: Initializing staging table...; Rank 1 - 2026-09-14 20:19:53
+INFO - 20-APR: Dropping table if exists: staging_20_apr; Rank 1 - 2026-09-14 20:18:21
+INFO - 20-APR: Importing CSV; Rank 1 - 2026-09-14 20:18:21
+INFO - 20-APR: Initializing staging table...; Rank 1 - 2026-09-14 20:18:21
+INFO - 20-AUG: Dropping table if exists: staging_20_aug; Rank 0 - 2026-09-14 20:19:57
+INFO - 20-AUG: Importing CSV; Rank 0 - 2026-09-14 20:19:59
+INFO - 20-AUG: Initializing staging table...; Rank 0 - 2026-09-14 20:19:57
+INFO - 20-DEC: Dropping table if exists: staging_20_dec; Rank 1 - 2026-09-14 20:15:51
+INFO - 20-DEC: Importing CSV; Rank 1 - 2026-09-14 20:15:51
+INFO - 20-DEC: Initializing staging table...; Rank 1 - 2026-09-14 20:15:51
+INFO - 20-FEB: Dropping table if exists: staging_20_feb; Rank 0 - 2026-09-14 20:21:04
+INFO - 20-FEB: Importing CSV; Rank 0 - 2026-09-14 20:21:07
+INFO - 20-FEB: Initializing staging table...; Rank 0 - 2026-09-14 20:21:05
+INFO - 20-JAN: Dropping table if exists: staging_20_jan; Rank 1 - 2026-09-14 20:18:50
+INFO - 20-JAN: Importing CSV; Rank 1 - 2026-09-14 20:18:51
+INFO - 20-JAN: Initializing staging table...; Rank 1 - 2026-09-14 20:18:51
+INFO - 20-JUL: Dropping table if exists: staging_20_jul; Rank 1 - 2026-09-14 20:16:39
+INFO - 20-JUL: Importing CSV; Rank 1 - 2026-09-14 20:16:40
+INFO - 20-JUL: Initializing staging table...; Rank 1 - 2026-09-14 20:16:40
+INFO - 20-JUN: Dropping table if exists: staging_20_jun; Rank 1 - 2026-09-14 20:17:11
+INFO - 20-JUN: Importing CSV; Rank 1 - 2026-09-14 20:17:12
+INFO - 20-JUN: Initializing staging table...; Rank 1 - 2026-09-14 20:17:12
+INFO - 20-MAR: Dropping table if exists: staging_20_mar; Rank 0 - 2026-09-14 20:20:44
+INFO - 20-MAR: Importing CSV; Rank 0 - 2026-09-14 20:20:44
+INFO - 20-MAR: Initializing staging table...; Rank 0 - 2026-09-14 20:20:44
+INFO - 20-MAY: Dropping table if exists: staging_20_may; Rank 0 - 2026-09-14 20:20:27
+INFO - 20-MAY: Importing CSV; Rank 0 - 2026-09-14 20:20:27
+INFO - 20-MAY: Initializing staging table...; Rank 0 - 2026-09-14 20:20:27
+INFO - 20-NOV: Dropping table if exists: staging_20_nov; Rank 0 - 2026-09-14 20:18:30
+INFO - 20-NOV: Importing CSV; Rank 0 - 2026-09-14 20:18:30
+INFO - 20-NOV: Initializing staging table...; Rank 0 - 2026-09-14 20:18:30
+INFO - 20-OCT: Dropping table if exists: staging_20_oct; Rank 0 - 2026-09-14 20:19:35
+INFO - 20-OCT: Importing CSV; Rank 0 - 2026-09-14 20:19:35
+INFO - 20-OCT: Initializing staging table...; Rank 0 - 2026-09-14 20:19:35
+INFO - 20-SEP: Dropping table if exists: staging_20_sep; Rank 1 - 2026-09-14 20:16:19
+INFO - 20-SEP: Importing CSV; Rank 1 - 2026-09-14 20:16:19
+INFO - 20-SEP: Initializing staging table...; Rank 1 - 2026-09-14 20:16:19
+INFO - 21-APR: Dropping table if exists: staging_21_apr; Rank 0 - 2026-09-14 20:17:18
+INFO - 21-APR: Importing CSV; Rank 0 - 2026-09-14 20:17:19
+INFO - 21-APR: Initializing staging table...; Rank 0 - 2026-09-14 20:17:19
+INFO - 21-AUG: Dropping table if exists: staging_21_aug; Rank 1 - 2026-09-14 20:14:38
+INFO - 21-AUG: Importing CSV; Rank 1 - 2026-09-14 20:14:38
+INFO - 21-AUG: Initializing staging table...; Rank 1 - 2026-09-14 20:14:38
+INFO - 21-DEC: Dropping table if exists: staging_21_dec; Rank 0 - 2026-09-14 20:16:05
+INFO - 21-DEC: Importing CSV; Rank 0 - 2026-09-14 20:16:06
+INFO - 21-DEC: Initializing staging table...; Rank 0 - 2026-09-14 20:16:06
+INFO - 21-FEB: Dropping table if exists: staging_21_feb; Rank 1 - 2026-09-14 20:15:32
+INFO - 21-FEB: Importing CSV; Rank 1 - 2026-09-14 20:15:33
+INFO - 21-FEB: Initializing staging table...; Rank 1 - 2026-09-14 20:15:32
+INFO - 21-JAN: Dropping table if exists: staging_21_jan; Rank 0 - 2026-09-14 20:17:59
+INFO - 21-JAN: Importing CSV; Rank 0 - 2026-09-14 20:18:01
+INFO - 21-JAN: Initializing staging table...; Rank 0 - 2026-09-14 20:18:00
+INFO - 21-JUL: Dropping table if exists: staging_21_jul; Rank 0 - 2026-09-14 20:16:50
+INFO - 21-JUL: Importing CSV; Rank 0 - 2026-09-14 20:16:50
+INFO - 21-JUL: Initializing staging table...; Rank 0 - 2026-09-14 20:16:50
+INFO - 21-JUN: Dropping table if exists: staging_21_jun; Rank 0 - 2026-09-14 20:17:04
+INFO - 21-JUN: Importing CSV; Rank 0 - 2026-09-14 20:17:04
+INFO - 21-JUN: Initializing staging table...; Rank 0 - 2026-09-14 20:17:04
+INFO - 21-MAR: Dropping table if exists: staging_21_mar; Rank 1 - 2026-09-14 20:15:14
+INFO - 21-MAR: Importing CSV; Rank 1 - 2026-09-14 20:15:15
+INFO - 21-MAR: Initializing staging table...; Rank 1 - 2026-09-14 20:15:15
+INFO - 21-MAY: Dropping table if exists: staging_21_may; Rank 1 - 2026-09-14 20:14:56
+INFO - 21-MAY: Importing CSV; Rank 1 - 2026-09-14 20:14:56
+INFO - 21-MAY: Initializing staging table...; Rank 1 - 2026-09-14 20:14:56
+INFO - 21-NOV: Dropping table if exists: staging_21_nov; Rank 1 - 2026-09-14 20:12:31
+INFO - 21-NOV: Importing CSV; Rank 1 - 2026-09-14 20:12:31
+INFO - 21-NOV: Initializing staging table...; Rank 1 - 2026-09-14 20:12:31
+INFO - 21-OCT: Dropping table if exists: staging_21_oct; Rank 1 - 2026-09-14 20:13:05
+INFO - 21-OCT: Importing CSV; Rank 1 - 2026-09-14 20:13:06
+INFO - 21-OCT: Initializing staging table...; Rank 1 - 2026-09-14 20:13:06
+INFO - 21-SEP: Dropping table if exists: staging_21_sep; Rank 0 - 2026-09-14 20:16:25
+INFO - 21-SEP: Importing CSV; Rank 0 - 2026-09-14 20:16:27
+INFO - 21-SEP: Initializing staging table...; Rank 0 - 2026-09-14 20:16:26
+INFO - 22-APR: Dropping table if exists: staging_22_apr; Rank 1 - 2026-09-14 20:11:01
+INFO - 22-APR: Importing CSV; Rank 1 - 2026-09-14 20:11:02
+INFO - 22-APR: Initializing staging table...; Rank 1 - 2026-09-14 20:11:02
+INFO - 22-AUG: Dropping table if exists: staging_22_aug; Rank 1 - 2026-09-14 20:10:17
+INFO - 22-AUG: Importing CSV; Rank 1 - 2026-09-14 20:10:17
+INFO - 22-AUG: Initializing staging table...; Rank 1 - 2026-09-14 20:10:17
+INFO - 22-DEC: Dropping table if exists: staging_22_dec; Rank 1 - 2026-09-14 20:09:23
+INFO - 22-DEC: Importing CSV; Rank 1 - 2026-09-14 20:09:23
+INFO - 22-DEC: Initializing staging table...; Rank 1 - 2026-09-14 20:09:23
+INFO - 22-FEB: Dropping table if exists: staging_22_feb; Rank 0 - 2026-09-14 20:15:41
+INFO - 22-FEB: Importing CSV; Rank 0 - 2026-09-14 20:15:41
+INFO - 22-FEB: Initializing staging table...; Rank 0 - 2026-09-14 20:15:41
+INFO - 22-JAN: Dropping table if exists: staging_22_jan; Rank 1 - 2026-09-14 20:12:11
+INFO - 22-JAN: Importing CSV; Rank 1 - 2026-09-14 20:12:11
+INFO - 22-JAN: Initializing staging table...; Rank 1 - 2026-09-14 20:12:11
+INFO - 22-JUL: Dropping table if exists: staging_22_jul; Rank 0 - 2026-09-14 20:14:32
+INFO - 22-JUL: Importing CSV; Rank 0 - 2026-09-14 20:14:32
+INFO - 22-JUL: Initializing staging table...; Rank 0 - 2026-09-14 20:14:32
+INFO - 22-JUN: Dropping table if exists: staging_22_jun; Rank 0 - 2026-09-14 20:14:48
+INFO - 22-JUN: Importing CSV; Rank 0 - 2026-09-14 20:14:49
+INFO - 22-JUN: Initializing staging table...; Rank 0 - 2026-09-14 20:14:48
+INFO - 22-MAR: Dropping table if exists: staging_22_mar; Rank 0 - 2026-09-14 20:15:17
+INFO - 22-MAR: Importing CSV; Rank 0 - 2026-09-14 20:15:23
+INFO - 22-MAR: Initializing staging table...; Rank 0 - 2026-09-14 20:15:20
+INFO - 22-MAY: Dropping table if exists: staging_22_may; Rank 1 - 2026-09-14 20:10:45
+INFO - 22-MAY: Importing CSV; Rank 1 - 2026-09-14 20:10:45
+INFO - 22-MAY: Initializing staging table...; Rank 1 - 2026-09-14 20:10:45
+INFO - 22-NOV: Dropping table if exists: staging_22_nov; Rank 0 - 2026-09-14 20:12:21
+INFO - 22-NOV: Importing CSV; Rank 0 - 2026-09-14 20:12:22
+INFO - 22-NOV: Initializing staging table...; Rank 0 - 2026-09-14 20:12:21
+INFO - 22-OCT: Dropping table if exists: staging_22_oct; Rank 0 - 2026-09-14 20:13:34
+INFO - 22-OCT: Importing CSV; Rank 0 - 2026-09-14 20:13:34
+INFO - 22-OCT: Initializing staging table...; Rank 0 - 2026-09-14 20:13:34
+INFO - 22-SEP: Dropping table if exists: staging_22_sep; Rank 1 - 2026-09-14 20:09:57
+INFO - 22-SEP: Importing CSV; Rank 1 - 2026-09-14 20:10:00
+INFO - 22-SEP: Initializing staging table...; Rank 1 - 2026-09-14 20:10:00
+INFO - 23-APR: Dropping table if exists: staging_23_apr; Rank 1 - 2026-09-14 20:08:42
+INFO - 23-APR: Importing CSV; Rank 1 - 2026-09-14 20:08:44
+INFO - 23-APR: Initializing staging table...; Rank 1 - 2026-09-14 20:08:43
+INFO - 23-AUG: Dropping table if exists: staging_23_aug; Rank 1 - 2026-09-14 20:07:31
+INFO - 23-AUG: Importing CSV; Rank 1 - 2026-09-14 20:07:33
+INFO - 23-AUG: Initializing staging table...; Rank 1 - 2026-09-14 20:07:31
+INFO - 23-DEC: Dropping table if exists: staging_23_dec; Rank 1 - 2026-09-14 20:05:49
+INFO - 23-DEC: Importing CSV; Rank 1 - 2026-09-14 20:05:49
+INFO - 23-DEC: Initializing staging table...; Rank 1 - 2026-09-14 20:05:49
+INFO - 23-FEB: Dropping table if exists: staging_23_feb; Rank 0 - 2026-09-14 20:11:45
+INFO - 23-FEB: Importing CSV; Rank 0 - 2026-09-14 20:11:46
+INFO - 23-FEB: Initializing staging table...; Rank 0 - 2026-09-14 20:11:45
+INFO - 23-JAN: Dropping table if exists: staging_23_jan; Rank 1 - 2026-09-14 20:09:01
+INFO - 23-JAN: Importing CSV; Rank 1 - 2026-09-14 20:09:01
+INFO - 23-JAN: Initializing staging table...; Rank 1 - 2026-09-14 20:09:01
+INFO - 23-JUL: Dropping table if exists: staging_23_jul; Rank 0 - 2026-09-14 20:09:54
+INFO - 23-JUL: Importing CSV; Rank 0 - 2026-09-14 20:09:55
+INFO - 23-JUL: Initializing staging table...; Rank 0 - 2026-09-14 20:09:54
+INFO - 23-JUN: Dropping table if exists: staging_23_jun; Rank 0 - 2026-09-14 20:10:32
+INFO - 23-JUN: Importing CSV; Rank 0 - 2026-09-14 20:10:32
+INFO - 23-JUN: Initializing staging table...; Rank 0 - 2026-09-14 20:10:32
+INFO - 23-MAR: Dropping table if exists: staging_23_mar; Rank 0 - 2026-09-14 20:10:55
+INFO - 23-MAR: Importing CSV; Rank 0 - 2026-09-14 20:10:55
+INFO - 23-MAR: Initializing staging table...; Rank 0 - 2026-09-14 20:10:55
+INFO - 23-MAY: Dropping table if exists: staging_23_may; Rank 1 - 2026-09-14 20:08:19
+INFO - 23-MAY: Importing CSV; Rank 1 - 2026-09-14 20:08:20
+INFO - 23-MAY: Initializing staging table...; Rank 1 - 2026-09-14 20:08:19
+INFO - 23-NOV: Dropping table if exists: staging_23_nov; Rank 0 - 2026-09-14 20:08:41
+INFO - 23-NOV: Importing CSV; Rank 0 - 2026-09-14 20:08:42
+INFO - 23-NOV: Initializing staging table...; Rank 0 - 2026-09-14 20:08:42
+INFO - 23-OCT: Dropping table if exists: staging_23_oct; Rank 1 - 2026-09-14 20:06:13
+INFO - 23-OCT: Importing CSV; Rank 1 - 2026-09-14 20:06:14
+INFO - 23-OCT: Initializing staging table...; Rank 1 - 2026-09-14 20:06:13
+INFO - 23-SEP: Dropping table if exists: staging_23_sep; Rank 0 - 2026-09-14 20:09:23
+INFO - 23-SEP: Importing CSV; Rank 0 - 2026-09-14 20:09:25
+INFO - 23-SEP: Initializing staging table...; Rank 0 - 2026-09-14 20:09:25
+INFO - 24-APR: Dropping table if exists: staging_24_apr; Rank 1 - 2026-09-14 20:04:02
+INFO - 24-APR: Importing CSV; Rank 1 - 2026-09-14 20:04:02
+INFO - 24-APR: Initializing staging table...; Rank 1 - 2026-09-14 20:04:02
+INFO - 24-AUG: Dropping table if exists: staging_24_aug; Rank 1 - 2026-09-14 20:03:19
+INFO - 24-AUG: Importing CSV; Rank 1 - 2026-09-14 20:03:19
+INFO - 24-AUG: Initializing staging table...; Rank 1 - 2026-09-14 20:03:19
+INFO - 24-DEC: Dropping table if exists: staging_24_dec; Rank 1 - 2026-09-14 20:02:08
+INFO - 24-DEC: Importing CSV; Rank 1 - 2026-09-14 20:02:09
+INFO - 24-DEC: Initializing staging table...; Rank 1 - 2026-09-14 20:02:09
+INFO - 24-FEB: Dropping table if exists: staging_24_feb; Rank 0 - 2026-09-14 20:07:24
+INFO - 24-FEB: Importing CSV; Rank 0 - 2026-09-14 20:07:24
+INFO - 24-FEB: Initializing staging table...; Rank 0 - 2026-09-14 20:07:24
+INFO - 24-JAN: Dropping table if exists: staging_24_jan; Rank 1 - 2026-09-14 20:05:29
+INFO - 24-JAN: Importing CSV; Rank 1 - 2026-09-14 20:05:29
+INFO - 24-JAN: Initializing staging table...; Rank 1 - 2026-09-14 20:05:29
+INFO - 24-JUL: Dropping table if exists: staging_24_jul; Rank 0 - 2026-09-14 20:05:57
+INFO - 24-JUL: Importing CSV; Rank 0 - 2026-09-14 20:05:57
+INFO - 24-JUL: Initializing staging table...; Rank 0 - 2026-09-14 20:05:57
+INFO - 24-JUN: Dropping table if exists: staging_24_jun; Rank 0 - 2026-09-14 20:05:18
+INFO - 24-JUN: Importing CSV; Rank 0 - 2026-09-14 20:05:19
+INFO - 24-JUN: Initializing staging table...; Rank 0 - 2026-09-14 20:05:19
+INFO - 24-MAR: Dropping table if exists: staging_24_mar; Rank 0 - 2026-09-14 20:07:08
+INFO - 24-MAR: Importing CSV; Rank 0 - 2026-09-14 20:07:08
+INFO - 24-MAR: Initializing staging table...; Rank 0 - 2026-09-14 20:07:08
+INFO - 24-MAY: Dropping table if exists: staging_24_may; Rank 1 - 2026-09-14 20:03:43
+INFO - 24-MAY: Importing CSV; Rank 1 - 2026-09-14 20:03:43
+INFO - 24-MAY: Initializing staging table...; Rank 1 - 2026-09-14 20:03:43
+INFO - 24-NOV: Dropping table if exists: staging_24_nov; Rank 0 - 2026-09-14 20:03:11
+INFO - 24-NOV: Importing CSV; Rank 0 - 2026-09-14 20:03:11
+INFO - 24-NOV: Initializing staging table...; Rank 0 - 2026-09-14 20:03:11
+INFO - 24-OCT: Dropping table if exists: staging_24_oct; Rank 0 - 2026-09-14 20:04:01
+INFO - 24-OCT: Importing CSV; Rank 0 - 2026-09-14 20:04:02
+INFO - 24-OCT: Initializing staging table...; Rank 0 - 2026-09-14 20:04:02
+INFO - 24-SEP: Dropping table if exists: staging_24_sep; Rank 1 - 2026-09-14 20:02:34
+INFO - 24-SEP: Importing CSV; Rank 1 - 2026-09-14 20:02:34
+INFO - 24-SEP: Initializing staging table...; Rank 1 - 2026-09-14 20:02:34
+INFO - 25-APR: Dropping table if exists: staging_25_apr; Rank 1 - 2026-09-14 20:00:20
+INFO - 25-APR: Importing CSV; Rank 1 - 2026-09-14 20:00:21
+INFO - 25-APR: Initializing staging table...; Rank 1 - 2026-09-14 20:00:21
+INFO - 25-AUG: Dropping table if exists: staging_25_aug; Rank 1 - 2026-09-14 19:58:45
+INFO - 25-AUG: Importing CSV; Rank 1 - 2026-09-14 19:58:48
+INFO - 25-AUG: Initializing staging table...; Rank 1 - 2026-09-14 19:58:48
+INFO - 25-DEC: Dropping table if exists: staging_25_dec; Rank 1 - 2026-09-14 19:56:21
+INFO - 25-DEC: Importing CSV; Rank 1 - 2026-09-14 19:56:22
+INFO - 25-DEC: Initializing staging table...; Rank 1 - 2026-09-14 19:56:22
+INFO - 25-FEB: Dropping table if exists: staging_25_feb; Rank 0 - 2026-09-14 20:02:42
+INFO - 25-FEB: Importing CSV; Rank 0 - 2026-09-14 20:02:43
+INFO - 25-FEB: Initializing staging table...; Rank 0 - 2026-09-14 20:02:42
+INFO - 25-JAN: Dropping table if exists: staging_25_jan; Rank 1 - 2026-09-14 20:01:41
+INFO - 25-JAN: Importing CSV; Rank 1 - 2026-09-14 20:01:41
+INFO - 25-JAN: Initializing staging table...; Rank 1 - 2026-09-14 20:01:41
+INFO - 25-JUL: Dropping table if exists: staging_25_jul; Rank 0 - 2026-09-14 19:58:44
+INFO - 25-JUL: Importing CSV; Rank 0 - 2026-09-14 19:58:44
+INFO - 25-JUL: Initializing staging table...; Rank 0 - 2026-09-14 19:58:44
+INFO - 25-JUN: Dropping table if exists: staging_25_jun; Rank 0 - 2026-09-14 20:00:20
+INFO - 25-JUN: Importing CSV; Rank 0 - 2026-09-14 20:00:20
+INFO - 25-JUN: Initializing staging table...; Rank 0 - 2026-09-14 20:00:20
+INFO - 25-MAR: Dropping table if exists: staging_25_mar; Rank 0 - 2026-09-14 20:01:55
+INFO - 25-MAR: Importing CSV; Rank 0 - 2026-09-14 20:01:55
+INFO - 25-MAR: Initializing staging table...; Rank 0 - 2026-09-14 20:01:55
+INFO - 25-MAY: Dropping table if exists: staging_25_may; Rank 1 - 2026-09-14 20:00:02
+INFO - 25-MAY: Importing CSV; Rank 1 - 2026-09-14 20:00:03
+INFO - 25-MAY: Initializing staging table...; Rank 1 - 2026-09-14 20:00:02
+INFO - 25-NOV: Dropping table if exists: staging_25_nov; Rank 0 - 2026-09-14 19:57:06
+INFO - 25-NOV: Importing CSV; Rank 0 - 2026-09-14 19:57:09
+INFO - 25-NOV: Initializing staging table...; Rank 0 - 2026-09-14 19:57:08
+INFO - 25-OCT: Dropping table if exists: staging_25_oct; Rank 1 - 2026-09-14 19:57:02
+INFO - 25-OCT: Importing CSV; Rank 1 - 2026-09-14 19:57:02
+INFO - 25-OCT: Initializing staging table...; Rank 1 - 2026-09-14 19:57:02
+INFO - 25-SEP: Dropping table if exists: staging_25_sep; Rank 0 - 2026-09-14 19:58:21
+INFO - 25-SEP: Importing CSV; Rank 0 - 2026-09-14 19:58:21
+INFO - 25-SEP: Initializing staging table...; Rank 0 - 2026-09-14 19:58:21
+INFO - 26-APR: Dropping table if exists: staging_26_apr; Rank 1 - 2026-09-14 19:54:59
+INFO - 26-APR: Importing CSV; Rank 1 - 2026-09-14 19:54:59
+INFO - 26-APR: Initializing staging table...; Rank 1 - 2026-09-14 19:54:59
+INFO - 26-FEB: Dropping table if exists: staging_26_feb; Rank 1 - 2026-09-14 19:55:53
+INFO - 26-FEB: Importing CSV; Rank 1 - 2026-09-14 19:55:53
+INFO - 26-FEB: Initializing staging table...; Rank 1 - 2026-09-14 19:55:53
+INFO - 26-JAN: Dropping table if exists: staging_26_jan; Rank 0 - 2026-09-14 19:56:36
+INFO - 26-JAN: Importing CSV; Rank 0 - 2026-09-14 19:56:36
+INFO - 26-JAN: Initializing staging table...; Rank 0 - 2026-09-14 19:56:36
+INFO - 26-MAR: Dropping table if exists: staging_26_mar; Rank 0 - 2026-09-14 19:54:59
+INFO - 26-MAR: Importing CSV; Rank 0 - 2026-09-14 19:54:59
+INFO - 26-MAR: Initializing staging table...; Rank 0 - 2026-09-14 19:54:59

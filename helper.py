@@ -128,19 +128,19 @@ def get_type_dict(table_data: list[dict[str, str]]=None) -> dict[tuple[str, str]
         table_data = get_table_data()
     
     type_dict = {
-        ("2001", "jan"): 1,
-        ("2001", "apr"): 2,
-        ("2002", "jan"): 2,
-        ("2001", "jul"): 3,
-        ("2001", "oct"): 3,
-        ("2002", "apr"): 3,
+        ("2001", "JAN"): 1,
+        ("2001", "APR"): 2,
+        ("2002", "JAN"): 2,
+        ("2001", "JUL"): 3,
+        ("2001", "OCT"): 3,
+        ("2002", "APR"): 3,
     }
     
-    for month_data in get_period_range(2002, "jul", 2012, "aug", table_data=table_data):
+    for month_data in get_period_range(2002, "JUL", 2012, "AUG", table_data=table_data):
         type_dict[(month_data["year4"], month_data["month"])] = 2
-    for month_data in get_period_range(2012, "sep", 2016, "aug", table_data=table_data):
+    for month_data in get_period_range(2012, "SEP", 2016, "AUG", table_data=table_data):
         type_dict[(month_data["year4"], month_data["month"])] = 4
-    for month_data in get_period_range(2016, "sep", 2026, "apr", table_data=table_data):
+    for month_data in get_period_range(2016, "SEP", 2026, "APR", table_data=table_data):
         type_dict[(month_data["year4"], month_data["month"])] = 5
 
     return type_dict
@@ -207,4 +207,4 @@ def mpi_main(function: callable, log_name: str, get_period_range_kwargs=None, mp
     
     
 if __name__ == "__main__":
-    print(get_table_data()[100])
+    print(get_type_dict())

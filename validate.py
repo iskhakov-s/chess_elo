@@ -10,7 +10,8 @@ import mpi_logging
 from helper import get_table_data, FIDE_CSV_DIR, FIDE_CSV_DIR_2, find_optimal_split, initiate_conn
 
 
-def find_broken_rows(conn: MySQLConnection):
+def find_broken_rows():
+    conn = initiate_conn()
     with conn.cursor() as cursor:
         cursor.execute("SHOW TABLES;")
         for (table, ) in cursor.fetchall():
@@ -20,6 +21,7 @@ def find_broken_rows(conn: MySQLConnection):
                 print(table)
                 for row in rows:
                     print(row)
+    conn.close()
 
 
 def validate_ids_mpi(month_names: list[dict[str, str]], rank):
@@ -29,7 +31,14 @@ def validate_ids_mpi(month_names: list[dict[str, str]], rank):
             with open(os.path.join(FIDE_CSV_DIR_2, month_data["csv_name"]), "r") as f:
                 reader = csv.reader(f, delimiter="*")
                 next(reader)  # skip header
-                csv_ids = set(int(row[0]) for row in reader)
+                csv_ids = set()
+                for row in reader:
+                    try:
+                        csv_ids.add(int(row[0]))    
+                    except ValueError as e:
+                        print(f"Error reading CSV for {month_data['year']}-{month_data['month_digits']}: {e}")
+                        print(row)
+                        continue
 
             cursor.execute(f"SELECT id FROM {month_data['table_name']};")
             sql_ids = set(int(row[0]) for row in cursor.fetchall())
@@ -170,4 +179,4 @@ def get_titles_in_name_mpi(month_names: list[dict[str, str]], rank):
 # mpiexec -n 8 python -u validate.py
 if __name__ == "__main__":
     # helper.mpi_main(get_titles_in_name_mpi, "get_titles_in_name", mpi_log_kwargs={ "format": "%(message)s"})
-    helper.mpi_main(validate_row_counts_mpi, "validate_row_counts", mpi_log_kwargs={ "format": "%(message)s"}, get_period_range_kwargs={"start_year": 2001, "start_month": 1, "end_year": 2012, "end_month": 8})
+    helper.mpi_main(validate_row_counts_mpi, "validate_row_counts_re")
