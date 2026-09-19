@@ -111,6 +111,7 @@ def get_distinct_titles_mpi(month_names: list[dict[str, str]], rank):
 
 def get_distinct_otitles_mpi(month_names: list[dict[str, str]], rank):
     conn = initiate_conn()
+    month_names = helper.get_period_range(start_year=2012, start_month="sep", end_year=2026, end_month="dec", table_data=month_names)
     with conn.cursor() as cursor:
         for month_data in month_names:            
             cursor.execute(f"SELECT distinct otitle FROM {month_data['table_name']};")
@@ -179,4 +180,5 @@ def get_titles_in_name_mpi(month_names: list[dict[str, str]], rank):
 # mpiexec -n 8 python -u validate.py
 if __name__ == "__main__":
     # helper.mpi_main(get_titles_in_name_mpi, "get_titles_in_name", mpi_log_kwargs={ "format": "%(message)s"})
-    helper.mpi_main(validate_row_counts_mpi, "validate_row_counts_re")
+    helper.mpi_main(get_distinct_otitles_mpi, "distinct_otitles")
+    # delete_null_rows(helper.get_period_range(start_year=2004, start_month="apr", end_year=2008, end_month="jan"))

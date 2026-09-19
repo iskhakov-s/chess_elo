@@ -8,9 +8,10 @@ from mpi_logging import mpi_log
 from helper import FIDE_CSV_DIR, FIDE_CSV_DIR_2
 import mpi_logging
 
-""" Reformats the CSV files in FIDE_CSV_DIR and writes them to FIDE_CSV_DIR_2. 
-This is intended to occur after running reformat.R.
+""" Reformats the original files and writes them to FIDE_CSV_DIR_2. 
 Specifically, it removes blank rows and removes the first two characters from each row of the CSV files where there is filler.
+
+This is in place of reformat.R, which is no longer used because it's implementation was broken.
 """
 
 # removes first two characters from each row of the csv files
@@ -44,14 +45,27 @@ def remove_first_two_chars():
 def remove_blank_lines(month_names: list[dict[str, str]], rank):
     for month_data in month_names:
         blank_rows = 0
-        with open(os.path.join(FIDE_CSV_DIR, month_data["csv_name"]), "r") as rf:
-            with open(os.path.join(FIDE_CSV_DIR_2, month_data["csv_name"]), "w") as wf:
+        with open(os.path.join(FIDE_CSV_DIR_2, month_data["csv_name"]), "r") as rf:
+            with open(os.path.join("fide_historical_ratings_rereformatted", month_data["csv_name"]), "w") as wf:
                 for line in rf:
                     if line.strip() != "":
                         wf.write(line)
                     else:
                         blank_rows += 1
         mpi_log(rank, f"{month_data['year']}-{month_data['month_digits']}: Removed {blank_rows:<3} blank rows")
+
+
+def remove_x1a(month_names: list[dict[str, str]], rank):
+    for month_data in month_names:
+        removed_rows = 0
+        with open(os.path.join(FIDE_CSV_DIR_2, month_data["csv_name"]), "r") as rf:
+            with open(os.path.join("fide_historical_ratings_rereformatted", month_data["csv_name"]), "w") as wf:
+                for line in rf:
+                    if '\x1a' in line:
+                        removed_rows += 1
+                    else:
+                        wf.write(line)
+        mpi_log(rank, f"{month_data['year']}-{month_data['month_digits']}: Removed {removed_rows:<3} rows with \\x1a")
 
 
 def remove_runs(lst):
@@ -179,7 +193,7 @@ def reformat_mpi(month_names: list[dict[str, str]], rank):
             with open(os.path.join(FIDE_CSV_DIR_2, month_data["csv_name"]), "w", newline="", encoding="utf-8") as wf:
                 # blank_columns = find_blank_columns(os.path.join(helper.SRC_DIR, month_data["src_name"]))
                 blank_columns = type_5_columns
-                # mpi_log(rank, f"{month_data['year']}-{month_data['month_digits']}: Blank columns: {blank_columns}")
+                mpi_log(rank, f"{month_data['year']}-{month_data['month_digits']}: Blank columns: {blank_columns}")
                 rf.seek(0)
                 for line in rf:
                     if line.strip() == "":
@@ -196,7 +210,7 @@ def reformat_mpi(month_names: list[dict[str, str]], rank):
 
 # mpiexec -n 8 python -u reformat.py
 if __name__ == "__main__":
-    helper.mpi_main(reformat_mpi, "reformat_2016_2026", get_period_range_kwargs={"start_year": 2016, "start_month": 9, "end_year": 2026, "end_month": 4})
+    helper.mpi_main(reformat_mpi, "reformat2016_2026", get_period_range_kwargs={"start_year": 2016, "start_month": "sep", "end_year": 2026, "end_month": "aug"})
     # check_blank_columns()
     # print(remove_runs([0, 10, 44, 47, 54, 63, 68, 74]))
     
