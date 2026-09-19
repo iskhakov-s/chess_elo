@@ -1,8 +1,11 @@
--- staging table to simplify the process and unify the data for import into the player/profile
--- because each year has its own standards for some reason
--- birthday also not needed, because only the player table needs it, not profile
--- ignore otitles for now, they're annoying to parse and there are multiple issues with them
-`` 
+/*
+staging table to simplify the process and unify the data for import into the player/profile
+  because each year has its own standards for some reason
+Unneeded columns:
+ - birthday, only needed by the players table, not profile, because it shouldn't change over time
+ - elo, games, k, these are only needed in the elo table
+allow null for foa and other titles because they are not present for all time periods
+*/
 create table player_staging_union (
     id int not null,
     period date not null,
@@ -11,27 +14,21 @@ create table player_staging_union (
     sex tinyint unsigned not null,
     title tinyint unsigned not null default 0, -- 0 = none, 1 = GM, 2 = IM, 3 = FM, 4 = CM, 5 = HGM
     wtitle tinyint unsigned not null default 0, -- 0 = none, 1 = WGM, 2 = WIM, 3 = WFM, 4 = WCM, 5 = WHGM
-    -- allow null for foa and other titles because they are not present for all time periods
     foa tinyint unsigned, -- 0 = none, 1 = AGM, 2 = AIM, 3 = AFM, 4 = ACM, 5 = AAF 
-    -- otit_ia boolean, -- arbiter titles
-    -- otit_fa boolean,
-    -- otit_na boolean,
-    -- otit_io boolean, -- international organizer\
-    -- otit_ao boolean,
-    -- otit_di boolean, -- trainer titles
-    -- otit_ni boolean,
-    -- otit_fi boolean,
-    -- otit_ft boolean,
-    -- otit_fst boolean, 
-    -- otit_li boolean, -- licensed instructors
-    -- otit_lsi boolean,
-    -- otit_sli boolean,
-    -- stuff only stored in elo table is not needed
-    -- elo smallint NOT null check(elo between 0 and 5000),
-    -- games smallint NOT NULL,
-    -- k tinyint unsigned NOT NULL,
+    otit_ia boolean, -- arbiter titles
+    otit_fa boolean,
+    otit_na boolean,
+    otit_io boolean, -- international organizer
+    otit_ao boolean,
+    otit_di boolean, -- trainer titles
+    otit_ni boolean,
+    otit_fi boolean,
+    otit_ft boolean,
+    otit_fst boolean, 
+    otit_li boolean, -- licensed instructors
+    otit_lsi boolean,
+    otit_sli boolean,
     inactive boolean NOT NULL,
-    -- flag varchar(2) DEFAULT NULL, -- instead of flag, parse flag into active/inactive
     primary key (id, period)
 );
 
@@ -105,7 +102,7 @@ from staging_01_jan;
 -- log error rows and skip instead of auto failing
 
 -- players should auto update with new data
--- 20+257 bytes
+-- 20 bytes + NAME
 create table players (
     id int not null,
     birthday date,
@@ -119,8 +116,6 @@ create table players (
     primary key id
 );
 
--- no wtit, its redundant
--- foa and otit are nullable because they are not present until 2016/2012 respectively
 -- 20+62 bytes
 CREATE TABLE player_profiles (
     profile_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -132,20 +127,14 @@ CREATE TABLE player_profiles (
     sex CHAR(1) DEFAULT NULL,
     title tinyint unsigned not null, -- 0 = none, 1 = GM, 2 = IM, 3 = FM, 4 = CM, 5 = HGM
     wtitle tinyint unsigned not null, -- 0 = none, 1 = WGM, 2 = WIM, 3 = WFM, 4 = WCM, 5 = WHGM
-    foa tinyint unsigned, -- 0 = none, 1 = AFM, 2 = AIM, 3 = ACM, 4 = AGM, 5 = AAF 
-    otit_ia boolean,
-    otit_fa boolean,
-    otit_na boolean,
-    otit_io boolean,
-    otit_ft boolean,
-    otit_fst boolean,
     PRIMARY KEY (profile_id),
     FOREIGN KEY (player_id) REFERENCES players(id)
 );
 
-create table other_titles (
+create table other_title_profiles (
     player_id int not null,
     effective_date date not null,
+    foa tinyint unsigned, -- 0 = none, 1 = AFM, 2 = AIM, 3 = ACM, 4 = AGM
     otit_ia boolean, -- arbiter titles
     otit_fa boolean,
     otit_na boolean,
