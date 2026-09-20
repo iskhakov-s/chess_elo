@@ -1,149 +1,120 @@
+import logging
 import helper
-import mpi_logging
+import duckdb
+
+from mpi_logging import log_setup
 
 
-def transform_type_1_2_3():
-    conn = helper.initiate_conn(get_warnings=True)
-    with conn.cursor() as cursor:
-        table_data = helper.get_period_range(
-            start_year=2001,
-            start_month="apr",
-            end_year=2012,
-            end_month="aug",
-            table_data=helper.get_table_data(),
-        )
-        cursor.execute("""
-            insert into player_staging_union (id, period, name, fed, sex, title, wtitle, inactive)
-                select 
-                    id, 
-                    concat(year, '-', month, '-01') as period, 
-                    name,
-                    fed,
-                    if(flag like "%w%", 1, 0) as sex,
-                    case title
-                        when "g" then 1
-                        when "gm" then 1
-                        when "m" then 2
-                        when "f" then 3
-                        when "c" then 4
-                        when "h" then 5
-                        else 0
-                    end as title,
-                    case title
-                        when "wg" then 1
-                        when "wm" then 2
-                        when "wf" then 3
-                        when "wc" then 4
-                        when "wh" then 5
-                        else 0
-                    end as wtitle,
-                    if(flag like "%i%", 1, 0) as inactive
-                from staging_01_jan;
-            );
-        """)
+INSERT_INTO_STRINGS = {
+    1: """
+        INSERT INTO player_staging_union (id, period, name, fed, sex, title, wtitle, inactive)
+            SELECT 
+                id, 
+                '{}-{}-01' AS period, 
+                name,
+                fed,
+                IF(flag LIKE '%w%', 1, 0) AS sex,
+                CASE title
+                    WHEN 'g' THEN 1
+                    WHEN 'gm' THEN 1
+                    WHEN 'm' THEN 2
+                    WHEN 'f' THEN 3
+                    WHEN 'c' THEN 4
+                    WHEN 'h' THEN 5
+                    ELSE 0
+                END AS title,
+                CASE title
+                    WHEN 'wg' THEN 1
+                    WHEN 'wm' THEN 2
+                    WHEN 'wf' THEN 3
+                    WHEN 'wc' THEN 4
+                    WHEN 'wh' THEN 5
+                    ELSE 0
+                END AS wtitle,
+                IF(flag LIKE '%i%', 1, 0) AS inactive
+            FROM {};
+    """,
+    4: """
+        INSERT INTO player_staging_union (id, period, name, fed, sex, title, wtitle, inactive)
+        SELECT 
+            id, 
+            '{}-{}-01' AS period, 
+            name,
+            fed,
+            IF(sex = 'F', 1, 0) AS sex,
+            CASE title
+                WHEN 'GM' THEN 1
+                WHEN 'IM' THEN 2
+                WHEN 'FM' THEN 3
+                WHEN 'CM' THEN 4
+                WHEN 'HM' THEN 5
+                ELSE 0
+            END AS title,
+            CASE wtitle
+                WHEN 'WGM' THEN 1
+                WHEN 'WIM' THEN 2
+                WHEN 'WF' THEN 3
+                WHEN 'WFM' THEN 3
+                WHEN 'WC' THEN 4
+                WHEN 'WCM' THEN 4
+                WHEN 'WH' THEN 5
+                ELSE 0
+            END AS wtitle,
+            IF(flag LIKE '%i%', 1, 0) AS inactive
+        FROM {};
+    """,
+    5: """
+        INSERT INTO player_staging_union (id, period, name, fed, sex, title, wtitle, foa, inactive)
+        SELECT 
+            id, 
+            '{}-{}-01' AS period, 
+            name,
+            fed,
+            IF(sex = 'F', 1, 0) AS sex,
+            CASE title
+                WHEN 'GM' THEN 1
+                WHEN 'IM' THEN 2
+                WHEN 'FM' THEN 3
+                WHEN 'CM' THEN 4
+                WHEN 'HM' THEN 5
+                ELSE 0
+            END AS title,
+            CASE wtitle
+                WHEN 'WGM' THEN 1
+                WHEN 'WIM' THEN 2
+                WHEN 'WF' THEN 3
+                WHEN 'WFM' THEN 3
+                WHEN 'WC' THEN 4
+                WHEN 'WCM' THEN 4
+                WHEN 'WH' THEN 5
+                ELSE 0
+            END AS wtitle,
+            CASE foa
+                WHEN 'AGM' THEN 1
+                WHEN 'AIM' THEN 2
+                WHEN 'AFM' THEN 3
+                WHEN 'ACM' THEN 4
+                ELSE 0
+            END AS foa,
+            IF(flag LIKE '%i%', 1, 0) AS inactive
+        FROM {};
+    """
+}
+INSERT_INTO_STRINGS[2] = INSERT_INTO_STRINGS[1]
+INSERT_INTO_STRINGS[3] = INSERT_INTO_STRINGS[1]
 
-
-def transform_type_4(month_names: list[dict[str, str]], rank):
-    conn = helper.initiate_conn(get_warnings=True)
-    with conn.cursor() as cursor:
-        for month_data in month_names:
-            cursor.execute(f"""
-                insert into player_staging_union (id, period, name, fed, sex, title, wtitle, inactive)
-                select 
-                    id, 
-                    concat("{month_data['year4']}", "-", "{month_data['month_digits']}", "-01") as period, 
-                    name,
-                    fed,
-                    if(sex="F", 1, 0) as sex,
-                    case title
-                        when "GM" then 1
-                        when "IM" then 2
-                        when "FM" then 3
-                        when "CM" then 4
-                        when "HM" then 5
-                        else 0
-                    end as title,
-                    case wtitle
-                        when "WGM" then 1
-                        when "WIM" then 2
-                        when "WF" then 3
-                        when "WFM" then 3
-                        when "WC" then 4
-                        when "WCM" then 4
-                        when "WH" then 5
-                        else 0
-                    end as wtitle,
-                    if(flag like "%i%", 1, 0) as inactive
-                from {month_data['table_name']};
-            """)
-            if cursor.warnings:
-                for warning in cursor.warnings:
-                    mpi_logging.mpi_log(
-                        rank,
-                        f"{month_data['year']}-{month_data['month_digits']}: {warning}",
-                    )
-            mpi_logging.mpi_log(
-                rank,
-                f"{month_data['year']}-{month_data['month_digits']}: Inserted {cursor.rowcount} rows into player_staging_union",
-            )
+    
+def transform(month_names: list[dict[str, str]]):
+    # log_setup("transform", format="%(message)s")
+    
+    conn = duckdb.connect("fide_elo.duckdb")
+    type_dict = helper.get_type_dict(month_names)
+    for month_data in month_names:
+        insert_string = INSERT_INTO_STRINGS[type_dict[(month_data["year4"], month_data["month"])]]
+        conn.sql(insert_string.format(month_data['year4'], month_data['month_digits'], month_data['table_name']))
+        # logging.info(f"{month_data['year']}-{month_data['month_digits']}: Inserted {cursor.rowcount} rows into player_staging_union")
     conn.commit()
-    conn.close()
-
-
-def transform_type_5(month_names: list[dict[str, str]], rank):
-    conn = helper.initiate_conn(get_warnings=True)
-    with conn.cursor() as cursor:
-        for month_data in month_names:
-            cursor.execute(f"""
-                insert into player_staging_union (id, period, name, fed, sex, title, wtitle, foa, inactive)
-                select 
-                    id, 
-                    concat('{month_data['year4']}', '-', '{month_data['month_digits']}', '-01') as period, 
-                    name,
-                    fed,
-                    if(sex="F", 1, 0) as sex,
-                    case title
-                        when "GM" then 1
-                        when "IM" then 2
-                        when "FM" then 3
-                        when "CM" then 4
-                        when "HM" then 5
-                        else 0
-                    end as title,
-                    case wtitle
-                        when "WGM" then 1
-                        when "WIM" then 2
-                        when "WF" then 3
-                        when "WFM" then 3
-                        when "WC" then 4
-                        when "WCM" then 4
-                        when "WH" then 5
-                        else 0
-                    end as wtitle,
-                    case foa
-                        when "AGM" then 1
-                        when "AIM" then 2
-                        when "AFM" then 3
-                        when "ACM" then 4
-                        when "AAF" then 5
-                        else 0
-                    end as foa,
-                    if(flag like "%i%", 1, 0) as inactive
-                from {month_data['table_name']};
-            """)
-            if cursor.warnings:
-                for warning in cursor.warnings:
-                    mpi_logging.mpi_log(
-                        rank,
-                        f"{month_data['year']}-{month_data['month_digits']}: {warning}",
-                    )
-            mpi_logging.mpi_log(
-                rank,
-                f"{month_data['year']}-{month_data['month_digits']}: Inserted {cursor.rowcount} rows into player_staging_union",
-            )
-    conn.commit()
-    conn.close()
 
 
 if __name__ == "__main__":
-    helper.mpi_main(transform_type_4, "transform_type_4", get_period_range_kwargs={"start_year": 2012, "start_month": "nov", "end_year": 2012, "end_month": "dec"})
+    transform(get_period_range_kwargs={"start_year": 2012, "start_month": "nov", "end_year": 2012, "end_month": "dec"})
