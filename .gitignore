@@ -9,3 +9,4 @@ olimpbase_records/
 .Rhistory
 chess_elo.Rproj
 .env
+fide_elo.duckdb

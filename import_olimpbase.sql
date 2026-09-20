@@ -1,25 +1,25 @@
-create table staging_olimpbase (
-    name varchar(255) NOT NULL,
-    standard_name varchar(255) NOT NULL,
-    yyyymm,
-    id int,
-    birthday varchar(255),
-    title varchar(7),
-    fed char(3),
-    elo int,
-    elo_change int, -- not needed
-    games int,
-    flag varchar(255),
-    comments varchar(255),
-    fed2 char(3)
+CREATE TABLE staging_olimpbase (
+    name VARCHAR(255) NOT NULL,
+    standard_name VARCHAR(255) NOT NULL,
+    yyyymm VARCHAR(6),
+    id INTEGER,
+    birthday VARCHAR(255),
+    title VARCHAR(7),
+    fed CHAR(3),
+    elo INTEGER,
+    elo_change INTEGER, -- not needed
+    games INTEGER,
+    flag VARCHAR(255),
+    comments VARCHAR(255),
+    fed2 CHAR(3)
 );
 
-alter table staging_olimpbase 
-add column year smallint, 
-add column month tinyint;
+ALTER TABLE staging_olimpbase
+    ADD COLUMN year SMALLINT,
+    ADD COLUMN month TINYINT;
 
-update staging_olimpbase
-set year=SUBSTR(yyyymm, 1, 4);
+UPDATE staging_olimpbase
+SET year = CAST(SUBSTR(yyyymm, 1, 4) AS SMALLINT);
 
-update staging_olimpbase
-set month=SUBSTR(yyyymm, 5);
+UPDATE staging_olimpbase
+SET month = CAST(SUBSTR(yyyymm, 5) AS TINYINT);

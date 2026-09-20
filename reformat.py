@@ -55,6 +55,7 @@ def remove_blank_lines(month_names: list[dict[str, str]], rank):
         mpi_log(rank, f"{month_data['year']}-{month_data['month_digits']}: Removed {blank_rows:<3} blank rows")
 
 
+# only needed for apr04-jan08
 def remove_x1a(month_names: list[dict[str, str]], rank):
     for month_data in month_names:
         removed_rows = 0
@@ -183,16 +184,40 @@ def find_broken_chars():
             if "1708228" in line:
                 print(line, end="")
 
+
 def reformat_mpi(month_names: list[dict[str, str]], rank):
-    # type_4_columns = [14, 75, 79, 83, 88, 93, 108, 114, 118, 121, 127]
+    for month_data in month_names:
+        with open(os.path.join(helper.SRC_DIR, month_data["src_name"]), "r", encoding="utf-8", errors="replace") as rf:
+            with open(os.path.join(FIDE_CSV_DIR_2, month_data["csv_name"]), "w", newline="", encoding="utf-8") as wf:
+                # get columns to insert asterisks into
+                blank_columns = find_blank_columns(os.path.join(helper.SRC_DIR, month_data["src_name"]))
+                mpi_log(rank, f"{month_data['year']}-{month_data['month_digits']}: Blank columns: {blank_columns}")
+                rf.seek(0)
+                
+                # exclude asterisk if it's one of the last 5 chars (needed for apr08-aug16 due to ragged flag column)
+                # caution when running on other files, may remove necessary value separators
+                header_len = len(rf.readline())
+                blank_columns = [i for i in blank_columns if i < header_len - 5]
+                rf.seek(0)
+                
+                for line in rf:
+                    if line.strip() == "" or "\x1a" in line:
+                        continue
+                    new_line = insert_asterisks(line, blank_columns)
+                    if not new_line.endswith(("\n", "\r\n")):
+                        new_line += "\n"
+                    wf.write(new_line)
+        # mpi_log(rank, f"{month_data['year']}-{month_data['month_digits']}: Reformatted {month_data['csv_name']}")
+        
+
+
+def reformat_mpi_type_5(month_names: list[dict[str, str]], rank):
     # manually insert the type 5, ie 2016sep-present columns because otitle is broken in some of the files
-    type_5_columns = [14, 75, 79, 83, 88, 93, 108, 112, 118, 122, 125, 131]
+    blank_columns = [14, 75, 79, 83, 88, 93, 108, 112, 118, 122, 125, 131]
     
     for month_data in month_names:
         with open(os.path.join(helper.SRC_DIR, month_data["src_name"]), "r", encoding="utf-8", errors="replace") as rf:
             with open(os.path.join(FIDE_CSV_DIR_2, month_data["csv_name"]), "w", newline="", encoding="utf-8") as wf:
-                # blank_columns = find_blank_columns(os.path.join(helper.SRC_DIR, month_data["src_name"]))
-                blank_columns = type_5_columns
                 mpi_log(rank, f"{month_data['year']}-{month_data['month_digits']}: Blank columns: {blank_columns}")
                 rf.seek(0)
                 for line in rf:
@@ -206,11 +231,13 @@ def reformat_mpi(month_names: list[dict[str, str]], rank):
                     if not new_line.endswith(("\n", "\r\n")):
                         new_line += "\n"
                     wf.write(new_line)
-        # mpi_log(rank, f"{month_data['year']}-{month_data['month_digits']}: Reformatted {month_data['csv_name']}")
+        # mpi_log(rank, f"{month_data['year']}-{month_data['month_digits']}: Reformatted {month_data['csv_name']}")        
+
+
 
 # mpiexec -n 8 python -u reformat.py
 if __name__ == "__main__":
-    helper.mpi_main(reformat_mpi, "reformat2016_2026", get_period_range_kwargs={"start_year": 2016, "start_month": "sep", "end_year": 2026, "end_month": "aug"})
+    # helper.mpi_main(reformat_mpi, "reformat2016_2026", get_period_range_kwargs={"start_year": 2016, "start_month": "sep", "end_year": 2026, "end_month": "aug"})
     # check_blank_columns()
     # print(remove_runs([0, 10, 44, 47, 54, 63, 68, 74]))
-    
+    helper.mpi_main(reformat_mpi, "reformat_ragged", get_period_range_kwargs={"start_year": 2008, "start_month": "apr", "end_year": 2016, "end_month": "aug"})

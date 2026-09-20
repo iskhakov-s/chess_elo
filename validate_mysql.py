@@ -1,6 +1,4 @@
 import csv
-import mysql.connector
-from mysql.connector.connection import MySQLConnection
 import os
 import numpy as np
 
