@@ -6,7 +6,7 @@ import mysql.connector
 import helper
 from mpi_logging import *
 import mpi_logging
-from helper import get_table_data, FIDE_CSV_DIR, FIDE_CSV_DIR_2, find_optimal_split, initiate_conn
+from helper import get_table_data, FIDE_CSV_DIR, FIDE_CSV_DIR_2, find_optimal_split
 
 
 def initiate_conn(get_warnings=False):

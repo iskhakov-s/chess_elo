@@ -1,0 +1,269 @@
+INFO - 01-JAN: Error getting distinct sex for JAN 2001: Binder Error: Referenced column "sex" not found in FROM clause!
+Candidate bindings: "fed", "temp" - 2026-09-20 15:42:52
+INFO - 01-APR: Error getting distinct sex for APR 2001: Binder Error: Referenced column "sex" not found in FROM clause!
+Candidate bindings: "fed", "temp" - 2026-09-20 15:42:52
+INFO - 01-JUL: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 01-OCT: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 02-JAN: Error getting distinct sex for JAN 2002: Binder Error: Referenced column "sex" not found in FROM clause!
+Candidate bindings: "fed", "temp" - 2026-09-20 15:42:52
+INFO - 02-APR: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 02-JUL: Error getting distinct sex for JUL 2002: Binder Error: Referenced column "sex" not found in FROM clause!
+Candidate bindings: "fed", "temp" - 2026-09-20 15:42:52
+INFO - 02-OCT: Error getting distinct sex for OCT 2002: Binder Error: Referenced column "sex" not found in FROM clause!
+Candidate bindings: "fed", "temp" - 2026-09-20 15:42:52
+INFO - 03-JAN: Error getting distinct sex for JAN 2003: Binder Error: Referenced column "sex" not found in FROM clause!
+Candidate bindings: "fed", "temp" - 2026-09-20 15:42:52
+INFO - 03-APR: Error getting distinct sex for APR 2003: Binder Error: Referenced column "sex" not found in FROM clause!
+Candidate bindings: "fed", "temp" - 2026-09-20 15:42:52
+INFO - 03-JUL: Error getting distinct sex for JUL 2003: Binder Error: Referenced column "sex" not found in FROM clause!
+Candidate bindings: "fed", "temp" - 2026-09-20 15:42:52
+INFO - 03-OCT: Error getting distinct sex for OCT 2003: Binder Error: Referenced column "sex" not found in FROM clause!
+Candidate bindings: "fed", "temp" - 2026-09-20 15:42:52
+INFO - 04-JAN: Error getting distinct sex for JAN 2004: Binder Error: Referenced column "sex" not found in FROM clause!
+Candidate bindings: "fed", "temp" - 2026-09-20 15:42:52
+INFO - 04-APR: Error getting distinct sex for APR 2004: Binder Error: Referenced column "sex" not found in FROM clause!
+Candidate bindings: "fed" - 2026-09-20 15:42:52
+INFO - 04-JUL: Error getting distinct sex for JUL 2004: Binder Error: Referenced column "sex" not found in FROM clause!
+Candidate bindings: "fed" - 2026-09-20 15:42:52
+INFO - 04-OCT: Error getting distinct sex for OCT 2004: Binder Error: Referenced column "sex" not found in FROM clause!
+Candidate bindings: "fed" - 2026-09-20 15:42:52
+INFO - 05-JAN: Error getting distinct sex for JAN 2005: Binder Error: Referenced column "sex" not found in FROM clause!
+Candidate bindings: "fed" - 2026-09-20 15:42:52
+INFO - 05-APR: Error getting distinct sex for APR 2005: Binder Error: Referenced column "sex" not found in FROM clause!
+Candidate bindings: "fed" - 2026-09-20 15:42:52
+INFO - 05-JUL: Error getting distinct sex for JUL 2005: Binder Error: Referenced column "sex" not found in FROM clause!
+Candidate bindings: "fed" - 2026-09-20 15:42:52
+INFO - 05-OCT: Error getting distinct sex for OCT 2005: Binder Error: Referenced column "sex" not found in FROM clause!
+Candidate bindings: "fed" - 2026-09-20 15:42:52
+INFO - 06-JAN: Error getting distinct sex for JAN 2006: Binder Error: Referenced column "sex" not found in FROM clause!
+Candidate bindings: "fed" - 2026-09-20 15:42:52
+INFO - 06-APR: Error getting distinct sex for APR 2006: Binder Error: Referenced column "sex" not found in FROM clause!
+Candidate bindings: "fed" - 2026-09-20 15:42:52
+INFO - 06-JUL: Error getting distinct sex for JUL 2006: Binder Error: Referenced column "sex" not found in FROM clause!
+Candidate bindings: "fed" - 2026-09-20 15:42:52
+INFO - 06-OCT: Error getting distinct sex for OCT 2006: Binder Error: Referenced column "sex" not found in FROM clause!
+Candidate bindings: "fed" - 2026-09-20 15:42:52
+INFO - 07-JAN: Error getting distinct sex for JAN 2007: Binder Error: Referenced column "sex" not found in FROM clause!
+Candidate bindings: "fed" - 2026-09-20 15:42:52
+INFO - 07-APR: Error getting distinct sex for APR 2007: Binder Error: Referenced column "sex" not found in FROM clause!
+Candidate bindings: "fed" - 2026-09-20 15:42:52
+INFO - 07-JUL: Error getting distinct sex for JUL 2007: Binder Error: Referenced column "sex" not found in FROM clause!
+Candidate bindings: "fed" - 2026-09-20 15:42:52
+INFO - 07-OCT: Error getting distinct sex for OCT 2007: Binder Error: Referenced column "sex" not found in FROM clause!
+Candidate bindings: "fed" - 2026-09-20 15:42:52
+INFO - 08-JAN: Error getting distinct sex for JAN 2008: Binder Error: Referenced column "sex" not found in FROM clause!
+Candidate bindings: "fed" - 2026-09-20 15:42:52
+INFO - 08-APR: Error getting distinct sex for APR 2008: Binder Error: Referenced column "sex" not found in FROM clause!
+Candidate bindings: "fed" - 2026-09-20 15:42:52
+INFO - 08-JUL: Error getting distinct sex for JUL 2008: Binder Error: Referenced column "sex" not found in FROM clause!
+Candidate bindings: "fed" - 2026-09-20 15:42:52
+INFO - 08-OCT: Error getting distinct sex for OCT 2008: Binder Error: Referenced column "sex" not found in FROM clause!
+Candidate bindings: "fed" - 2026-09-20 15:42:52
+INFO - 09-JAN: Error getting distinct sex for JAN 2009: Binder Error: Referenced column "sex" not found in FROM clause!
+Candidate bindings: "fed" - 2026-09-20 15:42:52
+INFO - 09-APR: Error getting distinct sex for APR 2009: Binder Error: Referenced column "sex" not found in FROM clause!
+Candidate bindings: "fed" - 2026-09-20 15:42:52
+INFO - 09-JUL: Error getting distinct sex for JUL 2009: Binder Error: Referenced column "sex" not found in FROM clause!
+Candidate bindings: "fed" - 2026-09-20 15:42:52
+INFO - 09-SEP: Error getting distinct sex for SEP 2009: Binder Error: Referenced column "sex" not found in FROM clause!
+Candidate bindings: "fed" - 2026-09-20 15:42:52
+INFO - 09-NOV: Error getting distinct sex for NOV 2009: Binder Error: Referenced column "sex" not found in FROM clause!
+Candidate bindings: "fed" - 2026-09-20 15:42:52
+INFO - 10-JAN: Error getting distinct sex for JAN 2010: Binder Error: Referenced column "sex" not found in FROM clause!
+Candidate bindings: "fed" - 2026-09-20 15:42:52
+INFO - 10-MAR: Error getting distinct sex for MAR 2010: Binder Error: Referenced column "sex" not found in FROM clause!
+Candidate bindings: "fed" - 2026-09-20 15:42:52
+INFO - 10-MAY: Error getting distinct sex for MAY 2010: Binder Error: Referenced column "sex" not found in FROM clause!
+Candidate bindings: "fed" - 2026-09-20 15:42:52
+INFO - 10-JUL: Error getting distinct sex for JUL 2010: Binder Error: Referenced column "sex" not found in FROM clause!
+Candidate bindings: "fed" - 2026-09-20 15:42:52
+INFO - 10-SEP: Error getting distinct sex for SEP 2010: Binder Error: Referenced column "sex" not found in FROM clause!
+Candidate bindings: "fed" - 2026-09-20 15:42:52
+INFO - 10-NOV: Error getting distinct sex for NOV 2010: Binder Error: Referenced column "sex" not found in FROM clause!
+Candidate bindings: "fed" - 2026-09-20 15:42:52
+INFO - 11-JAN: Error getting distinct sex for JAN 2011: Binder Error: Referenced column "sex" not found in FROM clause!
+Candidate bindings: "fed" - 2026-09-20 15:42:52
+INFO - 11-MAR: Error getting distinct sex for MAR 2011: Binder Error: Referenced column "sex" not found in FROM clause!
+Candidate bindings: "fed" - 2026-09-20 15:42:52
+INFO - 11-MAY: Error getting distinct sex for MAY 2011: Binder Error: Referenced column "sex" not found in FROM clause!
+Candidate bindings: "fed" - 2026-09-20 15:42:52
+INFO - 11-JUL: Error getting distinct sex for JUL 2011: Binder Error: Referenced column "sex" not found in FROM clause!
+Candidate bindings: "fed" - 2026-09-20 15:42:52
+INFO - 11-SEP: Error getting distinct sex for SEP 2011: Binder Error: Referenced column "sex" not found in FROM clause!
+Candidate bindings: "fed" - 2026-09-20 15:42:52
+INFO - 11-NOV: Error getting distinct sex for NOV 2011: Binder Error: Referenced column "sex" not found in FROM clause!
+Candidate bindings: "fed" - 2026-09-20 15:42:52
+INFO - 12-JAN: Error getting distinct sex for JAN 2012: Binder Error: Referenced column "sex" not found in FROM clause!
+Candidate bindings: "fed" - 2026-09-20 15:42:52
+INFO - 12-MAR: Error getting distinct sex for MAR 2012: Binder Error: Referenced column "sex" not found in FROM clause!
+Candidate bindings: "fed" - 2026-09-20 15:42:52
+INFO - 12-MAY: Error getting distinct sex for MAY 2012: Binder Error: Referenced column "sex" not found in FROM clause!
+Candidate bindings: "fed" - 2026-09-20 15:42:52
+INFO - 12-JUL: Error getting distinct sex for JUL 2012: Binder Error: Referenced column "sex" not found in FROM clause!
+Candidate bindings: "fed" - 2026-09-20 15:42:52
+INFO - 12-AUG: Error getting distinct sex for AUG 2012: Binder Error: Referenced column "sex" not found in FROM clause!
+Candidate bindings: "fed" - 2026-09-20 15:42:52
+INFO - 12-SEP: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 12-OCT: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 12-NOV: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 12-DEC: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 13-JAN: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 13-FEB: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 13-MAR: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 13-APR: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 13-MAY: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 13-JUN: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 13-JUL: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 13-AUG: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 13-SEP: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 13-OCT: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 13-NOV: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 13-DEC: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 14-JAN: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 14-FEB: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 14-MAR: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 14-APR: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 14-MAY: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 14-JUN: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 14-JUL: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 14-AUG: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 14-SEP: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 14-OCT: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 14-NOV: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 14-DEC: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 15-JAN: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 15-FEB: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 15-MAR: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 15-APR: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 15-MAY: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 15-JUN: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 15-JUL: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 15-AUG: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 15-SEP: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 15-OCT: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 15-NOV: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 15-DEC: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 16-JAN: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 16-FEB: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 16-MAR: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 16-APR: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 16-MAY: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 16-JUN: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 16-JUL: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 16-AUG: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 16-SEP: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 16-OCT: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 16-NOV: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 16-DEC: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 17-JAN: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 17-FEB: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 17-MAR: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 17-APR: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 17-MAY: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 17-JUN: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 17-JUL: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 17-AUG: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 17-SEP: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 17-OCT: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 17-NOV: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 17-DEC: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 18-JAN: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 18-FEB: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 18-MAR: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 18-APR: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 18-MAY: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 18-JUN: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 18-JUL: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 18-AUG: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 18-SEP: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 18-OCT: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 18-NOV: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 18-DEC: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 19-JAN: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 19-FEB: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 19-MAR: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 19-APR: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 19-MAY: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 19-JUN: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 19-JUL: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 19-AUG: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 19-SEP: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 19-OCT: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 19-NOV: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 19-DEC: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 20-JAN: ['F', 'M'] - 2026-09-20 15:42:52
+INFO - 20-FEB: ['F', 'M'] - 2026-09-20 15:42:53
+INFO - 20-MAR: ['F', 'M'] - 2026-09-20 15:42:53
+INFO - 20-APR: ['F', 'M'] - 2026-09-20 15:42:53
+INFO - 20-MAY: ['F', 'M'] - 2026-09-20 15:42:53
+INFO - 20-JUN: ['F', 'M'] - 2026-09-20 15:42:53
+INFO - 20-JUL: ['F', 'M'] - 2026-09-20 15:42:53
+INFO - 20-AUG: ['F', 'M'] - 2026-09-20 15:42:53
+INFO - 20-SEP: ['F', 'M'] - 2026-09-20 15:42:53
+INFO - 20-OCT: ['F', 'M'] - 2026-09-20 15:42:53
+INFO - 20-NOV: ['F', 'M'] - 2026-09-20 15:42:53
+INFO - 20-DEC: ['F', 'M'] - 2026-09-20 15:42:53
+INFO - 21-JAN: ['F', 'M'] - 2026-09-20 15:42:53
+INFO - 21-FEB: ['F', 'M'] - 2026-09-20 15:42:53
+INFO - 21-MAR: ['F', 'M'] - 2026-09-20 15:42:53
+INFO - 21-APR: ['F', 'M'] - 2026-09-20 15:42:53
+INFO - 21-MAY: ['F', 'M'] - 2026-09-20 15:42:53
+INFO - 21-JUN: ['F', 'M'] - 2026-09-20 15:42:53
+INFO - 21-JUL: ['F', 'M'] - 2026-09-20 15:42:53
+INFO - 21-AUG: ['F', 'M'] - 2026-09-20 15:42:53
+INFO - 21-SEP: ['F', 'M'] - 2026-09-20 15:42:53
+INFO - 21-OCT: ['F', 'M'] - 2026-09-20 15:42:53
+INFO - 21-NOV: ['F', 'M'] - 2026-09-20 15:42:53
+INFO - 21-DEC: ['F', 'M'] - 2026-09-20 15:42:53
+INFO - 22-JAN: ['F', 'M'] - 2026-09-20 15:42:53
+INFO - 22-FEB: ['F', 'M'] - 2026-09-20 15:42:53
+INFO - 22-MAR: ['F', 'M'] - 2026-09-20 15:42:53
+INFO - 22-APR: ['F', 'M'] - 2026-09-20 15:42:53
+INFO - 22-MAY: ['F', 'M'] - 2026-09-20 15:42:53
+INFO - 22-JUN: ['F', 'M'] - 2026-09-20 15:42:53
+INFO - 22-JUL: ['F', 'M'] - 2026-09-20 15:42:53
+INFO - 22-AUG: ['F', 'M'] - 2026-09-20 15:42:53
+INFO - 22-SEP: ['F', 'M'] - 2026-09-20 15:42:53
+INFO - 22-OCT: ['F', 'M'] - 2026-09-20 15:42:53
+INFO - 22-NOV: ['F', 'M'] - 2026-09-20 15:42:53
+INFO - 22-DEC: ['F', 'M'] - 2026-09-20 15:42:53
+INFO - 23-JAN: ['F', 'M'] - 2026-09-20 15:42:53
+INFO - 23-FEB: ['F', 'M'] - 2026-09-20 15:42:53
+INFO - 23-MAR: ['F', 'M'] - 2026-09-20 15:42:53
+INFO - 23-APR: ['F', 'M'] - 2026-09-20 15:42:53
+INFO - 23-MAY: ['F', 'M'] - 2026-09-20 15:42:53
+INFO - 23-JUN: ['F', 'M'] - 2026-09-20 15:42:53
+INFO - 23-JUL: ['F', 'M'] - 2026-09-20 15:42:53
+INFO - 23-AUG: ['F', 'M'] - 2026-09-20 15:42:53
+INFO - 23-SEP: ['F', 'M'] - 2026-09-20 15:42:53
+INFO - 23-OCT: ['F', 'M'] - 2026-09-20 15:42:53
+INFO - 23-NOV: ['F', 'M'] - 2026-09-20 15:42:53
+INFO - 23-DEC: ['F', 'M'] - 2026-09-20 15:42:53
+INFO - 24-JAN: ['F', 'M'] - 2026-09-20 15:42:53
+INFO - 24-FEB: ['F', 'M'] - 2026-09-20 15:42:53
+INFO - 24-MAR: ['F', 'M'] - 2026-09-20 15:42:53
+INFO - 24-APR: ['F', 'M'] - 2026-09-20 15:42:53
+INFO - 24-MAY: ['F', 'M'] - 2026-09-20 15:42:53
+INFO - 24-JUN: ['F', 'M'] - 2026-09-20 15:42:53
+INFO - 24-JUL: ['F', 'M'] - 2026-09-20 15:42:53
+INFO - 24-AUG: ['F', 'M'] - 2026-09-20 15:42:53
+INFO - 24-SEP: ['F', 'M'] - 2026-09-20 15:42:53
+INFO - 24-OCT: ['F', 'M'] - 2026-09-20 15:42:53
+INFO - 24-NOV: ['F', 'M'] - 2026-09-20 15:42:53
+INFO - 24-DEC: ['F', 'M'] - 2026-09-20 15:42:53
+INFO - 25-JAN: ['F', 'M'] - 2026-09-20 15:42:53
+INFO - 25-FEB: ['F', 'M'] - 2026-09-20 15:42:53
+INFO - 25-MAR: ['F', 'M'] - 2026-09-20 15:42:53
+INFO - 25-APR: ['F', 'M'] - 2026-09-20 15:42:53
+INFO - 25-MAY: ['F', 'M'] - 2026-09-20 15:42:53
+INFO - 25-JUN: ['F', 'M'] - 2026-09-20 15:42:53
+INFO - 25-JUL: ['F', 'M'] - 2026-09-20 15:42:53
+INFO - 25-AUG: ['F', 'M'] - 2026-09-20 15:42:53
+INFO - 25-SEP: ['F', 'M'] - 2026-09-20 15:42:53
+INFO - 25-OCT: ['F', 'M'] - 2026-09-20 15:42:53
+INFO - 25-NOV: ['F', 'M'] - 2026-09-20 15:42:53
+INFO - 25-DEC: ['F', 'M'] - 2026-09-20 15:42:53
+INFO - 26-JAN: ['F', 'M'] - 2026-09-20 15:42:53
+INFO - 26-FEB: ['F', 'M'] - 2026-09-20 15:42:53
+INFO - 26-MAR: ['F', 'M'] - 2026-09-20 15:42:53
+INFO - 26-APR: ['F', 'M'] - 2026-09-20 15:42:53
