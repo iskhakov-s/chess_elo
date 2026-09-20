@@ -1,11 +1,30 @@
 import csv
 import os
-import numpy as np
+from dotenv import load_dotenv
+import mysql.connector
 
 import helper
 from mpi_logging import *
 import mpi_logging
 from helper import get_table_data, FIDE_CSV_DIR, FIDE_CSV_DIR_2, find_optimal_split, initiate_conn
+
+
+def initiate_conn(get_warnings=False):
+    load_dotenv()
+    host = os.environ.get("MYSQL_HOST")
+    user = os.environ.get("MYSQL_USER")
+    password = os.environ.get("MYSQL_PASSWORD")
+    database = os.environ.get("MYSQL_DATABASE")
+    
+    conn = mysql.connector.connect(
+        host=host,
+        user=user,
+        password=password,
+        database=database,
+        allow_local_infile=True,
+        get_warnings=get_warnings
+    )
+    return conn
 
 
 def find_broken_rows():

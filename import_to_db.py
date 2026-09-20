@@ -2,7 +2,7 @@ import os
 import duckdb
 import logging
 
-from helper import FIDE_CSV_DIR, FIDE_CSV_DIR_2, initiate_conn
+from helper import FIDE_CSV_DIR, FIDE_CSV_DIR_2
 import helper
 import mpi_logging
 

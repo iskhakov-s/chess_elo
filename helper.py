@@ -3,8 +3,6 @@
 
 import csv
 import os
-from dotenv import load_dotenv
-import mysql.connector
 from mpi4py import MPI
 
 import mpi_logging
@@ -30,24 +28,6 @@ MONTH_INT2STR = {
 }
 
 MONTH_STR2INT = {v: k for k, v in MONTH_INT2STR.items()}
-
-
-def initiate_conn(get_warnings=False):
-    load_dotenv()
-    host = os.environ.get("MYSQL_HOST")
-    user = os.environ.get("MYSQL_USER")
-    password = os.environ.get("MYSQL_PASSWORD")
-    database = os.environ.get("MYSQL_DATABASE")
-    
-    conn = mysql.connector.connect(
-        host=host,
-        user=user,
-        password=password,
-        database=database,
-        allow_local_infile=True,
-        get_warnings=get_warnings
-    )
-    return conn
 
 
 def get_table_data() -> list[dict[str, str]]:
