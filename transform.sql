@@ -14,7 +14,7 @@ CREATE TABLE player_staging_union (
     sex UTINYINT NOT NULL,
     title UTINYINT NOT NULL DEFAULT 0, -- 0 = none, 1 = GM, 2 = IM, 3 = FM, 4 = CM, 5 = HGM
     wtitle UTINYINT NOT NULL DEFAULT 0, -- 0 = none, 1 = WGM, 2 = WIM, 3 = WFM, 4 = WCM, 5 = WHGM
-    foa UTINYINT, -- 0 = none, 1 = AGM, 2 = AIM, 3 = AFM, 4 = ACM, 5 = AAF
+    foa UTINYINT, -- 0 = none, 1 = AGM, 2 = AIM, 3 = AFM, 4 = ACM
     otit_ia BOOLEAN, -- arbiter titles
     otit_fa BOOLEAN,
     otit_na BOOLEAN,
@@ -91,7 +91,6 @@ SELECT
         WHEN 'AIM' THEN 2
         WHEN 'AFM' THEN 3
         WHEN 'ACM' THEN 4
-        WHEN 'AAF' THEN 5
         ELSE 0
     END AS foa,
     IF(flag LIKE '%i%', 1, 0) AS inactive
@@ -111,7 +110,7 @@ CREATE TABLE players (
     sex CHAR(1) DEFAULT NULL,
     title UTINYINT NOT NULL, -- 0 = none, 1 = GM, 2 = IM, 3 = FM, 4 = CM, 5 = HGM
     wtitle UTINYINT NOT NULL, -- 0 = none, 1 = WGM, 2 = WIM, 3 = WFM, 4 = WCM, 5 = WHGM
-    foa UTINYINT NOT NULL, -- 0 = none, 1 = AFM, 2 = AIM, 3 = ACM, 4 = AGM, 5 = AAF
+    foa UTINYINT NOT NULL, -- 0 = none, 1 = AFM, 2 = AIM, 3 = ACM, 4 = AGM
     PRIMARY KEY (id)
 );
 
