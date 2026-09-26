@@ -11,10 +11,10 @@ INSERT_INTO_STRINGS = {
             SELECT 
                 id, 
                 '{}-{}-01' AS period, 
-                name,
-                fed,
-                IF(flag LIKE '%w%', 1, 0) AS sex,
-                CASE title
+                trim(name) AS name,
+                trim(fed) AS fed,
+                IF(trim(flag) LIKE '%w%', 1, 0) AS sex,
+                CASE trim(title)
                     WHEN 'g' THEN 1
                     WHEN 'gm' THEN 1
                     WHEN 'm' THEN 2
@@ -24,7 +24,7 @@ INSERT_INTO_STRINGS = {
                     WHEN 'hg' THEN 5
                     ELSE 0
                 END AS title,
-                CASE title
+                CASE trim(title)
                     WHEN 'wg' THEN 1
                     WHEN 'wm' THEN 2
                     WHEN 'wf' THEN 3
@@ -33,7 +33,7 @@ INSERT_INTO_STRINGS = {
                     WHEN 'wh' THEN 5
                     ELSE 0
                 END AS wtitle,
-                IF(flag LIKE '%i%', 1, 0) AS inactive
+                IF(trim(flag) LIKE '%i%', 1, 0) AS inactive
             FROM {};
     """,
     4: """
@@ -45,10 +45,10 @@ INSERT_INTO_STRINGS = {
         SELECT 
             id, 
             '{}-{}-01' AS period, 
-            name,
-            fed,
-            IF(sex = 'F', 1, 0) AS sex,
-            CASE title
+            trim(name) AS name,
+            trim(fed) AS fed,
+            IF(trim(sex) = 'F', 1, 0) AS sex,
+            CASE trim(title)
                 WHEN 'GM' THEN 1
                 WHEN 'IM' THEN 2
                 WHEN 'FM' THEN 3
@@ -56,7 +56,7 @@ INSERT_INTO_STRINGS = {
                 WHEN 'HM' THEN 5
                 ELSE 0
             END AS title,
-            CASE wtitle
+            CASE trim(wtitle)
                 WHEN 'WGM' THEN 1
                 WHEN 'WIM' THEN 2
                 WHEN 'WF' THEN 3
@@ -66,20 +66,20 @@ INSERT_INTO_STRINGS = {
                 WHEN 'WH' THEN 5
                 ELSE 0
             END AS wtitle,
-            IF (lower(otitle) LIKE '%ia%', 1, 0) AS otit_ia,
-            IF (lower(otitle) LIKE '%fa%', 1, 0) AS otit_fa,
-            IF (lower(otitle) LIKE '%na%', 1, 0) AS otit_na,
-            IF (lower(otitle) LIKE '%io%', 1, 0) AS otit_io,
-            IF (lower(otitle) LIKE '%ao%', 1, 0) AS otit_ao,
-            IF (lower(otitle) LIKE '%di%', 1, 0) AS otit_di,
-            IF (lower(otitle) LIKE '%ni%', 1, 0) AS otit_ni,
-            IF (lower(otitle) LIKE '%fi%', 1, 0) AS otit_fi,
-            IF (lower(otitle) LIKE '%ft%', 1, 0) AS otit_ft,
-            IF (lower(otitle) LIKE '%fst%', 1, 0) AS otit_fst,
-            IF (lower(otitle) LIKE '%li%', 1, 0) AS otit_li,
-            IF (lower(otitle) LIKE '%lsi%', 1, 0) AS otit_lsi,
-            IF (lower(otitle) LIKE '%sli%', 1, 0) AS otit_sli,
-            IF(flag LIKE '%i%', 1, 0) AS inactive
+            IF (lower(trim(otitle)) LIKE '%ia%', 1, 0) AS otit_ia,
+            IF (lower(trim(otitle)) LIKE '%fa%', 1, 0) AS otit_fa,
+            IF (lower(trim(otitle)) LIKE '%na%', 1, 0) AS otit_na,
+            IF (lower(trim(otitle)) LIKE '%io%', 1, 0) AS otit_io,
+            IF (lower(trim(otitle)) LIKE '%ao%', 1, 0) AS otit_ao,
+            IF (lower(trim(otitle)) LIKE '%di%', 1, 0) AS otit_di,
+            IF (lower(trim(otitle)) LIKE '%ni%', 1, 0) AS otit_ni,
+            IF (lower(trim(otitle)) LIKE '%fi%', 1, 0) AS otit_fi,
+            IF (lower(trim(otitle)) LIKE '%ft%', 1, 0) AS otit_ft,
+            IF (lower(trim(otitle)) LIKE '%fst%', 1, 0) AS otit_fst,
+            IF (lower(trim(otitle)) LIKE '%li%', 1, 0) AS otit_li,
+            IF (lower(trim(otitle)) LIKE '%lsi%', 1, 0) AS otit_lsi,
+            IF (lower(trim(otitle)) LIKE '%sli%', 1, 0) AS otit_sli,
+            IF(trim(flag) LIKE '%i%', 1, 0) AS inactive
         FROM {};
     """,
     5: """
@@ -91,10 +91,10 @@ INSERT_INTO_STRINGS = {
         SELECT 
             id, 
             '{}-{}-01' AS period, 
-            name,
-            fed,
-            IF(sex = 'F', 1, 0) AS sex,
-            CASE title
+            trim(name) AS name,
+            trim(fed) AS fed,
+            IF(trim(sex) = 'F', 1, 0) AS sex,
+            CASE trim(title)
                 WHEN 'GM' THEN 1
                 WHEN 'IM' THEN 2
                 WHEN 'FM' THEN 3
@@ -102,7 +102,7 @@ INSERT_INTO_STRINGS = {
                 WHEN 'HM' THEN 5
                 ELSE 0
             END AS title,
-            CASE wtitle
+            CASE trim(wtitle)
                 WHEN 'WGM' THEN 1
                 WHEN 'WIM' THEN 2
                 WHEN 'WF' THEN 3
@@ -112,39 +112,79 @@ INSERT_INTO_STRINGS = {
                 WHEN 'WH' THEN 5
                 ELSE 0
             END AS wtitle,
-            IF (lower(otitle) LIKE '%ia%', 1, 0) AS otit_ia,
-            IF (lower(otitle) LIKE '%fa%', 1, 0) AS otit_fa,
-            IF (lower(otitle) LIKE '%na%', 1, 0) AS otit_na,
-            IF (lower(otitle) LIKE '%io%', 1, 0) AS otit_io,
-            IF (lower(otitle) LIKE '%ao%', 1, 0) AS otit_ao,
-            IF (lower(otitle) LIKE '%di%', 1, 0) AS otit_di,
-            IF (lower(otitle) LIKE '%ni%', 1, 0) AS otit_ni,
-            IF (lower(otitle) LIKE '%fi%', 1, 0) AS otit_fi,
-            IF (lower(otitle) LIKE '%ft%', 1, 0) AS otit_ft,
-            IF (lower(otitle) LIKE '%fst%', 1, 0) AS otit_fst,
-            IF (lower(otitle) LIKE '%li%', 1, 0) AS otit_li,
-            IF (lower(otitle) LIKE '%lsi%', 1, 0) AS otit_lsi,
-            IF (lower(otitle) LIKE '%sli%', 1, 0) AS otit_sli,
-            CASE foa
+            IF (lower(trim(otitle)) LIKE '%ia%', 1, 0) AS otit_ia,
+            IF (lower(trim(otitle)) LIKE '%fa%', 1, 0) AS otit_fa,
+            IF (lower(trim(otitle)) LIKE '%na%', 1, 0) AS otit_na,
+            IF (lower(trim(otitle)) LIKE '%io%', 1, 0) AS otit_io,
+            IF (lower(trim(otitle)) LIKE '%ao%', 1, 0) AS otit_ao,
+            IF (lower(trim(otitle)) LIKE '%di%', 1, 0) AS otit_di,
+            IF (lower(trim(otitle)) LIKE '%ni%', 1, 0) AS otit_ni,
+            IF (lower(trim(otitle)) LIKE '%fi%', 1, 0) AS otit_fi,
+            IF (lower(trim(otitle)) LIKE '%ft%', 1, 0) AS otit_ft,
+            IF (lower(trim(otitle)) LIKE '%fst%', 1, 0) AS otit_fst,
+            IF (lower(trim(otitle)) LIKE '%li%', 1, 0) AS otit_li,
+            IF (lower(trim(otitle)) LIKE '%lsi%', 1, 0) AS otit_lsi,
+            IF (lower(trim(otitle)) LIKE '%sli%', 1, 0) AS otit_sli,
+            CASE trim(foa)
                 WHEN 'AGM' THEN 1
                 WHEN 'AIM' THEN 2
                 WHEN 'AFM' THEN 3
                 WHEN 'ACM' THEN 4
                 ELSE 0
             END AS foa,
-            IF(flag LIKE '%i%', 1, 0) AS inactive
+            IF(trim(flag) LIKE '%i%', 1, 0) AS inactive
         FROM {};
     """
 }
 INSERT_INTO_STRINGS[2] = INSERT_INTO_STRINGS[1]
 INSERT_INTO_STRINGS[3] = INSERT_INTO_STRINGS[1]
 
+
+CREATE_TABLE_STRING = """
+    CREATE TABLE player_staging_union (
+        id INTEGER NOT NULL,
+        period DATE NOT NULL,
+        name VARCHAR(255) NOT NULL,
+        fed CHAR(3) NOT NULL,
+        sex UTINYINT NOT NULL,
+        title UTINYINT NOT NULL DEFAULT 0, -- 0 = none, 1 = GM, 2 = IM, 3 = FM, 4 = CM, 5 = HGM
+        wtitle UTINYINT NOT NULL DEFAULT 0, -- 0 = none, 1 = WGM, 2 = WIM, 3 = WFM, 4 = WCM, 5 = WHGM
+        foa UTINYINT, -- 0 = none, 1 = AGM, 2 = AIM, 3 = AFM, 4 = ACM
+        otit_ia BOOLEAN, -- arbiter titles
+        otit_fa BOOLEAN,
+        otit_na BOOLEAN,
+        otit_io BOOLEAN, -- international organizer
+        otit_ao BOOLEAN,
+        otit_di BOOLEAN, -- trainer titles
+        otit_ni BOOLEAN,
+        otit_fi BOOLEAN,
+        otit_ft BOOLEAN,
+        otit_fst BOOLEAN,
+        otit_li BOOLEAN, -- licensed instructors
+        otit_lsi BOOLEAN,
+        otit_sli BOOLEAN,
+        inactive BOOLEAN NOT NULL,
+        PRIMARY KEY (id, period)
+    );
+"""
+
+
+def create_staging_table(conn: duckdb.DuckDBPyConnection, drop=False):
+    if drop:
+        conn.sql("DROP TABLE IF EXISTS player_staging_union")
+        logging.info("Dropped existing player_staging_union table")
+    conn.sql(CREATE_TABLE_STRING)
+    logging.info("Created player_staging_union table")
+
     
 def transform(month_names: list[dict[str, str]]):
-    log_setup("transform_2012_2026")
+    log_setup("transform")
     
     conn = duckdb.connect("fide_elo.duckdb")
     type_dict = helper.get_type_dict(month_names)
+    
+    create_staging_table(conn, drop=True)
+    
     for month_data in month_names:
         insert_string = INSERT_INTO_STRINGS[type_dict[(month_data["year4"], month_data["month"])]]
         insert_string = insert_string.format(month_data['year4'], month_data['month_digits'], month_data['table_name'])
@@ -158,4 +198,4 @@ def transform(month_names: list[dict[str, str]]):
 
 
 if __name__ == "__main__":
-    transform(helper.get_period_range(start_year=2012, start_month="sep", end_year=2026, end_month="dec"))
+    transform(helper.get_table_data())
