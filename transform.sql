@@ -1,10 +1,5 @@
 /*
 staging table to simplify the process and unify the data for import into the player/profile
-  because each year has its own standards for some reason
-Unneeded columns:
- - birthday, only needed by the players table, not profile, because it shouldn't change over time
- - elo, games, k, these are only needed in the elo table
-allow null for foa and other titles because they are not present for all time periods
 */
 CREATE TABLE player_staging_union (
     id INTEGER NOT NULL,
@@ -12,8 +7,12 @@ CREATE TABLE player_staging_union (
     name VARCHAR(255) NOT NULL,
     fed CHAR(3) NOT NULL,
     sex UTINYINT NOT NULL,
-    title UTINYINT NOT NULL DEFAULT 0, -- 0 = none, 1 = GM, 2 = IM, 3 = FM, 4 = CM, 5 = HGM
-    wtitle UTINYINT NOT NULL DEFAULT 0, -- 0 = none, 1 = WGM, 2 = WIM, 3 = WFM, 4 = WCM, 5 = WHGM
+    elo SMALLINT NOT NULL,
+    games SMALLINT NOT NULL,
+    k UTINYINT,
+    birthday VARCHAR(30),
+    title UTINYINT NOT NULL DEFAULT 0, -- 0 = none, 1 = GM, 2 = IM, 3 = FM, 4 = CM, 5 = HGM/WHGM
+    wtitle UTINYINT NOT NULL DEFAULT 0, -- 0 = none, 1 = WGM, 2 = WIM, 3 = WFM, 4 = WCM
     foa UTINYINT, -- 0 = none, 1 = AGM, 2 = AIM, 3 = AFM, 4 = ACM
     otit_ia BOOLEAN, -- arbiter titles
     otit_fa BOOLEAN,
