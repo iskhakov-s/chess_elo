@@ -3,7 +3,7 @@
 with raw_olimpbase as (
     select *
     from read_csv(
-        'olimpbase_records/elo1967-2001/all2.csv',
+        '../olimpbase_records/elo1967-2001/all2.csv',
         header = false,
         sep = ';',
         columns = {
@@ -11,31 +11,39 @@ with raw_olimpbase as (
             'name': 'varchar',
             'standard_name': 'varchar',
             'yyyymm': 'varchar',
-            'id': 'integer',
+            'id': 'varchar',
             'birthday': 'varchar',
             'title': 'varchar',
             'fed': 'varchar',
-            'elo': 'integer',
-            'elo_change': 'integer',
-            'games': 'integer',
+            'elo': 'varchar',
+            'elo_change': 'varchar',
+            'games': 'varchar',
             'flag': 'varchar',
             'comments': 'varchar',
             'fed2': 'varchar',
             'temp2': 'varchar'
         }
     )
+),
+
+name_changes as (
+    select
+        try_cast(id as integer) as id,
+        standard_name,
+        new_standard_name
+    from {{ ref('olimpbase_name_changes') }}
 )
 
 select
     name,
-    standard_name,
-    id,
+    coalesce(name_changes.new_standard_name, raw_olimpbase.standard_name) as standard_name,
+    try_cast(id as integer) as id,
     birthday,
     title,
     fed,
-    elo,
-    elo_change,
-    games,
+    try_cast(elo as integer) as elo,
+    try_cast(elo_change as integer) as elo_change,
+    try_cast(games as integer) as games,
     flag,
     comments,
     fed2,
@@ -45,3 +53,6 @@ select
         as date
     ) as period
 from raw_olimpbase
+left join name_changes
+    on try_cast(raw_olimpbase.id as integer) = name_changes.id
+    and raw_olimpbase.standard_name = name_changes.standard_name

@@ -13,6 +13,8 @@ seeds:
   # Builds seeds into '<your_schema_name>_raw'
   chess_elo_dbt:
     +schema: raw
+    olimpbase_name_changes:
+      +delimiter: ";"
 
 models:
   chess_elo_dbt:
