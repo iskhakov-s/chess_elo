@@ -191,7 +191,7 @@ def assign_ids():
     std_names = conn.sql("SELECT distinct standard_name FROM staging_olimpbase;").fetchall()
     std_names = [row[0] for row in std_names]
     for std_name in std_names:
-        cursor = conn.sql("SELECT * FROM staging_olimpbase WHERE standard_name = ?;", params=(std_name, ))
+        cursor = conn.sql("SELECT id, period,  FROM staging_olimpbase WHERE standard_name = ? ORDER BY period;", params=(std_name, ))
         latest_period = cursor.max("period").fetchone()[0]
         if latest_period < date(1990, 7, 1):
             logging.info(f"Player {std_name} does not have modern FIDE ID, oldest record {latest_period} is before July 1990")
@@ -239,5 +239,33 @@ def find_id_collisions():
     conn.close()
 
 
+def fix_id_collisions():
+    conn = duckdb.connect("fide_elo.duckdb")
+    
+    new_names = conn.read_csv(os.path.join("logs", "find_id_collisions_olimpbase.log"))
+    new_names.show()
+    
+    
+    
+    conn.close()
+
+    
+def find_id_collisions_olimpbase_to_modern():
+    conn = duckdb.connect("fide_elo.duckdb")
+    mpi_logging.log_setup("find_id_collisions_olimpbase_to_modern", format="%(message)s")
+    
+    collisions = conn.sql("""
+        SELECT DISTINCT ON (standard_name) standard_name, name, id, period
+        FROM staging_olimpbase
+        WHERE id IS NOT NULL AND period >= '1990-07-01'
+        ORDER BY standard_name, period DESC;
+    """).fetchall()
+    
+    for collision in collisions:
+        logging.info(collision)
+    
+    conn.close()
+
+
 if __name__ == "__main__":
-    find_id_collisions()
+    fix_id_collisions()

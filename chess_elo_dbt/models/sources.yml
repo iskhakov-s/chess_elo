@@ -1,0 +1,548 @@
+version: 2
+
+sources:
+  - name: fide_elo
+    description: Monthly FIDE rating staging tables imported by import_to_db.py.
+    schema: main
+    tables:
+      # The importer has five historical source layouts. YAML anchors keep the
+      # repeated dbt column metadata consistent across the monthly tables.
+      - name: staging_01_jan
+        columns: &columns_type_1
+          - name: id
+            data_type: integer
+            description: FIDE player identifier.
+          - name: name
+            data_type: varchar
+          - name: title
+            data_type: varchar
+          - name: fed
+            data_type: varchar
+          - name: elo
+            data_type: integer
+          - name: games
+            data_type: integer
+          - name: flag
+            data_type: varchar
+
+      - name: staging_01_apr
+        columns: &columns_type_2
+          - name: id
+            data_type: integer
+          - name: name
+            data_type: varchar
+          - name: title
+            data_type: varchar
+          - name: fed
+            data_type: varchar
+          - name: elo
+            data_type: integer
+          - name: games
+            data_type: integer
+          - name: birthday
+            data_type: varchar
+          - name: flag
+            data_type: varchar
+      - name: staging_02_jan
+        columns: *columns_type_2
+      - name: staging_02_jul
+        columns: *columns_type_2
+      - name: staging_02_oct
+        columns: *columns_type_2
+      - name: staging_03_jan
+        columns: *columns_type_2
+      - name: staging_03_apr
+        columns: *columns_type_2
+      - name: staging_03_jul
+        columns: *columns_type_2
+      - name: staging_03_oct
+        columns: *columns_type_2
+      - name: staging_04_jan
+        columns: *columns_type_2
+      - name: staging_04_apr
+        columns: *columns_type_2
+      - name: staging_04_jul
+        columns: *columns_type_2
+      - name: staging_04_oct
+        columns: *columns_type_2
+      - name: staging_05_jan
+        columns: *columns_type_2
+      - name: staging_05_apr
+        columns: *columns_type_2
+      - name: staging_05_jul
+        columns: *columns_type_2
+      - name: staging_05_oct
+        columns: *columns_type_2
+      - name: staging_06_jan
+        columns: *columns_type_2
+      - name: staging_06_apr
+        columns: *columns_type_2
+      - name: staging_06_jul
+        columns: *columns_type_2
+      - name: staging_06_oct
+        columns: *columns_type_2
+      - name: staging_07_jan
+        columns: *columns_type_2
+      - name: staging_07_apr
+        columns: *columns_type_2
+      - name: staging_07_jul
+        columns: *columns_type_2
+      - name: staging_07_oct
+        columns: *columns_type_2
+      - name: staging_08_jan
+        columns: *columns_type_2
+      - name: staging_08_apr
+        columns: *columns_type_2
+      - name: staging_08_jul
+        columns: *columns_type_2
+      - name: staging_08_oct
+        columns: *columns_type_2
+      - name: staging_09_jan
+        columns: *columns_type_2
+      - name: staging_09_apr
+        columns: *columns_type_2
+      - name: staging_09_jul
+        columns: *columns_type_2
+      - name: staging_09_sep
+        columns: *columns_type_2
+      - name: staging_09_nov
+        columns: *columns_type_2
+      - name: staging_10_jan
+        columns: *columns_type_2
+      - name: staging_10_mar
+        columns: *columns_type_2
+      - name: staging_10_may
+        columns: *columns_type_2
+      - name: staging_10_jul
+        columns: *columns_type_2
+      - name: staging_10_sep
+        columns: *columns_type_2
+      - name: staging_10_nov
+        columns: *columns_type_2
+      - name: staging_11_jan
+        columns: *columns_type_2
+      - name: staging_11_mar
+        columns: *columns_type_2
+      - name: staging_11_may
+        columns: *columns_type_2
+      - name: staging_11_jul
+        columns: *columns_type_2
+      - name: staging_11_sep
+        columns: *columns_type_2
+      - name: staging_11_nov
+        columns: *columns_type_2
+      - name: staging_12_jan
+        columns: *columns_type_2
+      - name: staging_12_mar
+        columns: *columns_type_2
+      - name: staging_12_may
+        columns: *columns_type_2
+      - name: staging_12_jul
+        columns: *columns_type_2
+      - name: staging_12_aug
+        columns: *columns_type_2
+
+      - name: staging_01_jul
+        columns: &columns_type_3
+          - name: id
+            data_type: integer
+          - name: name
+            data_type: varchar
+          - name: title
+            data_type: varchar
+          - name: fed
+            data_type: varchar
+          - name: elo
+            data_type: integer
+          - name: games
+            data_type: integer
+          - name: birthday
+            data_type: varchar
+          - name: sex
+            data_type: varchar
+          - name: flag
+            data_type: varchar
+      - name: staging_01_oct
+        columns: *columns_type_3
+      - name: staging_02_apr
+        columns: *columns_type_3
+
+      - name: staging_12_sep
+        columns: &columns_type_4
+          - name: id
+            data_type: integer
+          - name: name
+            data_type: varchar
+          - name: fed
+            data_type: varchar
+          - name: sex
+            data_type: varchar
+          - name: title
+            data_type: varchar
+          - name: wtitle
+            data_type: varchar
+          - name: otitle
+            data_type: varchar
+          - name: elo
+            data_type: integer
+          - name: games
+            data_type: integer
+          - name: k
+            data_type: integer
+          - name: birthday
+            data_type: varchar
+          - name: flag
+            data_type: varchar
+      - name: staging_12_oct
+        columns: *columns_type_4
+      - name: staging_12_nov
+        columns: *columns_type_4
+      - name: staging_12_dec
+        columns: *columns_type_4
+      - name: staging_13_jan
+        columns: *columns_type_4
+      - name: staging_13_feb
+        columns: *columns_type_4
+      - name: staging_13_mar
+        columns: *columns_type_4
+      - name: staging_13_apr
+        columns: *columns_type_4
+      - name: staging_13_may
+        columns: *columns_type_4
+      - name: staging_13_jun
+        columns: *columns_type_4
+      - name: staging_13_jul
+        columns: *columns_type_4
+      - name: staging_13_aug
+        columns: *columns_type_4
+      - name: staging_13_sep
+        columns: *columns_type_4
+      - name: staging_13_oct
+        columns: *columns_type_4
+      - name: staging_13_nov
+        columns: *columns_type_4
+      - name: staging_13_dec
+        columns: *columns_type_4
+      - name: staging_14_jan
+        columns: *columns_type_4
+      - name: staging_14_feb
+        columns: *columns_type_4
+      - name: staging_14_mar
+        columns: *columns_type_4
+      - name: staging_14_apr
+        columns: *columns_type_4
+      - name: staging_14_may
+        columns: *columns_type_4
+      - name: staging_14_jun
+        columns: *columns_type_4
+      - name: staging_14_jul
+        columns: *columns_type_4
+      - name: staging_14_aug
+        columns: *columns_type_4
+      - name: staging_14_sep
+        columns: *columns_type_4
+      - name: staging_14_oct
+        columns: *columns_type_4
+      - name: staging_14_nov
+        columns: *columns_type_4
+      - name: staging_14_dec
+        columns: *columns_type_4
+      - name: staging_15_jan
+        columns: *columns_type_4
+      - name: staging_15_feb
+        columns: *columns_type_4
+      - name: staging_15_mar
+        columns: *columns_type_4
+      - name: staging_15_apr
+        columns: *columns_type_4
+      - name: staging_15_may
+        columns: *columns_type_4
+      - name: staging_15_jun
+        columns: *columns_type_4
+      - name: staging_15_jul
+        columns: *columns_type_4
+      - name: staging_15_aug
+        columns: *columns_type_4
+      - name: staging_15_sep
+        columns: *columns_type_4
+      - name: staging_15_oct
+        columns: *columns_type_4
+      - name: staging_15_nov
+        columns: *columns_type_4
+      - name: staging_15_dec
+        columns: *columns_type_4
+      - name: staging_16_jan
+        columns: *columns_type_4
+      - name: staging_16_feb
+        columns: *columns_type_4
+      - name: staging_16_mar
+        columns: *columns_type_4
+      - name: staging_16_apr
+        columns: *columns_type_4
+      - name: staging_16_may
+        columns: *columns_type_4
+      - name: staging_16_jun
+        columns: *columns_type_4
+      - name: staging_16_jul
+        columns: *columns_type_4
+      - name: staging_16_aug
+        columns: *columns_type_4
+
+      - name: staging_16_sep
+        columns: &columns_type_5
+          - name: id
+            data_type: integer
+          - name: name
+            data_type: varchar
+          - name: fed
+            data_type: varchar
+          - name: sex
+            data_type: varchar
+          - name: title
+            data_type: varchar
+          - name: wtitle
+            data_type: varchar
+          - name: otitle
+            data_type: varchar
+          - name: foa
+            data_type: varchar
+          - name: elo
+            data_type: integer
+          - name: games
+            data_type: integer
+          - name: k
+            data_type: integer
+          - name: birthday
+            data_type: varchar
+          - name: flag
+            data_type: varchar
+      - name: staging_16_oct
+        columns: *columns_type_5
+      - name: staging_16_nov
+        columns: *columns_type_5
+      - name: staging_16_dec
+        columns: *columns_type_5
+      - name: staging_17_jan
+        columns: *columns_type_5
+      - name: staging_17_feb
+        columns: *columns_type_5
+      - name: staging_17_mar
+        columns: *columns_type_5
+      - name: staging_17_apr
+        columns: *columns_type_5
+      - name: staging_17_may
+        columns: *columns_type_5
+      - name: staging_17_jun
+        columns: *columns_type_5
+      - name: staging_17_jul
+        columns: *columns_type_5
+      - name: staging_17_aug
+        columns: *columns_type_5
+      - name: staging_17_sep
+        columns: *columns_type_5
+      - name: staging_17_oct
+        columns: *columns_type_5
+      - name: staging_17_nov
+        columns: *columns_type_5
+      - name: staging_17_dec
+        columns: *columns_type_5
+      - name: staging_18_jan
+        columns: *columns_type_5
+      - name: staging_18_feb
+        columns: *columns_type_5
+      - name: staging_18_mar
+        columns: *columns_type_5
+      - name: staging_18_apr
+        columns: *columns_type_5
+      - name: staging_18_may
+        columns: *columns_type_5
+      - name: staging_18_jun
+        columns: *columns_type_5
+      - name: staging_18_jul
+        columns: *columns_type_5
+      - name: staging_18_aug
+        columns: *columns_type_5
+      - name: staging_18_sep
+        columns: *columns_type_5
+      - name: staging_18_oct
+        columns: *columns_type_5
+      - name: staging_18_nov
+        columns: *columns_type_5
+      - name: staging_18_dec
+        columns: *columns_type_5
+      - name: staging_19_jan
+        columns: *columns_type_5
+      - name: staging_19_feb
+        columns: *columns_type_5
+      - name: staging_19_mar
+        columns: *columns_type_5
+      - name: staging_19_apr
+        columns: *columns_type_5
+      - name: staging_19_may
+        columns: *columns_type_5
+      - name: staging_19_jun
+        columns: *columns_type_5
+      - name: staging_19_jul
+        columns: *columns_type_5
+      - name: staging_19_aug
+        columns: *columns_type_5
+      - name: staging_19_sep
+        columns: *columns_type_5
+      - name: staging_19_oct
+        columns: *columns_type_5
+      - name: staging_19_nov
+        columns: *columns_type_5
+      - name: staging_19_dec
+        columns: *columns_type_5
+      - name: staging_20_jan
+        columns: *columns_type_5
+      - name: staging_20_feb
+        columns: *columns_type_5
+      - name: staging_20_mar
+        columns: *columns_type_5
+      - name: staging_20_apr
+        columns: *columns_type_5
+      - name: staging_20_may
+        columns: *columns_type_5
+      - name: staging_20_jun
+        columns: *columns_type_5
+      - name: staging_20_jul
+        columns: *columns_type_5
+      - name: staging_20_aug
+        columns: *columns_type_5
+      - name: staging_20_sep
+        columns: *columns_type_5
+      - name: staging_20_oct
+        columns: *columns_type_5
+      - name: staging_20_nov
+        columns: *columns_type_5
+      - name: staging_20_dec
+        columns: *columns_type_5
+      - name: staging_21_jan
+        columns: *columns_type_5
+      - name: staging_21_feb
+        columns: *columns_type_5
+      - name: staging_21_mar
+        columns: *columns_type_5
+      - name: staging_21_apr
+        columns: *columns_type_5
+      - name: staging_21_may
+        columns: *columns_type_5
+      - name: staging_21_jun
+        columns: *columns_type_5
+      - name: staging_21_jul
+        columns: *columns_type_5
+      - name: staging_21_aug
+        columns: *columns_type_5
+      - name: staging_21_sep
+        columns: *columns_type_5
+      - name: staging_21_oct
+        columns: *columns_type_5
+      - name: staging_21_nov
+        columns: *columns_type_5
+      - name: staging_21_dec
+        columns: *columns_type_5
+      - name: staging_22_jan
+        columns: *columns_type_5
+      - name: staging_22_feb
+        columns: *columns_type_5
+      - name: staging_22_mar
+        columns: *columns_type_5
+      - name: staging_22_apr
+        columns: *columns_type_5
+      - name: staging_22_may
+        columns: *columns_type_5
+      - name: staging_22_jun
+        columns: *columns_type_5
+      - name: staging_22_jul
+        columns: *columns_type_5
+      - name: staging_22_aug
+        columns: *columns_type_5
+      - name: staging_22_sep
+        columns: *columns_type_5
+      - name: staging_22_oct
+        columns: *columns_type_5
+      - name: staging_22_nov
+        columns: *columns_type_5
+      - name: staging_22_dec
+        columns: *columns_type_5
+      - name: staging_23_jan
+        columns: *columns_type_5
+      - name: staging_23_feb
+        columns: *columns_type_5
+      - name: staging_23_mar
+        columns: *columns_type_5
+      - name: staging_23_apr
+        columns: *columns_type_5
+      - name: staging_23_may
+        columns: *columns_type_5
+      - name: staging_23_jun
+        columns: *columns_type_5
+      - name: staging_23_jul
+        columns: *columns_type_5
+      - name: staging_23_aug
+        columns: *columns_type_5
+      - name: staging_23_sep
+        columns: *columns_type_5
+      - name: staging_23_oct
+        columns: *columns_type_5
+      - name: staging_23_nov
+        columns: *columns_type_5
+      - name: staging_23_dec
+        columns: *columns_type_5
+      - name: staging_24_jan
+        columns: *columns_type_5
+      - name: staging_24_feb
+        columns: *columns_type_5
+      - name: staging_24_mar
+        columns: *columns_type_5
+      - name: staging_24_apr
+        columns: *columns_type_5
+      - name: staging_24_may
+        columns: *columns_type_5
+      - name: staging_24_jun
+        columns: *columns_type_5
+      - name: staging_24_jul
+        columns: *columns_type_5
+      - name: staging_24_aug
+        columns: *columns_type_5
+      - name: staging_24_sep
+        columns: *columns_type_5
+      - name: staging_24_oct
+        columns: *columns_type_5
+      - name: staging_24_nov
+        columns: *columns_type_5
+      - name: staging_24_dec
+        columns: *columns_type_5
+      - name: staging_25_jan
+        columns: *columns_type_5
+      - name: staging_25_feb
+        columns: *columns_type_5
+      - name: staging_25_mar
+        columns: *columns_type_5
+      - name: staging_25_apr
+        columns: *columns_type_5
+      - name: staging_25_may
+        columns: *columns_type_5
+      - name: staging_25_jun
+        columns: *columns_type_5
+      - name: staging_25_jul
+        columns: *columns_type_5
+      - name: staging_25_aug
+        columns: *columns_type_5
+      - name: staging_25_sep
+        columns: *columns_type_5
+      - name: staging_25_oct
+        columns: *columns_type_5
+      - name: staging_25_nov
+        columns: *columns_type_5
+      - name: staging_25_dec
+        columns: *columns_type_5
+      - name: staging_26_jan
+        columns: *columns_type_5
+      - name: staging_26_feb
+        columns: *columns_type_5
+      - name: staging_26_mar
+        columns: *columns_type_5
+      - name: staging_26_apr
+        columns: *columns_type_5

@@ -1,0 +1,21 @@
+==================== 2026-10-05T16:31:25.995858Z | 01a10ce7-e2e7-7d20-9b75-2c13d78490d7 ====================
+16:31:26.010953 [info ]: Installing dbt project and profile setup
+16:31:26.105678 [info ]: Info Created .vscode/extensions.json with dbt extension recommendation
+16:31:26.111078 [info ]: Success Project created successfully!
+16:31:26.111791 [info ]: Info Project name: jaffle_shop
+16:31:26.112477 [info ]: Info Project directory: jaffle_shop
+16:33:40.755339 [info ]: Info Setting up your profile...
+16:33:40.761856 [info ]: Loading ~/.dbt/profiles.yml
+16:33:40.799305 [info ]: Info Creating new profile...
+16:34:56.191574 [info ]: Info Backup created at C:\Users\Samuel\.dbt\profiles.yml.bkp
+16:34:56.199477 [info ]: Success Profile written to C:\Users\Samuel\.dbt\profiles.yml
+16:34:56.204692 [info ]: Validating profile inputs, adapters, and connection
+
+16:34:56.205891 [info ]: dbt 2.0.6
+16:34:56.219128 [info ]: Started loading project
+16:34:56.356145 [info ]: Loading ~/.dbt/profiles.yml
+16:34:56.378427 [info ]: Finished loading project [  0.16s]
+16:34:56.383417 [error]: [InvalidConfig (dbt1005)]: Configuration Error: The 'postgres' adapter is not yet supported by dbt. Supported adapters: snowflake, bigquery, databricks, redshift, duckdb, salesforce, clickhouse. To use an experimental adapter, set the environment variable DBT_ALLOW_EXPERIMENTAL_ADAPTERS=true. Note that experimental adapters may be unstable and are not yet recommended for production use.
+16:34:56.434456 [info ]: 
+==================== Execution Summary =====================
+Finished 'init' with 1 error [3m 30s]

@@ -1,0 +1,23 @@
+name: chess_elo_dbt
+
+profile: chess_elo_dbt
+
+seed-paths: ["seeds"]
+model-paths: ["models"]
+macro-paths: ["macros"]
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+seeds:
+  # Builds seeds into '<your_schema_name>_raw'
+  chess_elo_dbt:
+    +schema: raw
+
+models:
+  chess_elo_dbt:
+    +static_analysis: strict
+    staging:
+      +materialized: table
+    marts:
+      +materialized: table

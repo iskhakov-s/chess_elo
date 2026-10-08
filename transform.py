@@ -170,6 +170,3 @@ def transform(month_names: list[dict[str, str]]):
 
 if __name__ == "__main__":
     transform(helper.get_table_data())
-    # for i in range(len(INSERT_INTO_STRINGS)):
-    #     print(i+1)
-    #     print(INSERT_INTO_STRINGS[i+1].template)
