@@ -10,3 +10,4 @@ olimpbase_records/
 chess_elo.Rproj
 .env
 fide_elo.duckdb*
+logs/

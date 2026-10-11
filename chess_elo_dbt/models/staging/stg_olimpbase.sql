@@ -37,7 +37,7 @@ name_changes as (
 select
     name,
     coalesce(name_changes.new_standard_name, raw_olimpbase.standard_name) as standard_name,
-    try_cast(id as integer) as id,
+    try_cast(raw_olimpbase.id as integer) as id,
     birthday,
     title,
     fed,
