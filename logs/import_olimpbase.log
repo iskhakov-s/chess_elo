@@ -1,8 +1,0 @@
-WARNING - scan_id,file_id,line,line_byte_position,byte_position,column_idx,column_name,error_type,csv_line,error_message
-5,0,113086,8814475,8814537,11,column10,CAST,"
-;Cleghorn, Peter;Cleghorn, Peter;199901;2000695;;;USA;2405;0;c;i;;USA;","Error when converting column ""column10"". Could not convert string ""c"" to 'INTEGER'"
-5,0,101203,7869314,7869367,11,column10,CAST,"
-;Cejic, Dusica;Cejic, Dusica;198801;;;wm;YUG;2170;5;?;w;;YUG;","Error when converting column ""column10"". Could not convert string ""?"" to 'INTEGER'"
-5,0,196775,15373681,15373744,10,column09,CAST,"
-;Garcia, Sebastian;Garcia, Sebastian;200007;110396;;;ARG;2152;#ADR!;12;;;ARG;","Error when converting column ""column09"". Could not convert string ""#ADR!"" to 'INTEGER'"
- - 2026-09-23 21:42:09
