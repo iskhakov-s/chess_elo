@@ -140,3 +140,4 @@ with fide_union as (
 
 select *
 from fide_union
+where name <> 'Name'
