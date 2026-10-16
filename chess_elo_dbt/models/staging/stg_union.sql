@@ -71,8 +71,74 @@ fide as (
         otit_sli,
         inactive
     from {{ ref('stg_fide_union') }}
+),
+
+unioned as (
+    select * from fide
+    union all
+    select * from olimpbase
+),
+
+with_birthday as (
+    select
+        *,
+        cast(case
+            when regexp_full_match(birthday, '\d{4}\.\d{2}\.\d{2}')
+                then try_strptime(birthday, '%Y.%m.%d')
+            when regexp_full_match(birthday, '\d{2}\.\d{2}\.\d{2}')
+                then try_strptime(birthday, '%d.%m.%y')
+            when regexp_full_match(birthday, '\d{2}\.\d{2}\.\d{4}')
+                then try_strptime(birthday, '%d.%m.%Y')
+            when regexp_full_match(birthday, '\d{4}')
+                then try_strptime(birthday || '.01.01', '%Y.%m.%d')
+            when regexp_full_match(birthday, '\d{4}\.xx\.xx')
+                then try_strptime(birthday[:4] || '.01.01', '%Y.%m.%d')
+            when regexp_full_match(birthday, '\d{4}\.\d{2}\.xx')
+                then try_strptime(birthday[:7] || '.01', '%Y.%m.%d')
+            else null
+        end as date) as birthday_date,
+        cast(case
+            when birthday is null then false
+            when regexp_full_match(birthday, '\d{4}') then false
+            when regexp_full_match(birthday, '\d{4}\.xx\.xx') then false
+            when regexp_full_match(birthday, '\d{4}\.\d{2}\.xx') then false
+            when regexp_full_match(birthday, '\d{4}\.\d{2}\.\d{2}')
+                then try_strptime(birthday, '%Y.%m.%d') is not null
+            when regexp_full_match(birthday, '\d{2}\.\d{2}\.\d{2}')
+                then try_strptime(birthday, '%d.%m.%y') is not null
+            when regexp_full_match(birthday, '\d{2}\.\d{2}\.\d{4}')
+                then try_strptime(birthday, '%d.%m.%Y') is not null
+            else false
+        end as boolean) as is_birthday_exact
+    from unioned
 )
 
-select * from fide
-union all
-select * from olimpbase
+select
+    id,
+    period,
+    name,
+    fed,
+    sex,
+    elo,
+    games,
+    k,
+    birthday_date as birthday,
+    is_birthday_exact,
+    title,
+    wtitle,
+    foa,
+    otit_ia,
+    otit_fa,
+    otit_na,
+    otit_io,
+    otit_ao,
+    otit_di,
+    otit_ni,
+    otit_fi,
+    otit_ft,
+    otit_fst,
+    otit_li,
+    otit_lsi,
+    otit_sli,
+    inactive
+from with_birthday
