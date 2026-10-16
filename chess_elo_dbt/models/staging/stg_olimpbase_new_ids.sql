@@ -6,7 +6,7 @@ with player_stats as (
             where id is not null
               and period >= date '1990-07-01'
         ) as latest_id
-    from {{ ref('stg_olimpbase') }}
+    from {{ ref('stg_olimpbase_no_dupes') }}
     group by standard_name
 ),
 
@@ -16,7 +16,7 @@ assignments as (
         row_number() over (order by standard_name) as fake_id_number,
         exists (
             select 1
-            from {{ ref('stg_olimpbase') }} collisions
+            from {{ ref('stg_olimpbase_no_dupes') }} collisions
             where collisions.id = player_stats.latest_id
               and collisions.period > player_stats.latest_period
         ) as has_collision
@@ -39,6 +39,6 @@ new_ids as (
 select
     source.*,
     new_ids.id2
-from {{ ref('stg_olimpbase') }} source
+from {{ ref('stg_olimpbase_no_dupes') }} source
 left join new_ids
     using (standard_name)
