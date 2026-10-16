@@ -138,6 +138,20 @@ with fide_union as (
 {% endfor %}
 )
 
-select *
+select * replace (
+    cast(case
+        when lower(name) like '%(gm)' then 1
+        when lower(name) like '%(im)' then 2
+        when lower(name) like '%(fm)' then 3
+        else title
+    end as utinyint) as title,
+    cast(case
+        when lower(name) like '%(fm)'
+            or lower(name) like '%(im)'
+            or lower(name) like '%(gm)'
+            then trim(left(name, length(name) - 4))
+        else name
+    end as varchar(255)) as name
+)
 from fide_union
 where name <> 'Name'
