@@ -44,6 +44,7 @@ name_metrics as (
         ) as partial_match,
         levenshtein(lower(name), lower(prev_name)) as distance
     from names_with_previous
+    where prev_name is not null
 )
 
 select
