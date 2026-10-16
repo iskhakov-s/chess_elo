@@ -1,28 +1,28 @@
 with olimpbase as (
     select
-        id2 as id,
-        period,
-        name,
-        fed,
+        cast(id2 as uinteger) as id,
+        cast(period as date) as period,
+        cast(name as varchar(255)) as name,
+        cast(fed as char(3)) as fed,
         cast(null as utinyint) as sex,
-        elo,
-        games,
+        cast(elo as smallint) as elo,
+        cast(games as smallint) as games,
         cast(null as utinyint) as k,
-        birthday,
-        case lower(trim(title))
+        cast(birthday as varchar(30)) as birthday,
+        cast(case lower(trim(title))
             when 'g' then 1
             when 'm' then 2
             when 'f' then 3
             when 'h' then 5
             when 'wh' then 5
             else 0
-        end as title,
-        case lower(trim(title))
+        end as utinyint) as title,
+        cast(case lower(trim(title))
             when 'wg' then 1
             when 'wm' then 2
             when 'wf' then 3
             else 0
-        end as wtitle,
+        end as utinyint) as wtitle,
         cast(null as utinyint) as foa,
         cast(null as boolean) as otit_ia,
         cast(null as boolean) as otit_fa,
@@ -39,6 +39,7 @@ with olimpbase as (
         cast(null as boolean) as otit_sli,
         cast(null as boolean) as inactive
     from {{ ref('stg_olimpbase_new_ids') }}
+    where period<'2001-01-01'
 ),
 
 fide as (
